@@ -1,0 +1,43 @@
+a {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,"Segoe UI","Segoe WP","Microsoft YaHei";
+    -webkit-font-smoothing: antialiased;
+}
+.navbar-jn {
+    background-color: #292a34;
+    border-radius: 0px;
+    border: 0px;
+    margin-bottom: 0px;
+}
+.container>.navbar-header,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container-fluid>.navbar-collapse{
+    margin-right: 20px;
+    margin-left: -15px;
+}
+
+.navbar-brand-jn {
+	float: left;
+    height: 50px;
+    padding: 7px 15px 7px 0px;
+    font-size: 22px;
+    line-height: 36px;
+    color:#eee;
+}
+.navbar-brand-jn>div {
+	display: inline;
+	color: #1edb42;
+}
+.navbar-brand-jn:hover,
+.navbar-brand-jn:focus {
+    color: #eee;
+    text-decoration: none;
+}
+.nav>li>a{
+    color:#eee;
+}
+.nav>li>a:hover, .nav>li>a:focus,.nav>.active,.nav>.active>a{
+    text-decoration: none;
+    background-color: #eee;
+    color:#2a6496;
+}
