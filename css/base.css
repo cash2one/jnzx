@@ -1,3 +1,7 @@
+body{
+    background: #bfbfbf;
+}
+
 a {
     font-family: "Open Sans","Helvetica Neue",Helvetica,"Segoe UI","Segoe WP","Microsoft YaHei";
     -webkit-font-smoothing: antialiased;
@@ -40,4 +44,44 @@ a {
     text-decoration: none;
     background-color: #eee;
     color:#2a6496;
+}
+
+.navbar-right-jn #login-btn{
+    background: #1fda46;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-right-jn{
+    vertical-align: middle;
+}
+
+#wrapper{
+    background: white;
+}
+
+.stats{
+    height: 410px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.stats #intro{
+    font-size: 16px;
+    line-height: 2;
+}
+
+.lawyers{
+    background-color: #e9f1f1;
+    height: 480px;
+}
+
+/*IE6-IE8 respond*/
+@media screen and (max-width: 480px){
+    body{
+        background: blue;
+    }
 }

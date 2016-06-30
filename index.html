@@ -6,204 +6,191 @@
     <title>还我钱-首页</title>
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-    <!--normalize.css-->
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script> <!--normalize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <link href="css/base.css" rel="stylesheet">
-
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <!--Adobe Edge Runtime-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> <![endif]-->
+    <!--<script src="js/respond.min.js"></script>--> <!--<script src="js/html5shiv.js"></script>-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/> <!--Adobe Edge Runtime-->
     <script type="text/javascript" charset="utf-8" src="js/statsanimate_edgePreload.js"></script>
-    <style>
-        .edgeLoad-EDGE-40653199 { visibility:hidden; }
-    </style>
-    <!--Adobe Edge Runtime End-->
+    <style> .edgeLoad-EDGE-40653199 {
+        visibility: hidden;
+    } </style> <!--Adobe Edge Runtime End-->
 </head>
+
 <body>
-    <nav class="navbar navbar-jn" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <img class="navbar-brand-jn" src="images/Logo.png" alt="LOGO"/>
-                <a class="navbar-brand-jn" href="#">还我<div>钱</div></a>
-            </div>
-            <div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首页</a></li>
-                    <li><a href="#">债务中心</a></li>
-                    <li><a href="#">发布债务</a></li>
-                    <li><a href="#">债务催收</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">注册</a></li>
-                    <li>
-                        <button type="button" class="btn btn-default navbar-btn">
-                            登录
-                        </button>
-                    </li>
-                </ul>  
-            </div>
-        </div>
-        
-    </nav>
-    <div class="container" id="wrapper">
-        <div class="row banner">
-            <div id="myCarousel" class="carousel slide">
-               <!-- 轮播（Carousel）指标 -->
-               <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-               </ol>   
-               <!-- 轮播（Carousel）项目 -->
-               <div class="carousel-inner">
-                  <div class="item active">
-                     <img src="images/slide1.jpg" alt="First slide">
-                  </div>
-                  <div class="item">
-                     <img src="images/slide2.jpg" alt="Second slide">
-                  </div>
-               </div>
-               <!-- 轮播（Carousel）导航 -->
-               <a class="carousel-control left" href="#myCarousel" 
-                  data-slide="prev">&lsaquo;</a>
-               <a class="carousel-control right" href="#myCarousel" 
-                  data-slide="next">&rsaquo;</a>
-            </div>   
-        </div>
-        <div class="row stats">
-            <div class="col-sm-6 col-xs-12"> 
-                <h2>一站式债务清收处置服务</h2>
-                <p>还我钱平台通过京宁征信大数据征信系统查询债务方的全方位信息，通过委托遍布全国的签约认证的优质律师事务所的专业催收律师进行精准催收，通过律师函催收、诉讼催收和法院强制执行催收步步为营，通过京宁征信平台进行全程舆论施压和失信公示，解决了债务催收中的信息不对称、成本高、周期长的问题，让债务催收变得方便快捷高效。</p>
-            </div>
-            <div class="col-sm-6 col-xs-12"> 
-                <div id="Stage" class="EDGE-40653199">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-xs-12"> 
-                <img src="images/map.png" class="img-responsive">
-            </div>
-            <div class="col-sm-6 col-xs-12"> 
-                <table class="table">
-                   <thead>
-                      <tr>
-                         <th>北京 刘女士 催收编号：12999885</th>
-                      </tr>
-                   </thead>
-                   <tbody>
-                      <tr>
-                         <td>债权金额 (万元)</td>
-                         <td>166</td>
-                      </tr>
-                      <tr>
-                         <td>回报</td>
-                         <td>10%</td>
-                      </tr>
-                      <tr>
-                         <td>逾期时间</td>
-                         <td>6个月</td>
-                      </tr>
-                      <tr>
-                         <td>代办律师</td>
-                         <td>王杨</td>
-                      </tr>
-                      <tr>
-                         <td>追回总额 (万元)</td>
-                         <td>166</td>
-                      </tr>
-                   </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row items">
-            <div class="col-xs-12"> 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td>催收编号</td>
-                            <td>创建时间</td>
-                            <td>催收地区</td>
-                            <td>催收金额 (万元)</td>
-                            <td>回报比例</td>
-                            <td>委托状态</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>125867779</td>
-                            <td>2016.06.01</td>
-                            <td>北京</td>
-                            <td>86779</td>
-                            <td>25%</td>
-                            <td>抢单中</td>
-                        </tr>
-                        <tr>
-                            <td>125867779<br /></td>
-                            <td>2016.06.02</td>
-                            <td>深圳</td>
-                            <td>86779</td>
-                            <td>10%</td>
-                            <td>抢单中</td>
-                        </tr>
-                        <tr>
-                            <td>125867779</td>
-                            <td>2016.06.03</td>
-                            <td>重庆</td>
-                            <td>86779</td>
-                            <td>5%</td>
-                            <td>抢单中</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row lawyers">
-            <div class="col-sm-10 col-sm-offset-1 text-center"> 
-                <h3>明星级专业律师催收团队，为您保驾护航</h3>
-                <p>通过委托遍布全国的签约认证的优质律师事务所的专业催收律师进行精准催收，通过律师函催收、诉讼催收和法院强制执行催收步步为营，通过京宁征信平台进行全国舆论压力和失信公示，解决了债务催收中的信息不对称、成本高、周期长的问题，让债务催收变得方便快捷高效。</p>
-                <ul  class="list-inline">
-                    <li>
-                        <a href="#">
-                            <img src="images/lawyer1.jpg" class="img-circle">
-                            <p>唐宁</p>
-                            <p>京宁律师事务所</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/lawyer2.jpg" class="img-circle">
-                            <p>王杨</p>
-                            <p>明星律师</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/lawyer3.jpg" class="img-circle">
-                            <p>July</p>
-                            <p>律师事务所主任</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/lawyer4.jpg" class="img-circle">
-                            <p>Alex</p>
-                            <p>明星律师</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/lawyer5.jpg" class="img-circle">
-                            <p>Coco</p>
-                            <p>明星律师</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>  
+
+<nav class="navbar navbar-jn" role="navigation">
+    <div class="container">
+        <div class="navbar-header"><img class="navbar-brand-jn" src="images/Logo.png" alt="LOGO"/> <a
+                class="navbar-brand-jn" href="#">还我
+            <div>钱</div>
+        </a></div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">债务中心</a></li>
+                <li><a href="#">发布债务</a></li>
+                <li><a href="#">债务催收</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-right-jn">
+                <li><a href="#">注册</a></li>
+                <li><a id='login-btn' class="btn btn-primary" href="#" role="button">登录</a></li>
+            </ul>
         </div>
     </div>
-    
+</nav>
+<div class="container" id="wrapper">
+
+    <div class="row banner">
+        <div id="myCarousel" class="carousel slide"> <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol> <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active"><img src="images/slide1.jpg" alt="First slide"></div>
+                <div class="item"><img src="images/slide2.jpg" alt="Second slide"></div>
+            </div> <!-- 轮播（Carousel）导航 --> <a class="carousel-control left" href="#myCarousel"
+                                              data-slide="prev">&lsaquo;</a> <a class="carousel-control right"
+                                                                                href="#myCarousel"
+                                                                                data-slide="next">&rsaquo;</a></div>
+    </div>
+
+    <div class="row stats">
+        <div class="col-sm-6 col-xs-12"><h2>一站式债务清收处置服务</h2>
+            <p id="intro">
+                还我钱平台通过京宁征信大数据征信系统查询债务方的全方位信息，通过委托遍布全国的签约认证的优质律师事务所的专业催收律师进行精准催收，通过律师函催收、诉讼催收和法院强制执行催收步步为营，通过京宁征信平台进行全程舆论施压和失信公示，解决了债务催收中的信息不对称、成本高、周期长的问题，让债务催收变得方便快捷高效。</p>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div id="Stage" class="EDGE-40653199"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12"><img src="images/map.png" class="img-responsive"></div>
+        <div class="col-sm-6 col-xs-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>北京 刘女士 催收编号：12999885</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>债权金额 (万元)</td>
+                    <td>166</td>
+                </tr>
+                <tr>
+                    <td>回报</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td>逾期时间</td>
+                    <td>6个月</td>
+                </tr>
+                <tr>
+                    <td>代办律师</td>
+                    <td>王杨</td>
+                </tr>
+                <tr>
+                    <td>追回总额 (万元)</td>
+                    <td>166</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row items">
+        <div class="col-xs-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>催收编号</td>
+                    <td>创建时间</td>
+                    <td>催收地区</td>
+                    <td>催收金额 (万元)</td>
+                    <td>回报比例</td>
+                    <td>委托状态</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>125867779</td>
+                    <td>2016.06.01</td>
+                    <td>北京</td>
+                    <td>86779</td>
+                    <td>25%</td>
+                    <td>抢单中</td>
+                </tr>
+                <tr>
+                    <td>125867779<br/></td>
+                    <td>2016.06.02</td>
+                    <td>深圳</td>
+                    <td>86779</td>
+                    <td>10%</td>
+                    <td>抢单中</td>
+                </tr>
+                <tr>
+                    <td>125867779</td>
+                    <td>2016.06.03</td>
+                    <td>重庆</td>
+                    <td>86779</td>
+                    <td>5%</td>
+                    <td>抢单中</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row lawyers">
+        <div class="col-sm-10 col-sm-offset-1 text-center">
+            <h3>明星级专业律师催收团队，为您保驾护航</h3>
+            <p>
+                通过委托遍布全国的签约认证的优质律师事务所的专业催收律师进行精准催收，通过律师函催收、诉讼催收和法院强制执行催收步步为营，通过京宁征信平台进行全国舆论压力和失信公示，解决了债务催收中的信息不对称、成本高、周期长的问题，让债务催收变得方便快捷高效。</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">
+                        <img src="images/lawyer1.jpg" class="img-circle">
+                        <p>唐宁</p>
+                        <p>京宁律师事务所</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lawyer2.jpg" class="img-circle">
+                        <p>王杨</p>
+                        <p>明星律师</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lawyer3.jpg" class="img-circle">
+                        <p>July</p>
+                        <p>律师事务所主任</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lawyer4.jpg" class="img-circle">
+                        <p>Alex</p>
+                        <p>明星律师</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lawyer5.jpg" class="img-circle">
+                        <p>Coco</p>
+                        <p>明星律师</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <footer>
         <ul class="list-inline text-center">
             <li><a href="#">关于我们</a></li>
@@ -213,12 +200,14 @@
             <li><a href="#">联系我们</a></li>
             <li><a href="#">友情链接</a></li>
         </ul>
-        <ul  class="list-inline text-center">
+        <ul class="list-inline text-center">
             <li>©2016 北京京宁征信股份有限公司</li>
             <li>京公网安备11010899384</li>
             <li>京ICP备16006015号</li>
         </ul>
     </footer>
-        
+</div>
+
+
 </body>
 </html>
