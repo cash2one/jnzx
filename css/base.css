@@ -16,7 +16,9 @@ body{
 .container>.navbar-collapse,
 .container-fluid>.navbar-collapse{
     margin-right: 20px;
-    margin-left: -15px;
+}
+.navbar-right{
+    margin-right: 0px;
 }
 
 .navbar-brand-jn {
@@ -26,6 +28,7 @@ body{
     font-size: 22px;
     line-height: 36px;
     color:#eee;
+    letter-spacing: 3px;
 }
 .navbar-brand-jn>span {
 	color: #1edb42;
