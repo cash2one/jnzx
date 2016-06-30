@@ -1,5 +1,5 @@
 body{
-    background: #bfbfbf;
+    background: #fff;
 }
 
 a {
@@ -42,7 +42,7 @@ a {
 .nav>li>a:hover, .nav>li>a:focus,.nav>.active,.nav>.active>a{
     text-decoration: none;
     background-color: #eee;
-    color:#2a6496;
+    color:#1fda46;
 }
 
 .navbar-right-jn #login-btn{
@@ -52,6 +52,12 @@ a {
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    border-width: 0px;
+}
+.navbar-right-jn #login-btn:hover,
+.navbar-right-jn #login-btn:focus{
+    color:#eee;
+    background-color: #00b600;
 }
 
 .navbar-right-jn{
