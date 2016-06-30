@@ -31,8 +31,7 @@
 <nav class="navbar navbar-jn" role="navigation">
     <div class="container">
         <div class="navbar-header"><img class="navbar-brand-jn" src="images/Logo.png" alt="LOGO"/> <a
-                class="navbar-brand-jn" href="#">还我
-            <div>钱</div>
+                class="navbar-brand-jn" href="#">还我<span>钱</span>
         </a></div>
         <div>
             <ul class="nav navbar-nav">
@@ -75,7 +74,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row china-map">
         <div class="col-sm-6 col-xs-12">
             <!--<img src="images/map.png" class="img-responsive">-->
             <span id="china-map">
@@ -83,35 +82,37 @@
             </span>
         </div>
         <div class="col-sm-6 col-xs-12">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>北京 刘女士 催收编号：12999885</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>债权金额 (万元)</td>
-                    <td>166</td>
-                </tr>
-                <tr>
-                    <td>回报</td>
-                    <td>10%</td>
-                </tr>
-                <tr>
-                    <td>逾期时间</td>
-                    <td>6个月</td>
-                </tr>
-                <tr>
-                    <td>代办律师</td>
-                    <td>王杨</td>
-                </tr>
-                <tr>
-                    <td>追回总额 (万元)</td>
-                    <td>166</td>
-                </tr>
-                </tbody>
-            </table>
+            <div id="map-info">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>北京 刘女士 催收编号：12999001</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="items-odd">
+                        <td>债权金额 (万元)</td>
+                        <td>166</td>
+                    </tr>
+                    <tr class="items-even">
+                        <td>回报</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr class="items-odd">
+                        <td>逾期时间</td>
+                        <td>6个月</td>
+                    </tr>
+                    <tr class="items-even">
+                        <td>代办律师</td>
+                        <td>王杨</td>
+                    </tr>
+                    <tr class="items-final">
+                        <td>追回总额 (万元)</td>
+                        <td>166</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -155,6 +156,7 @@
                 </tr>
                 </tbody>
             </table>
+            <a id='item-btn' class="btn btn-primary" href="#" role="button">查看更多债券</a>
         </div>
     </div>
 
@@ -204,20 +206,20 @@
     </div>
     <footer>
         <div class="ft-bright">
-          <ul class="list-inline text-center contact">
-              <li><a href="#">关于我们</a></li>
-              <li><a href="#">用户协议</a></li>
-              <li><a href="#">增值服务</a></li>
-              <li><a href="#">异议处理</a></li>
-              <li><a href="#">联系我们</a></li>
-              <li><a href="#">友情链接</a></li>
-          </ul>
-          <ul  class="list-inline text-center copyright">
-              <li>©2016 北京京宁征信股份有限公司</li>
-              <li>京公网安备11010899384</li>
-              <li>京ICP备16006015号</li>
-          </ul>
-        <div>
+            <ul class="list-inline text-center contact">
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">用户协议</a></li>
+                <li><a href="#">增值服务</a></li>
+                <li><a href="#">异议处理</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">友情链接</a></li>
+            </ul>
+            <ul class="list-inline text-center copyright">
+                <li>©2016 北京京宁征信股份有限公司</li>
+                <li>京公网安备11010899384</li>
+                <li>京ICP备16006015号</li>
+            </ul>
+            <div>
     </footer>
 </div>
 
