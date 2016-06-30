@@ -85,3 +85,40 @@ a {
         background: blue;
     }
 }
+
+/*底部样式*/
+.ft-bright,
+.ft-dark{
+    min-height:80px;
+}
+.ft-bright{
+    background-color:#fff;
+    color:#333;
+}
+.ft-dark{
+    background-color:#292a34;
+    color:#eee;
+}
+.ft-dark li:first-child,
+.ft-bright li:first-child{
+    border-left: 0px;
+}
+.ft-bright li{
+    border-left: 1px solid #333;
+}
+.ft-dark li{
+    border-left: 1px solid #eee;
+}
+
+.contact{
+    padding-top: 20px;
+}
+.ft-bright>.contact a{
+    color:#333;
+}
+.ft-dark>.contact a{
+    color:#eee;
+}
+.copyright{
+    font-size: 10px;
+}
