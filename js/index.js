@@ -56,10 +56,10 @@ function showMapD3() {
             .on("mouseover", function (d) {
                 //1.change point size and color
                 d3.selectAll("circle").each(function (d, i) {
-                    d3.select(this).transition().duration(800).style({'fill': "white","r":"4px"});
+                    d3.select(this).transition().duration(1000).ease("elastic").style({'fill': "white","r":"4px"});
                 });
-                d3.select(this).transition().duration(800)
-                    .style({'fill': "red","r":"8px"});
+                d3.select(this).transition().duration(1000).ease("elastic")
+                    .style({'fill': "#3fe265","r":"10px"});
 
                 //2.change table content
                 refreshTable(d);
@@ -73,7 +73,7 @@ function showMapD3() {
         //initialize the first node
         d3.selectAll("circle").each(function (d, i) {
             if (d['id']=="12999001") {
-                d3.select(this).style({'fill': "red","r":"8px"});
+                d3.select(this).style({'fill': "#3fe265","r":"10px"});
             }
         });
 
