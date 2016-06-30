@@ -47,6 +47,7 @@
         </div>
     </div>
 </nav>
+
 <div id="myCarousel" class="carousel slide"> <!-- 轮播（Carousel）指标 -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -60,9 +61,10 @@
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
-<div class="container" id="wrapper">
+
+<div class="container">
     <div class="row stats">
-        <div class="col-sm-6 col-xs-12"><h2>一站式债务清收处置服务</h2>
+        <div class="col-sm-6 col-xs-12"><h3>一站式债务清收处置服务</h3>
             <p id="intro">
                 还我钱平台通过京宁征信大数据征信系统查询债务方的全方位信息，通过委托遍布全国的签约认证的优质律师事务所的专业催收律师进行精准催收，通过律师函催收、诉讼催收和法院强制执行催收步步为营，通过京宁征信平台进行全程舆论施压和失信公示，解决了债务催收中的信息不对称、成本高、周期长的问题，让债务催收变得方便快捷高效。</p>
         </div>
@@ -70,49 +72,54 @@
             <div id="Stage" class="EDGE-40653199"></div>
         </div>
     </div>
+</div>
+<div class="china-map stripe">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <!--<img src="images/map.png" class="img-responsive">-->
+                <span id="china-map">
 
-    <div class="row china-map">
-        <div class="col-sm-6 col-xs-12">
-            <!--<img src="images/map.png" class="img-responsive">-->
-            <span id="china-map">
-
-            </span>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-            <div id="map-info">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>北京 刘女士 催收编号：12999001</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="items-odd">
-                        <td>债权金额 (万元)</td>
-                        <td>166</td>
-                    </tr>
-                    <tr class="items-even">
-                        <td>回报</td>
-                        <td>10%</td>
-                    </tr>
-                    <tr class="items-odd">
-                        <td>逾期时间</td>
-                        <td>6个月</td>
-                    </tr>
-                    <tr class="items-even">
-                        <td>代办律师</td>
-                        <td>王杨</td>
-                    </tr>
-                    <tr class="items-final">
-                        <td>追回总额 (万元)</td>
-                        <td>166</td>
-                    </tr>
-                    </tbody>
-                </table>
+                </span>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div id="map-info">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>北京 刘女士 催收编号：12999001</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="items-odd">
+                            <td>债权金额 (万元)</td>
+                            <td>166</td>
+                        </tr>
+                        <tr class="items-even">
+                            <td>回报</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr class="items-odd">
+                            <td>逾期时间</td>
+                            <td>6个月</td>
+                        </tr>
+                        <tr class="items-even">
+                            <td>代办律师</td>
+                            <td>王杨</td>
+                        </tr>
+                        <tr class="items-final">
+                            <td>追回总额 (万元)</td>
+                            <td>166</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
+<div class="container">
     <div class="row items">
         <div class="col-xs-12">
             <table class="table">
@@ -152,13 +159,21 @@
                     <td>抢单中</td>
                 </tr>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <a id='item-btn' class="btn btn-primary" href="#" role="button">查看更多债券</a>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
-            <a id='item-btn' class="btn btn-primary" href="#" role="button">查看更多债券</a>
+            
         </div>
     </div>
-
-    <div class="row lawyers">
-        <div class="col-sm-10 col-sm-offset-1 text-center">
+</div>
+<div class="stripe">
+    <div class="container">
+        <div class="row lawyers text-center">
             <h3>明星级专业律师催收团队，为您保驾护航</h3>
             <p>
                 通过委托遍布全国的签约认证的优质律师事务所的专业催收律师进行精准催收，通过律师函催收、诉讼催收和法院强制执行催收步步为营，通过京宁征信平台进行全国舆论压力和失信公示，解决了债务催收中的信息不对称、成本高、周期长的问题，让债务催收变得方便快捷高效。</p>
@@ -199,27 +214,25 @@
                     </a>
                 </li>
             </ul>
+            <a id='lawyer-btn' class="btn btn-primary" href="#" role="button">查看更多成员</a>
         </div>
     </div>
-    <footer>
-        <div class="ft-bright">
-            <ul class="list-inline text-center contact">
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">用户协议</a></li>
-                <li><a href="#">增值服务</a></li>
-                <li><a href="#">异议处理</a></li>
-                <li><a href="#">联系我们</a></li>
-                <li><a href="#">友情链接</a></li>
-            </ul>
-            <ul class="list-inline text-center copyright">
-                <li>©2016 北京京宁征信股份有限公司</li>
-                <li>京公网安备11010899384</li>
-                <li>京ICP备16006015号</li>
-            </ul>
-            <div>
-    </footer>
 </div>
-
+<footer class="ft-bright">
+    <ul class="list-inline text-center contact">
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">用户协议</a></li>
+        <li><a href="#">增值服务</a></li>
+        <li><a href="#">异议处理</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">友情链接</a></li>
+    </ul>
+    <ul class="list-inline text-center copyright">
+        <li>©2016 北京京宁征信股份有限公司</li>
+        <li>京公网安备11010899384</li>
+        <li>京ICP备16006015号</li>
+    </ul>
+</footer>
 
 </body>
 </html>

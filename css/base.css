@@ -1,11 +1,10 @@
 body{
     background: #fff;
-}
-
-a {
+    font-size: 14px;
     font-family: "Open Sans","Helvetica Neue",Helvetica,"Segoe UI","Segoe WP","Microsoft YaHei";
     -webkit-font-smoothing: antialiased;
 }
+/*navigation bar*/
 .navbar-jn {
     background-color: #292a34;
     border-radius: 0px;
@@ -45,6 +44,9 @@ a {
     color:#1fda46;
 }
 
+.btn{   
+    border-width: 0px;
+}
 .navbar-right-jn #login-btn{
     background: #1fda46;
     margin-top: 10px;
@@ -52,7 +54,6 @@ a {
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    border-width: 0px;
 }
 .navbar-right-jn #login-btn:hover,
 .navbar-right-jn #login-btn:focus{
@@ -64,10 +65,6 @@ a {
     vertical-align: middle;
 }
 
-#wrapper{
-    background: white;
-}
-
 .stats{
     height: 410px;
     display: table-cell;
@@ -75,17 +72,21 @@ a {
 }
 
 .stats #intro{
-    font-size: 16px;
     line-height: 2;
 }
 
 /*China map area*/
-.china-map{
+.stripe{
     background-color: #dbeded;
 }
 
+#map-info{
+    padding: 100px 0px;
+}
 #map-info table{
     background-color: white;
+    max-width: 340px;
+    margin:auto;
 }
 
 #map-info .items-even{
@@ -96,23 +97,73 @@ a {
     background-color: #00cccd;
 }
 
-/*zhaiquan list*/
+/*debt list*/
 .items{
-    min-height: 450px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 
 .items #item-btn{
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 120px;
+    padding-right: 120px;
     background-color: #00cccd;
+    margin-top: 25px;
 }
 
+.items thead{
+    font-size:16px;
+    font-weight: bold;
+}
 
+.items .table>thead>tr>th,
+.items .table>tbody>tr>th,
+.items .table>tfoot>tr>th,
+.items .table>thead>tr>td,
+.items .table>tbody>tr>td,
+.items .table>tfoot>tr>td {
+    padding: 25px;
+    vertical-align: middle;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/*lawyers info*/
 .lawyers{
-    background-color: #e9f1f1;
+    padding-top:45px;
     min-height: 480px;
 }
+.lawyers>h3{
+    margin-bottom: 20px;
+}
+.lawyers>p{
+    margin-bottom: 45px;
+}
+.lawyers>ul a{
+    color: #333;
+    text-decoration: none;
+}
+.lawyers>ul>li{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.img-circle + p+p{
+    font-size:12px;
+}
+.img-circle + p{
+    margin-top: 14px;
+    font-size: 16px;
+}
+#lawyer-btn{
+    padding-left: 120px;
+    padding-right: 120px;
+    background-color: transparent;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border:1px solid #777;
+    color:#777;
+}
+
 
 /*IE6-IE8 respond*/
 @media screen and (max-width: 480px){
@@ -121,7 +172,7 @@ a {
     }
 }
 
-/*底部样式*/
+/*footer*/
 .ft-bright,
 .ft-dark{
     min-height:80px;
@@ -146,7 +197,7 @@ a {
 }
 
 .contact{
-    padding-top: 20px;
+    padding-top: 25px;
 }
 .ft-bright>.contact a{
     color:#333;
