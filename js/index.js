@@ -3,6 +3,8 @@
  * China map visualization
  */
 var city;
+var timeIdx = 0;
+var timeInter;
 
 $(document).ready(function () {
     d3.json("media/city.json", function (error, mcity){
@@ -54,6 +56,8 @@ function showMapD3() {
             .attr("r", "4px")
             .attr("fill", "white")
             .on("mouseover", function (d) {
+                clearInterval(timeInter);
+
                 //1.change point size and color
                 d3.selectAll("circle").each(function (d, i) {
                     d3.select(this).transition().duration(1000).ease("elastic").style({'fill': "white","r":"4px"});
@@ -66,8 +70,11 @@ function showMapD3() {
             })
             .on("mouseout", function (d) {
                 //1.change point size and color
-                // d3.select(this).transition().duration(800)
-                //     .style({'fill': "white", "r": "4px"});
+                d3.select(this).transition().duration(1000)
+                    .style({'fill': "white", "r": "4px"});
+
+                //set timer
+                timeInter = setInterval(showMapNode,3000);
             });
 
         //initialize the first node
@@ -77,8 +84,29 @@ function showMapD3() {
             }
         });
 
+        //set timer
+        timeInter = setInterval(showMapNode,3000);
+
     });
 
+}
+
+function showMapNode(){
+    var cityLen = city.length;
+    if(cityLen > 0) {
+        d3.selectAll("circle").each(function (d, i) {
+            if (i==timeIdx) {
+                d3.select(this).transition().duration(1000).style({'fill': "white","r":"4px"});
+            }
+        });
+        timeIdx = (timeIdx + 1) % cityLen;
+        d3.selectAll("circle").each(function (d, i) {
+            if (i==timeIdx) {
+                d3.select(this).transition().duration(1000).style({'fill': "#3fe265","r":"10px"});
+                refreshTable(d);
+            }
+        });
+    }
 }
 
 //change table content
