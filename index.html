@@ -9,6 +9,7 @@
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script> <!--normalize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <link href="css/base.css" rel="stylesheet">
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> <![endif]-->
@@ -18,6 +19,11 @@
     <style> .edgeLoad-EDGE-40653199 {
         visibility: hidden;
     } </style> <!--Adobe Edge Runtime End-->
+
+    <script src="http://apps.bdimg.com/libs/d3/3.4.8/d3.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/echarts/2.1.9/source/chart/map.js"></script>
+    <script src="js/index.js"></script>
+
 </head>
 
 <body>
@@ -70,7 +76,12 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-6 col-xs-12"><img src="images/map.png" class="img-responsive"></div>
+        <div class="col-sm-6 col-xs-12">
+            <!--<img src="images/map.png" class="img-responsive">-->
+            <span id="china-map">
+
+            </span>
+        </div>
         <div class="col-sm-6 col-xs-12">
             <table class="table">
                 <thead>
