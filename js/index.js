@@ -108,67 +108,50 @@ $(document).ready(function () {
         , anchor:   'middle'
         , leading:  '1.5em'
     })
-
-    circle1.animate(1500, '>', 1000).attr({ r: '100' })
-    circle2.animate(1500, '>', 1000).attr({ r: '100' })
-    circle3.animate(1500, '>', 1000).attr({ r: '100' })
     
     var sh1;
     var time1=50;
     var ni1=new SVG.Number('1088')
-    function rise1()
-    {   
-        ni1=ni1.plus('3356')
-        num1.text(ni1.toString())
-        time1=time1-1
-        if (time1<=0) {
-            clearInterval(sh1)
-        };
-    }
-    function delay1(){
-        sh1=setInterval("rise1()",30);
-    }
-    
 
     var sh2;
     var time2=50;
     var ni2=new SVG.Number('18')
-    function rise2()
-    {   
-        ni2=ni2.plus('3')
-        num2.text(ni2.toString()+"亿")
-        time2=time2-1
-        if (time2<=0) {
-            clearInterval(sh2)
-        };
-    }
-    function delay2(){
-        sh2=setInterval("rise2()",30);
-    }
     
-
     var sh3;
     var time3=50;
     var ni3=new SVG.Number('48%')
-    function rise3()
-    {   
-        ni3=ni3.plus('1%')
-        num3.text(ni3.toString())
-        time3=time3-1
-        if (time3<=0) {
-            clearInterval(sh3)
-        };
-    }
+    
     function delay3(){
         sh3=setInterval("rise3()",30);
     }
     var flag=0
     $( window ).scroll(function() {
         var x=$(document).scrollTop()
-        if ($(document).scrollTop()>500 && flag==0) {
-            setTimeout("delay1()",1000)
-            setTimeout("delay2()",1000)
-            setTimeout("delay3()",1000)
+        if ($(document).scrollTop()>300 && flag==0) {
+            circle1.animate(1500, '>', 100).attr({ r: '100' })
+            circle2.animate(1500, '>', 100).attr({ r: '100' })
+            circle3.animate(1500, '>', 100).attr({ r: '100' })
+            sh1=setInterval(function(){ni1=ni1.plus('3356');
+                                            num1.text(ni1.toString());
+                                            time1=time1-1;
+                                            if (time1<=0) {
+                                                clearInterval(sh1);
+                                            };
+                                        },30);
+            sh2=setInterval(function(){ni2=ni2.plus('3');
+                                            num2.text(ni2.toString()+"亿");
+                                            time2=time2-1;
+                                            if (time2<=0) {
+                                                clearInterval(sh2);
+                                            };
+                                        },30);
+            sh3=setInterval(function(){ni3=ni3.plus('1%');
+                                            num3.text(ni3.toString());
+                                            time3=time3-1;
+                                            if (time3<=0) {
+                                                clearInterval(sh3);
+                                            };
+                                        },30);
             flag=1
         };
     });           
