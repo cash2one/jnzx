@@ -28,6 +28,151 @@ $(document).ready(function () {
         showMapD3();  //when get city info, we plot China map
     });
 
+    var draw = SVG('drawing').size(520, 320)
+    var circle1 = draw.circle(150).attr({
+        cx:103
+        ,cy:137
+        ,fill: '#54555d'
+        , 'fill-opacity': 0.8
+    })
+    var circle2 = draw.circle(130).attr({
+        cx:261
+        ,cy:216
+        ,fill: '#4ce16b'
+        , 'fill-opacity': 0.8
+    })
+    var circle3 = draw.circle(100).attr({
+        cx:403
+        ,cy:110
+        ,fill: '#33d6d7'
+        , 'fill-opacity': 0.8
+    })
+    var text1 = draw.text("案件数量").attr({
+        x:103
+        ,y:142
+        ,fill:'#eee'
+    }).font({
+          family:   'Microsoft YaHei'
+        , size:     18
+        , anchor:   'middle'
+        , leading:  '1.5em'
+    })
+    var text2 = draw.text("债务总额").attr({
+        x:261
+        ,y:221
+        ,fill:'#eee'
+    }).font({
+          family:   'Microsoft YaHei'
+        , size:     18
+        , anchor:   'middle'
+        , leading:  '1.5em'
+    })
+    var text3 = draw.text("催收率").attr({
+        x:403
+        ,y:115
+        ,fill:'#eee'
+    }).font({
+          family:   'Microsoft YaHei'
+        , size:     18
+        , anchor:   'middle'
+        , leading:  '1.5em'
+    })
+    
+    var num1=draw.text("1088").attr({
+        x:103
+        ,y:77
+        ,fill:'#eee'
+    }).font({
+          family:   'Microsoft YaHei'
+        , size:     38
+        , anchor:   'middle'
+        , leading:  '1.5em'
+    })
+    var num2=draw.text("18亿").attr({
+        x:261
+        ,y:156
+        ,fill:'#eee'
+    }).font({
+          family:   'Microsoft YaHei'
+        , size:     38
+        , anchor:   'middle'
+        , leading:  '1.5em'
+    })
+    var num3=draw.text("48%").attr({
+        x:403
+        ,y:60
+        ,fill:'#eee'
+    }).font({
+          family:   'Microsoft YaHei'
+        , size:     38
+        , anchor:   'middle'
+        , leading:  '1.5em'
+    })
+
+    circle1.animate(1500, '>', 1000).attr({ r: '100' })
+    circle2.animate(1500, '>', 1000).attr({ r: '100' })
+    circle3.animate(1500, '>', 1000).attr({ r: '100' })
+    
+    var sh1;
+    var time1=50;
+    var ni1=new SVG.Number('1088')
+    function rise1()
+    {   
+        ni1=ni1.plus('3356')
+        num1.text(ni1.toString())
+        time1=time1-1
+        if (time1<=0) {
+            clearInterval(sh1)
+        };
+    }
+    function delay1(){
+        sh1=setInterval("rise1()",30);
+    }
+    
+
+    var sh2;
+    var time2=50;
+    var ni2=new SVG.Number('18')
+    function rise2()
+    {   
+        ni2=ni2.plus('3')
+        num2.text(ni2.toString()+"亿")
+        time2=time2-1
+        if (time2<=0) {
+            clearInterval(sh2)
+        };
+    }
+    function delay2(){
+        sh2=setInterval("rise2()",30);
+    }
+    
+
+    var sh3;
+    var time3=50;
+    var ni3=new SVG.Number('48%')
+    function rise3()
+    {   
+        ni3=ni3.plus('1%')
+        num3.text(ni3.toString())
+        time3=time3-1
+        if (time3<=0) {
+            clearInterval(sh3)
+        };
+    }
+    function delay3(){
+        sh3=setInterval("rise3()",30);
+    }
+    var flag=0
+    $( window ).scroll(function() {
+        var x=$(document).scrollTop()
+        if ($(document).scrollTop()>500 && flag==0) {
+            setTimeout("delay1()",1000)
+            setTimeout("delay2()",1000)
+            setTimeout("delay3()",1000)
+            flag=1
+        };
+    });           
+
 });
 
 //option1: visualize China map with D3.js
