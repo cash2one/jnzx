@@ -4,6 +4,34 @@ body{
     font-family: "Open Sans","Helvetica Neue",Helvetica,"Segoe UI","Segoe WP","Microsoft YaHei";
     -webkit-font-smoothing: antialiased;
 }
+.btn{   
+    border-width: 0px;
+}
+.btn-long{
+    padding: 12px 0px;
+    width: 310px;
+    background-color: #00cccd;
+    color:#eee;
+    font-size: 15px;
+}
+.btn-long:hover,
+.btn-long:focus,
+.btn-long.focus {
+    color: #eee;
+    text-decoration: none;
+}
+.btn-trans{
+    border: 1px solid #00cccd;
+    background-color: transparent;
+    color: #00cccd;
+}
+.btn-trans:hover,
+.btn-trans:focus,
+.btn-trans.focus {
+    color: #00cccd;
+    text-decoration: none;
+}
+
 /*navigation bar*/
 .navbar-jn {
     background-color: #292a34;
@@ -47,9 +75,7 @@ body{
     color:#1fda46;
 }
 
-.btn{   
-    border-width: 0px;
-}
+
 .navbar-right-jn #login-btn{
     background: #1fda46;
     margin-top: 10px;
@@ -68,6 +94,28 @@ body{
     vertical-align: middle;
 }
 
+/*Carsousel*/
+#myCarousel>div:first-child{
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+    width:75%;
+    margin-left: -37.5%;
+    z-index: 50;
+}
+#myCarousel h1{
+    color:#eee;
+    line-height: 200%;
+    font-style: italic;
+    letter-spacing: 3px;
+    margin-bottom: 5%;
+}
+#myCarousel .btn-long{
+    margin:5px 15px;
+}
+
+/*Stats Data*/
 .stats{
     height: 410px;
     display: table-cell;
@@ -108,9 +156,6 @@ body{
 
 
 .items #item-btn{
-    padding-left: 120px;
-    padding-right: 120px;
-    background-color: #00cccd;
     margin-top: 25px;
 }
 
@@ -163,8 +208,6 @@ body{
     font-size: 16px;
 }
 #lawyer-btn{
-    padding-left: 120px;
-    padding-right: 120px;
     background-color: transparent;
     margin-top: 25px;
     margin-bottom: 50px;
