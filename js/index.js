@@ -8,26 +8,20 @@ var timeInter;
 
 $(document).ready(function () {
     /*update nav bar*/
-    var position = window.location.pathname;
-    var dot1 = position.indexOf('.')
-    if (dot1 < 0) {  //home
-        $('#index').addClass('active');
-    } else {
-        //index.html or other
-        var slash1 = position.lastIndexOf('/');
-        if (slash1 < 0) {  // impossible
-            $('#index').addClass('active');
-        } else {
-            var posName = position.substring(slash1+1,dot1);
-            $('#' + posName).addClass('active');
-        }
-    }
+    updateNav();
+
+    //three circle
+    showCircle();
 
     d3.json("media/city.json", function (error, mcity) {
         city = mcity;
         showMapD3();  //when get city info, we plot China map
     });
 
+
+});
+
+function showCircle(){
     var draw = SVG('drawing').size(520, 320)
     var circle1 = draw.circle(150).attr({
         cx:103
@@ -52,7 +46,7 @@ $(document).ready(function () {
         ,y:142
         ,fill:'#eee'
     }).font({
-          family:   'Microsoft YaHei'
+        family:   'Microsoft YaHei'
         , size:     18
         , anchor:   'middle'
         , leading:  '1.5em'
@@ -62,7 +56,7 @@ $(document).ready(function () {
         ,y:221
         ,fill:'#eee'
     }).font({
-          family:   'Microsoft YaHei'
+        family:   'Microsoft YaHei'
         , size:     18
         , anchor:   'middle'
         , leading:  '1.5em'
@@ -72,18 +66,18 @@ $(document).ready(function () {
         ,y:115
         ,fill:'#eee'
     }).font({
-          family:   'Microsoft YaHei'
+        family:   'Microsoft YaHei'
         , size:     18
         , anchor:   'middle'
         , leading:  '1.5em'
     })
-    
+
     var num1=draw.text("1088").attr({
         x:103
         ,y:77
         ,fill:'#eee'
     }).font({
-          family:   'Microsoft YaHei'
+        family:   'Microsoft YaHei'
         , size:     38
         , anchor:   'middle'
         , leading:  '1.5em'
@@ -93,7 +87,7 @@ $(document).ready(function () {
         ,y:156
         ,fill:'#eee'
     }).font({
-          family:   'Microsoft YaHei'
+        family:   'Microsoft YaHei'
         , size:     38
         , anchor:   'middle'
         , leading:  '1.5em'
@@ -103,12 +97,12 @@ $(document).ready(function () {
         ,y:60
         ,fill:'#eee'
     }).font({
-          family:   'Microsoft YaHei'
+        family:   'Microsoft YaHei'
         , size:     38
         , anchor:   'middle'
         , leading:  '1.5em'
     })
-    
+
     var sh1;
     var time1=50;
     var ni1=new SVG.Number('1088')
@@ -116,11 +110,11 @@ $(document).ready(function () {
     var sh2;
     var time2=50;
     var ni2=new SVG.Number('18')
-    
+
     var sh3;
     var time3=50;
     var ni3=new SVG.Number('48%')
-    
+
     function delay3(){
         sh3=setInterval("rise3()",30);
     }
@@ -132,31 +126,48 @@ $(document).ready(function () {
             circle2.animate(1500, '>', 100).attr({ r: '100' })
             circle3.animate(1500, '>', 100).attr({ r: '100' })
             sh1=setInterval(function(){ni1=ni1.plus('3356');
-                                            num1.text(ni1.toString());
-                                            time1=time1-1;
-                                            if (time1<=0) {
-                                                clearInterval(sh1);
-                                            };
-                                        },30);
+                num1.text(ni1.toString());
+                time1=time1-1;
+                if (time1<=0) {
+                    clearInterval(sh1);
+                };
+            },30);
             sh2=setInterval(function(){ni2=ni2.plus('3');
-                                            num2.text(ni2.toString()+"亿");
-                                            time2=time2-1;
-                                            if (time2<=0) {
-                                                clearInterval(sh2);
-                                            };
-                                        },30);
+                num2.text(ni2.toString()+"亿");
+                time2=time2-1;
+                if (time2<=0) {
+                    clearInterval(sh2);
+                };
+            },30);
             sh3=setInterval(function(){ni3=ni3.plus('1%');
-                                            num3.text(ni3.toString());
-                                            time3=time3-1;
-                                            if (time3<=0) {
-                                                clearInterval(sh3);
-                                            };
-                                        },30);
+                num3.text(ni3.toString());
+                time3=time3-1;
+                if (time3<=0) {
+                    clearInterval(sh3);
+                };
+            },30);
             flag=1
         };
-    });           
+    });
+}
 
-});
+//update nav bar based on current url address
+function updateNav(){
+    var position = window.location.pathname;
+    var dot1 = position.indexOf('.')
+    if (dot1 < 0) {  //home
+        $('#index').addClass('active');
+    } else {
+        //index.html or other
+        var slash1 = position.lastIndexOf('/');
+        if (slash1 < 0) {  // impossible
+            $('#index').addClass('active');
+        } else {
+            var posName = position.substring(slash1+1,dot1);
+            $('#' + posName).addClass('active');
+        }
+    }
+}
 
 //option1: visualize China map with D3.js
 function showMapD3() {
@@ -165,10 +176,9 @@ function showMapD3() {
     var svg = d3.select("#china-map").append("svg")
         .attr("width", width)
         .attr("height", height)
+        .attr("id","map-svg")
         .attr("preserveAspectRatio", "xMidYMid")
         .attr("viewBox", "0 0 " + width + " " + height);
-
-    var tooltip = d3.select("#map-info");
 
     var proj = d3.geo.mercator().center([105, 38]).scale(400).translate([width / 2, height / 2]);
     var path = d3.geo.path().projection(proj);
@@ -203,7 +213,7 @@ function showMapD3() {
                 clearInterval(timeInter);
 
                 //1.change point size and color
-                d3.selectAll("circle").each(function (d, i) {
+                svg.selectAll("circle").each(function (d, i) {
                     d3.select(this).transition().duration(1000).ease("elastic").style({'fill': "white", "r": "4px"});
                 });
                 d3.select(this).transition().duration(1000).ease("elastic")
@@ -222,7 +232,7 @@ function showMapD3() {
             });
 
         //initialize the first node
-        d3.selectAll("circle").each(function (d, i) {
+        svg.selectAll("circle").each(function (d, i) {
             if (d['id'] == "12999001") {
                 d3.select(this).style({'fill': "#3fe265", "r": "10px"});
             }
@@ -230,21 +240,19 @@ function showMapD3() {
 
         //set timer
         timeInter = setInterval(showMapNode, 3000);
-
     });
-
 }
 
 function showMapNode() {
     var cityLen = city.length;
     if (cityLen > 0) {
-        d3.selectAll("circle").each(function (d, i) {
+        d3.select("#map-svg").selectAll("circle").each(function (d, i) {
             if (i == timeIdx) {
                 d3.select(this).transition().duration(1000).style({'fill': "white", "r": "4px"});
             }
         });
         timeIdx = (timeIdx + 1) % cityLen;
-        d3.selectAll("circle").each(function (d, i) {
+        d3.select("#map-svg").selectAll("circle").each(function (d, i) {
             if (i == timeIdx) {
                 d3.select(this).transition().duration(1000).style({'fill': "#3fe265", "r": "10px"});
                 refreshTable(d);
@@ -255,20 +263,13 @@ function showMapNode() {
 
 //change table content
 function refreshTable(data) {
-
     var htmlContent = '<table class="table"><thead><tr><th>' + data["city"] + ' ' + data["client"] + ' ' + '催收编号：' + data["id"] + '</th></tr></thead><tbody>';
-    htmlContent += '<tr class="items-odd"><td>债权金额(万元)</td><td>' + data['money']
+    htmlContent += '<tr class="items-odd"><td>债权金额 (万元)</td><td>' + data['money']
         + '</td></tr><tr class="items-even"><td>回报</td><td>' + data['return']
         + '</td></tr><tr class="items-odd"><td>逾期时间</td><td>' + data['due']
         + '</td></tr><tr class="items-even"><td>代办律师</td><td>' + data['lawyer']
-        + '</td></tr><tr class="items-final"><td>追回总额(万元)</td><td>' + data['moneyGet']
+        + '</td></tr><tr class="items-final"><td>追回总额 (万元)</td><td>' + data['moneyGet']
         + '</td></tr></tbody></table>';
 
     $("#map-info").html(htmlContent);
-
-}
-
-//option2: visualize China map with echarts
-function showMapEcharts() {
-
 }
