@@ -16,18 +16,35 @@
 }
 
 .cityName{
-    line-height: 2;
+    line-height: 34px;
     color: #d4d6d6;
+    float:left;
+    padding-right: 20px
+}
+
+.form-control{
+	float: left;
+	width:auto;
 }
 
 .debtcenter-nav{
     background-color: #f3f7f8;
 }
 
-.debtcenter-nav >li>a{
+.debtcenter-nav>li{
+    display: inline-block;
+}
+
+.debtcenter-nav>li>a,
+.debtcenter-nav>li>a:hover,
+.debtcenter-nav>li>a:focus,
+.debtcenter-nav>.active,
+.debtcenter-nav>.active>a{
     color: black;
     font-weight: normal;
     border: 0px solid #ddd;
+    background-color: #f3f7f8;
+    text-decoration: none;
 }
 
 .debtcenter-nav >li.active>a,.debtcenter-nav >li.active>a:hover{
@@ -36,30 +53,4 @@
     border: 0px solid #ddd;
     border-bottom: 2px solid #00cccd;
     background-color: #f3f7f8;
-}
-
-
-/*footer new style*/
-.ft-debt{
-    background-color: #292a34;
-    color: white;
-}
-
-.ft-debt>.contact a{
-    color: white;
-}
-.ft-debt>.contact a{
-    color: white;
-}
-
-.ft-debt li:first-child{
-    border-left: 0px;
-}
-
-.ft-debt li{
-    border-left: 1px solid white;
-}
-
-.ft-debt .copyright {
-    color: #b4bdc1;
 }
