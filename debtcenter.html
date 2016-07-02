@@ -8,7 +8,7 @@
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script> <!--normalize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">-->
     <link href="css/base.css" rel="stylesheet">
     <link href="css/debt.css" rel="stylesheet">
 
@@ -17,13 +17,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> <![endif]-->
     <!--<script src="js/respond.min.js"></script>--> <!--<script src="js/html5shiv.js"></script>-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/> <!--Adobe Edge Runtime-->
-    <script type="text/javascript" charset="utf-8" src="js/statsanimate_edgePreload.js"></script>
-    <style> .edgeLoad-EDGE-40653199 {
-        visibility: hidden;
-    } </style> <!--Adobe Edge Runtime End-->
 
     <script src="http://apps.bdimg.com/libs/d3/3.4.8/d3.min.js"></script>
-    <script src="http://apps.bdimg.com/libs/echarts/2.1.9/source/chart/map.js"></script>
     <script src="js/index.js"></script>
 
 </head>
@@ -50,74 +45,19 @@
     </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide"> <!-- 轮播（Carousel）指标 -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div>
+        <h1>网罗不良资产，汇聚处置机构<br>互联网+征信大数据平台+专业明星律师团队+不良资产</h1>
+    </div>
+    <!-- 轮播（Carousel）指标 -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol> <!-- 轮播（Carousel）项目 -->
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner">
-        <div class="item active"><img src="images/slide1.jpg" alt="First slide"></div>
-        <div class="item"><img src="images/slide2.jpg" alt="Second slide"></div>
-    </div> 
-    <!-- 轮播（Carousel）导航 -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div>
-
-<div class="container">
-    <div class="row stats">
-        <div class="col-sm-6 col-xs-12"><h3>一站式债务清收处置服务</h3>
-            <p id="intro">
-                还我钱平台通过京宁征信大数据征信系统查询债务方的全方位信息，通过委托遍布全国的签约认证的优质律师事务所的专业催收律师进行精准催收，通过律师函催收、诉讼催收和法院强制执行催收步步为营，通过京宁征信平台进行全程舆论施压和失信公示，解决了债务催收中的信息不对称、成本高、周期长的问题，让债务催收变得方便快捷高效。</p>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-            <div id="Stage" class="EDGE-40653199"></div>
-        </div>
-    </div>
-</div>
-<div class="china-map stripe">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-xs-12">
-                <!--<img src="images/map.png" class="img-responsive">-->
-                <span id="china-map">
-
-                </span>
-            </div>
-            <div class="col-md-6 col-xs-12">
-                <div id="map-info">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>北京 刘女士 催收编号：12999001</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr class="items-odd">
-                            <td>债权金额 (万元)</td>
-                            <td>166</td>
-                        </tr>
-                        <tr class="items-even">
-                            <td>回报</td>
-                            <td>10%</td>
-                        </tr>
-                        <tr class="items-odd">
-                            <td>逾期时间</td>
-                            <td>6个月</td>
-                        </tr>
-                        <tr class="items-even">
-                            <td>代办律师</td>
-                            <td>王杨</td>
-                        </tr>
-                        <tr class="items-final">
-                            <td>追回总额 (万元)</td>
-                            <td>166</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+        <div class="item active"><img class="img-responsive" src="images/slide1.jpg" alt="First slide"></div>
+        <div class="item"><img class="img-responsive" src="images/slide2.jpg" alt="Second slide"></div>
     </div>
 </div>
 
@@ -173,54 +113,8 @@
         </div>
     </div>
 </div>
-<div class="stripe">
-    <div class="container">
-        <div class="row lawyers text-center">
-            <h3>明星级专业律师催收团队，为您保驾护航</h3>
-            <p id="lawyer-intro">
-                通过委托遍布全国的签约认证的优质律师事务所的专业催收律师进行精准催收，通过律师函催收、诉讼催收和法院强制执行催收步步为营，通过京宁征信平台进行全国舆论压力和失信公示，解决了债务催收中的信息不对称、成本高、周期长的问题，让债务催收变得方便快捷高效。</p>
-            <ul class="list-inline">
-                <li>
-                    <a href="#">
-                        <img src="images/lawyer1.jpg" class="img-circle">
-                        <p>唐宁</p>
-                        <p>京宁律师事务所</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/lawyer2.jpg" class="img-circle">
-                        <p>王杨</p>
-                        <p>明星律师</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/lawyer3.jpg" class="img-circle">
-                        <p>July</p>
-                        <p>律师事务所主任</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/lawyer4.jpg" class="img-circle">
-                        <p>Alex</p>
-                        <p>明星律师</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/lawyer5.jpg" class="img-circle">
-                        <p>Coco</p>
-                        <p>明星律师</p>
-                    </a>
-                </li>
-            </ul>
-            <a id='lawyer-btn' class="btn btn-primary" href="#" role="button">查看更多成员</a>
-        </div>
-    </div>
-</div>
-<footer class="ft-bright">
+
+<footer class="ft-bright ft-debt">
     <ul class="list-inline text-center contact">
         <li><a href="#">关于我们</a></li>
         <li><a href="#">用户协议</a></li>

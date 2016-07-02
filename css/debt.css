@@ -1,1 +1,26 @@
 /*style for debt related pages*/
+
+
+/*footer new style*/
+.ft-debt{
+    background-color: #292a34;
+    color: white;
+}
+
+.ft-debt>.contact a{
+    color: white;
+}
+.ft-debt>.contact a{
+    color: white;
+}
+
+.ft-debt li:first-child{
+    border-left: 0px;
+}
+.ft-debt li{
+    border-left: 1px solid white;
+}
+
+.ft-debt .copyright {
+    color: #b4bdc1;
+}
