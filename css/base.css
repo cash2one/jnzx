@@ -238,8 +238,8 @@ body{
 }
 .ft-dark li:first-child,
 .ft-bright li:first-child{
-    border-left: 0px;
-}
+     border-left: 0px;
+ }
 .ft-bright li{
     border-left: 1px solid #333;
 }

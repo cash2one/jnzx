@@ -1,6 +1,44 @@
 /*style for debt related pages*/
 
 
+/*table style*/
+.debtcenter-table td{
+    padding: 20px !important;
+}
+
+.debtcenter-table a{
+    color: #2fd5d6;
+}
+
+.cityfilter{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.cityName{
+    line-height: 2;
+    color: #d4d6d6;
+}
+
+.debtcenter-nav{
+    background-color: #f3f7f8;
+}
+
+.debtcenter-nav >li>a{
+    color: black;
+    font-weight: normal;
+    border: 0px solid #ddd;
+}
+
+.debtcenter-nav >li.active>a,.debtcenter-nav >li.active>a:hover{
+    color: black;
+    font-weight: bold;
+    border: 0px solid #ddd;
+    border-bottom: 2px solid #00cccd;
+    background-color: #f3f7f8;
+}
+
+
 /*footer new style*/
 .ft-debt{
     background-color: #292a34;
@@ -17,6 +55,7 @@
 .ft-debt li:first-child{
     border-left: 0px;
 }
+
 .ft-debt li{
     border-left: 1px solid white;
 }

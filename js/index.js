@@ -21,138 +21,146 @@ $(document).ready(function () {
 
 });
 
-function showCircle(){
+function showCircle() {
     var draw = SVG('drawing').size(520, 320)
     var circle1 = draw.circle(150).attr({
-        cx:103
-        ,cy:137
-        ,fill: '#54555d'
+        cx: 103
+        , cy: 137
+        , fill: '#54555d'
         , 'fill-opacity': 0.8
     })
     var circle2 = draw.circle(130).attr({
-        cx:261
-        ,cy:216
-        ,fill: '#4ce16b'
+        cx: 261
+        , cy: 216
+        , fill: '#4ce16b'
         , 'fill-opacity': 0.8
     })
     var circle3 = draw.circle(100).attr({
-        cx:403
-        ,cy:110
-        ,fill: '#33d6d7'
+        cx: 403
+        , cy: 110
+        , fill: '#33d6d7'
         , 'fill-opacity': 0.8
     })
     var text1 = draw.text("案件数量").attr({
-        x:103
-        ,y:142
-        ,fill:'#eee'
+        x: 103
+        , y: 142
+        , fill: '#eee'
     }).font({
-        family:   'Microsoft YaHei'
-        , size:     18
-        , anchor:   'middle'
-        , leading:  '1.5em'
+        family: 'Microsoft YaHei'
+        , size: 18
+        , anchor: 'middle'
+        , leading: '1.5em'
     })
     var text2 = draw.text("债务总额").attr({
-        x:261
-        ,y:221
-        ,fill:'#eee'
+        x: 261
+        , y: 221
+        , fill: '#eee'
     }).font({
-        family:   'Microsoft YaHei'
-        , size:     18
-        , anchor:   'middle'
-        , leading:  '1.5em'
+        family: 'Microsoft YaHei'
+        , size: 18
+        , anchor: 'middle'
+        , leading: '1.5em'
     })
     var text3 = draw.text("催收率").attr({
-        x:403
-        ,y:115
-        ,fill:'#eee'
+        x: 403
+        , y: 115
+        , fill: '#eee'
     }).font({
-        family:   'Microsoft YaHei'
-        , size:     18
-        , anchor:   'middle'
-        , leading:  '1.5em'
+        family: 'Microsoft YaHei'
+        , size: 18
+        , anchor: 'middle'
+        , leading: '1.5em'
     })
 
-    var num1=draw.text("1088").attr({
-        x:103
-        ,y:77
-        ,fill:'#eee'
+    var num1 = draw.text("1088").attr({
+        x: 103
+        , y: 77
+        , fill: '#eee'
     }).font({
-        family:   'Microsoft YaHei'
-        , size:     38
-        , anchor:   'middle'
-        , leading:  '1.5em'
+        family: 'Microsoft YaHei'
+        , size: 38
+        , anchor: 'middle'
+        , leading: '1.5em'
     })
-    var num2=draw.text("18亿").attr({
-        x:261
-        ,y:156
-        ,fill:'#eee'
+    var num2 = draw.text("18亿").attr({
+        x: 261
+        , y: 156
+        , fill: '#eee'
     }).font({
-        family:   'Microsoft YaHei'
-        , size:     38
-        , anchor:   'middle'
-        , leading:  '1.5em'
+        family: 'Microsoft YaHei'
+        , size: 38
+        , anchor: 'middle'
+        , leading: '1.5em'
     })
-    var num3=draw.text("48%").attr({
-        x:403
-        ,y:60
-        ,fill:'#eee'
+    var num3 = draw.text("48%").attr({
+        x: 403
+        , y: 60
+        , fill: '#eee'
     }).font({
-        family:   'Microsoft YaHei'
-        , size:     38
-        , anchor:   'middle'
-        , leading:  '1.5em'
+        family: 'Microsoft YaHei'
+        , size: 38
+        , anchor: 'middle'
+        , leading: '1.5em'
     })
 
     var sh1;
-    var time1=50;
-    var ni1=new SVG.Number('1088')
+    var time1 = 50;
+    var ni1 = new SVG.Number('1088')
 
     var sh2;
-    var time2=50;
-    var ni2=new SVG.Number('18')
+    var time2 = 50;
+    var ni2 = new SVG.Number('18')
 
     var sh3;
-    var time3=50;
-    var ni3=new SVG.Number('48%')
+    var time3 = 50;
+    var ni3 = new SVG.Number('48%')
 
-    function delay3(){
-        sh3=setInterval("rise3()",30);
+    function delay3() {
+        sh3 = setInterval("rise3()", 30);
     }
-    var flag=0
-    $( window ).scroll(function() {
-        var x=$(document).scrollTop()
-        if ($(document).scrollTop()>300 && flag==0) {
-            circle1.animate(1500, '>', 100).attr({ r: '100' })
-            circle2.animate(1500, '>', 100).attr({ r: '100' })
-            circle3.animate(1500, '>', 100).attr({ r: '100' })
-            sh1=setInterval(function(){ni1=ni1.plus('3356');
+
+    var flag = 0
+    $(window).scroll(function () {
+        var x = $(document).scrollTop()
+        if ($(document).scrollTop() > 300 && flag == 0) {
+            circle1.animate(1500, '>', 100).attr({r: '100'})
+            circle2.animate(1500, '>', 100).attr({r: '100'})
+            circle3.animate(1500, '>', 100).attr({r: '100'})
+            sh1 = setInterval(function () {
+                ni1 = ni1.plus('3356');
                 num1.text(ni1.toString());
-                time1=time1-1;
-                if (time1<=0) {
+                time1 = time1 - 1;
+                if (time1 <= 0) {
                     clearInterval(sh1);
-                };
-            },30);
-            sh2=setInterval(function(){ni2=ni2.plus('3');
-                num2.text(ni2.toString()+"亿");
-                time2=time2-1;
-                if (time2<=0) {
+                }
+                ;
+            }, 30);
+            sh2 = setInterval(function () {
+                ni2 = ni2.plus('3');
+                num2.text(ni2.toString() + "亿");
+                time2 = time2 - 1;
+                if (time2 <= 0) {
                     clearInterval(sh2);
-                };
-            },30);
-            sh3=setInterval(function(){ni3=ni3.plus('1%');
+                }
+                ;
+            }, 30);
+            sh3 = setInterval(function () {
+                ni3 = ni3.plus('1%');
                 num3.text(ni3.toString());
-                time3=time3-1;
-                if (time3<=0) {
+                time3 = time3 - 1;
+                if (time3 <= 0) {
                     clearInterval(sh3);
-                };
-            },30);
-            flag=1
-        };
+                }
+                ;
+            }, 30);
+            flag = 1
+        }
+        ;
     });
 }
 
 //update nav bar based on current url address
-function updateNav(){
+function updateNav() {
     var position = window.location.pathname;
     var dot1 = position.indexOf('.')
     if (dot1 < 0) {  //home
@@ -163,7 +171,7 @@ function updateNav(){
         if (slash1 < 0) {  // impossible
             $('#index').addClass('active');
         } else {
-            var posName = position.substring(slash1+1,dot1);
+            var posName = position.substring(slash1 + 1, dot1);
             $('#' + posName).addClass('active');
         }
     }
@@ -176,7 +184,7 @@ function showMapD3() {
     var svg = d3.select("#china-map").append("svg")
         .attr("width", width)
         .attr("height", height)
-        .attr("id","map-svg")
+        .attr("id", "map-svg")
         .attr("preserveAspectRatio", "xMidYMid")
         .attr("viewBox", "0 0 " + width + " " + height);
 

@@ -19,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/> <!--Adobe Edge Runtime-->
 
     <script src="http://apps.bdimg.com/libs/d3/3.4.8/d3.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/debtcenter.js"></script>
 
 </head>
 
@@ -62,54 +62,149 @@
 </div>
 
 <div class="container">
-    <div class="row items">
+    <div class="row debt-items">
         <div class="col-xs-12">
-            <table class="table">
-                <thead>
-                <tr>
-                    <td>催收编号</td>
-                    <td>创建时间</td>
-                    <td>催收地区</td>
-                    <td>催收金额 (万元)</td>
-                    <td>回报比例</td>
-                    <td>委托状态</td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>125867779</td>
-                    <td>2016.06.01</td>
-                    <td>北京</td>
-                    <td>86779</td>
-                    <td>25%</td>
-                    <td>抢单中</td>
-                </tr>
-                <tr>
-                    <td>125867779<br/></td>
-                    <td>2016.06.02</td>
-                    <td>深圳</td>
-                    <td>86779</td>
-                    <td>10%</td>
-                    <td>抢单中</td>
-                </tr>
-                <tr>
-                    <td>125867779</td>
-                    <td>2016.06.03</td>
-                    <td>重庆</td>
-                    <td>86779</td>
-                    <td>5%</td>
-                    <td>抢单中</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="6">
-                            <a id='item-btn' class="btn btn-primary" href="#" role="button">查看更多债券</a>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-            
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs debtcenter-nav" role="tablist">
+                <li role="presentation" class="active"><a href="#delegation" aria-controls="home" role="tab"
+                                                          data-toggle="tab">最新催收委托</a></li>
+                <li role="presentation"><a href="#selfhelp" aria-controls="profile" role="tab"
+                                           data-toggle="tab">最新自助催收</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="delegation">
+
+                    <!-- city filter -->
+                    <div class="cityfilter">
+                        <div class="row">
+                            <div class="col-xs-1 col-sm-1 col-sm-offset-1 col-xs-offset-1">
+                                <div class="cityName">城市名称</div>
+                            </div>
+                            <div class="col-xs-2 col-sm-2">
+                                <select class="form-control">
+                                    <option selected>待分配</option>
+                                    <option>北京</option>
+                                    <option>上海</option>
+                                    <option>天津</option>
+                                    <option>南京</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table debtcenter-table">
+                        <thead>
+                        <tr>
+                            <td>催收编号</td>
+                            <td>创建时间</td>
+                            <td>催收地区</td>
+                            <td>催收金额 (万元)</td>
+                            <td>回报比例</td>
+                            <td>委托状态</td>
+                            <td>操作</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>125867779</td>
+                            <td>2016.06.01</td>
+                            <td>北京</td>
+                            <td>86779</td>
+                            <td>25%</td>
+                            <td>抢单中</td>
+                            <td><a href="#">申请</a></td>
+                        </tr>
+                        <tr>
+                            <td>125867779<br/></td>
+                            <td>2016.06.02</td>
+                            <td>深圳</td>
+                            <td>86779</td>
+                            <td>10%</td>
+                            <td>抢单中</td>
+                            <td><a href="#">申请</a></td>
+                        </tr>
+                        <tr>
+                            <td>125867779</td>
+                            <td>2016.06.03</td>
+                            <td>重庆</td>
+                            <td>86779</td>
+                            <td>5%</td>
+                            <td>抢单中</td>
+                            <td><a href="#">申请</a></td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="selfhelp">
+                    <!-- city filter -->
+                    <div class="cityfilter">
+                        <div class="row">
+                            <div class="col-xs-1 col-sm-1 col-sm-offset-1 col-xs-offset-1">
+                                <div class="cityName">城市名称</div>
+                            </div>
+                            <div class="col-xs-2 col-sm-2">
+                                <select class="form-control">
+                                    <option selected>待分配</option>
+                                    <option>北京</option>
+                                    <option>上海</option>
+                                    <option>天津</option>
+                                    <option>南京</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table debtcenter-table">
+                        <thead>
+                        <tr>
+                            <td>催收编号</td>
+                            <td>创建时间</td>
+                            <td>催收地区</td>
+                            <td>催收金额 (万元)</td>
+                            <td>回报比例</td>
+                            <td>委托状态</td>
+                            <td>操作</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>125867781</td>
+                            <td>2016.06.01</td>
+                            <td>北京</td>
+                            <td>86779</td>
+                            <td>25%</td>
+                            <td>抢单中</td>
+                            <td><a href="#">申请</a></td>
+                        </tr>
+                        <tr>
+                            <td>125867781<br/></td>
+                            <td>2016.06.02</td>
+                            <td>深圳</td>
+                            <td>86779</td>
+                            <td>10%</td>
+                            <td>抢单中</td>
+                            <td><a href="#">申请</a></td>
+                        </tr>
+                        <tr>
+                            <td>125867781</td>
+                            <td>2016.06.03</td>
+                            <td>重庆</td>
+                            <td>86779</td>
+                            <td>5%</td>
+                            <td>抢单中</td>
+                            <td><a href="#">申请</a></td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>
