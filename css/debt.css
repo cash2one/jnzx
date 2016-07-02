@@ -54,3 +54,27 @@
     border-bottom: 2px solid #00cccd;
     background-color: #f3f7f8;
 }
+
+/*pagination*/
+.pagination>li>a, .pagination>li>span {
+    color: #aaa;
+    background-color: transparent;
+    border: 0px;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus {
+    color: #333;
+}
+.pagination>li>.active{
+    color: #333;
+}
+.pagination>li>.prepage,
+.pagination>li>.nextpage{
+    background-color: #00cccd;
+    border-radius: 4px;
+    color:#eee;
+    padding-left:20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
