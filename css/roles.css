@@ -1,0 +1,41 @@
+.select-roles-col .second-part{
+
+    background: #F4F9F9;
+    position: absolute;
+    top:30px;
+    left: 0px;
+    padding: 60px 30px 10px 30px;
+    z-index: 1;
+
+}
+
+.select-roles-col img{
+    position: absolute;
+    top:0px;
+}
+
+.select-roles .first-row{
+    border-bottom: solid 1px #eee;
+}
+
+.select-roles  td{
+    border-left: solid 1px #eee;
+    padding: 20px;
+}
+
+.select-roles .first-column{
+    border-left: solid 0px #eee;
+}
+
+.select-roles a{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+}
+
+.select-roles img{
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+}
