@@ -97,3 +97,29 @@
 .issuedebt .control-label {
     text-align: left;
 }
+
+/*manage debt*/
+.manage-debt-items{
+    margin-top: 40px;
+    min-height:600px;
+}
+
+.manage-debt-items .form-control{
+    size: auto;
+}
+
+.manage-debt-items .manage-item{
+    border: solid 1px #00CCCD;
+    border-radius: 4px;
+    color: #00CCCD;
+    padding: 5px;
+}
+
+.manage-debt-items .managedebt-table td{
+    text-align: left;
+    line-height: 3;
+}
+
+.manage-debt-items .manage-id{
+    color: #00CCCD;
+}
