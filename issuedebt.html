@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>还我钱-首页</title>
+    <link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script> <!--normalize.css-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">-->
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/debt.css" rel="stylesheet">
+    <link href="css/fileinput.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> <![endif]-->
+    <!--<script src="js/respond.min.js"></script>--> <!--<script src="js/html5shiv.js"></script>-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/> <!--Adobe Edge Runtime-->
+
+    <script src="http://apps.bdimg.com/libs/d3/3.4.8/d3.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+
+    <!--bootstrap-fileinput http://www.htmleaf.com/html5/html5muban/201505091801.html-->
+    <script src="js/fileinput.min.js"></script>
+    <script src="js/fileinput_locale_zh.js"></script>
+    <script src="js/issuedebt.js"></script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-jn" role="navigation">
+    <div class="container">
+        <div class="navbar-header"><img class="navbar-brand-jn" src="images/Logo.png" alt="LOGO"/> <a
+                class="navbar-brand-jn" href="#">还我<span>钱</span>
+        </a></div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li id="index"><a href=".">首页</a></li>
+                <li id="issuedebt"><a href="issuedebt.html">发布债务</a></li>
+                <li id="managedebt"><a href="#">债务管理</a></li>
+                <li id="trackdebt"><a href="#">债务跟踪</a></li>
+                <li id="personcenter"><a href="#">个人中心</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row issuedebt">
+        <div class="col-xs-12">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="debtorType" class="col-sm-2 col-sm-offset-2 control-label">债务人类型</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <select class="form-control" id="debtorType" name="debtorType">
+                            <option selected>自然人</option>
+                            <option>自然人</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="debtorName" class="col-sm-2 col-sm-offset-2 control-label">债权人姓名</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <input type="text" class="form-control" id="debtorName" name="debtorName" placeholder="">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="debtAmount" class="col-sm-2 col-sm-offset-2 control-label">欠款金额（万元）</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <input type="text" class="form-control" id="debtAmount" name="debtAmount" placeholder="欠款金额">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="debtorAddress" class="col-sm-2 col-sm-offset-2 control-label">债务人所在地</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <select class="form-control" id="debtorAddress" name="debtorAddress">
+                            <option selected>北京</option>
+                            <option>上海</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="debtorPhone" class="col-sm-2 col-sm-offset-2 control-label">债务人联系方式</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <input type="text" class="form-control" id="debtorPhone" name="debtorPhone" placeholder="债务人联系方式">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="debtDate" class="col-sm-2 col-sm-offset-2 control-label">欠款日期</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <!--<input id="debtDate" name="debtDate" type="text" value="欠款日期" class="form_datetime">-->
+                        <div class="input-append date form_datetime">
+                            <input size="16" type="text" value="" readonly name="debtDate" id="debtDate">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="debtorCardType" class="col-sm-2 col-sm-offset-2 control-label">债务人证件类型</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" id="debtorCardType" name="debtorCardType">
+                            <option selected>身份证</option>
+                            <option>军官证</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="debtorCardNumber" class="col-sm-2 col-sm-offset-2 control-label">债务人证件号码</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <input type="text" class="form-control" id="debtorCardNumber" name ="debtorCardNumber" placeholder="债务人证件号码">
+                    </div>
+                </div>
+
+                <hr>
+
+
+                <div class="form-group">
+                    <label for="debtorEmail" class="col-sm-2 col-sm-offset-2 control-label">债务人电子邮箱</label>
+                    <div class="col-sm-6">
+                        <input type="email" class="form-control" id="debtorEmail" name="debtorEmail" placeholder="债务人电子邮箱">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="isGuarantee" class="col-sm-2 col-sm-offset-2 control-label">是否具有担保方</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <select class="form-control" id="isGuarantee" name="isGuarantee">
+                            <option selected>有担保</option>
+                            <option>无担保</option>
+                        </select>
+
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <input type="text" class="form-control" id="guaranteeName" name="guaranteeName" placeholder="担保方姓名">
+
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <input type="text" class="form-control" id="guaranteeNumber" name="guaranteeNumber" placeholder="担保方联系方式">
+
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="debtDetail" class="col-sm-2 col-sm-offset-2 control-label">欠款详情</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <textarea class="form-control" rows="8" id="debtDetail" name ="debtDetail" placeholder="欠款详情，简要描述不良资产情况"></textarea>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="method" class="col-sm-2 col-sm-offset-2 control-label">催收方式</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <select class="form-control" id="method" name ="method">
+                            <option selected>委托催收（专业催收公司、律师事务所、律师等）</option>
+                            <option>委托催收（专业催收公司、律师事务所、律师等）</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="agencyRation" class="col-sm-2 col-sm-offset-2 control-label">代理费率</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <input type="text" class="form-control" id="agencyRation" name ="agencyRation" placeholder="代理费率">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="proof" class="col-sm-2 col-sm-offset-2 control-label">部分主要证据</label>
+                    <div class="col-sm-6">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <input id="proof" name="proof" type="file" class="file" data-preview-file-type="text" >
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-9 col-sm-1">
+                        <button type="submit" class="btn btn-success">确认发布</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="ft-bright ft-debt">
+    <ul class="list-inline text-center contact">
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">用户协议</a></li>
+        <li><a href="#">增值服务</a></li>
+        <li><a href="#">异议处理</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">友情链接</a></li>
+    </ul>
+    <ul class="list-inline text-center copyright">
+        <li>©2016 北京京宁征信股份有限公司</li>
+        <li>京公网安备11010899384</li>
+        <li>京ICP备16006015号</li>
+    </ul>
+</footer>
+
+</body>
+</html>

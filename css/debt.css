@@ -63,3 +63,22 @@
 .ft-debt .copyright {
     color: #b4bdc1;
 }
+
+/*issue debt*/
+.issuedebt{
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.issuedebt span{
+    color: #00CCCD;
+}
+
+.issuedebt button{
+    background-color:#00CCCD;
+    margin-top: 20px;
+}
+
+.issuedebt .control-label {
+    text-align: left;
+}
