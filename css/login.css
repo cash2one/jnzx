@@ -1,0 +1,27 @@
+.login{
+    min-height:600px;
+}
+
+.login .login-form{
+    border: 1px solid #eee;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.login-form .top-title{
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.login-form .below-content{
+    padding-top: 20px;
+}
+
+.login-form button{
+    padding-left: 20px;
+    padding-right: 20px;
+}
