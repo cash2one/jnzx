@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>还我钱-首页</title>
+    <title>还我钱-债务中心</title>
     <link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -25,7 +25,7 @@
 
 <body>
 
-<nav class="navbar navbar-jn" role="navigation">
+<nav class="navbar navbar-jn navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header"><img class="navbar-brand-jn" src="images/Logo.png" alt="LOGO"/> <a
                 class="navbar-brand-jn" href="#">还我<span>钱</span>
@@ -61,18 +61,17 @@
     </div>
 </div>
 
+<!-- Nav tabs -->
+<ul class="nav debtcenter-nav text-center list-inline" role="tablist">
+    <li role="presentation" class="active"><a href="#delegation" aria-controls="home" role="tab"
+                                              data-toggle="tab">最新催收委托</a></li>
+    <li role="presentation"><a href="#selfhelp" aria-controls="profile" role="tab"
+                               data-toggle="tab">最新自助催收</a></li>
+</ul>
+
 <div class="container">
     <div class="row debt-items">
         <div class="col-xs-12">
-
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs debtcenter-nav" role="tablist">
-                <li role="presentation" class="active"><a href="#delegation" aria-controls="home" role="tab"
-                                                          data-toggle="tab">最新催收委托</a></li>
-                <li role="presentation"><a href="#selfhelp" aria-controls="profile" role="tab"
-                                           data-toggle="tab">最新自助催收</a></li>
-            </ul>
-
             <!-- Tab panes -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="delegation">
@@ -80,10 +79,8 @@
                     <!-- city filter -->
                     <div class="cityfilter">
                         <div class="row">
-                            <div class="col-xs-1 col-sm-1 col-sm-offset-1 col-xs-offset-1">
+                            <div class="col-xs-offset-1">
                                 <div class="cityName">城市名称</div>
-                            </div>
-                            <div class="col-xs-2 col-sm-2">
                                 <select class="form-control">
                                     <option selected>待分配</option>
                                     <option>北京</option>
@@ -143,10 +140,8 @@
                     <!-- city filter -->
                     <div class="cityfilter">
                         <div class="row">
-                            <div class="col-xs-1 col-sm-1 col-sm-offset-1 col-xs-offset-1">
+                            <div class="col-xs-offset-1">
                                 <div class="cityName">城市名称</div>
-                            </div>
-                            <div class="col-xs-2 col-sm-2">
                                 <select class="form-control">
                                     <option selected>待分配</option>
                                     <option>北京</option>
@@ -204,12 +199,23 @@
                 </div>
             </div>
 
-
+			<div class="text-center">
+				<ul class="pagination">
+				  <li><a class="prepage" href="#">上一页</a></li>
+				  <li><a class="active" href="#">1</a></li>
+				  <li><a href="#">2</a></li>
+				  <li><a href="#">3</a></li>
+				  <li><a href="#">4</a></li>
+				  <li><a href="#">...</a></li>
+				  <li><a href="#">40</a></li>
+				  <li><a class="nextpage" href="#">下一页</a></li>
+				</ul>
+			</div>
         </div>
     </div>
 </div>
 
-<footer class="ft-bright ft-debt">
+<footer class="ft-dark">
     <ul class="list-inline text-center contact">
         <li><a href="#">关于我们</a></li>
         <li><a href="#">用户协议</a></li>

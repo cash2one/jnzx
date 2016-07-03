@@ -95,6 +95,9 @@ body{
 }
 
 /*Carsousel*/
+#myCarousel{
+    margin-top: 50px;/*The height of navigation bar*/
+}
 #myCarousel>div:first-child{
     position: absolute;
     text-align: center;
@@ -109,6 +112,7 @@ body{
     line-height: 200%;
     font-style: italic;
     letter-spacing: 3px;
+    font-size: 28px;
     margin-bottom: 5%;
 }
 #myCarousel .btn-long{

@@ -16,18 +16,35 @@
 }
 
 .cityName{
-    line-height: 2;
+    line-height: 34px;
     color: #d4d6d6;
+    float:left;
+    padding-right: 20px
+}
+
+.form-control{
+	float: left;
+	width:auto;
 }
 
 .debtcenter-nav{
     background-color: #f3f7f8;
 }
 
-.debtcenter-nav >li>a{
+.debtcenter-nav>li{
+    display: inline-block;
+}
+
+.debtcenter-nav>li>a,
+.debtcenter-nav>li>a:hover,
+.debtcenter-nav>li>a:focus,
+.debtcenter-nav>.active,
+.debtcenter-nav>.active>a{
     color: black;
     font-weight: normal;
     border: 0px solid #ddd;
+    background-color: #f3f7f8;
+    text-decoration: none;
 }
 
 .debtcenter-nav >li.active>a,.debtcenter-nav >li.active>a:hover{
@@ -38,47 +55,26 @@
     background-color: #f3f7f8;
 }
 
-
-/*footer new style*/
-.ft-debt{
-    background-color: #292a34;
-    color: white;
+/*pagination*/
+.pagination>li>a, .pagination>li>span {
+    color: #aaa;
+    background-color: transparent;
+    border: 0px;
 }
-
-.ft-debt>.contact a{
-    color: white;
+.pagination>li>a:hover,
+.pagination>li>a:focus {
+    color: #333;
 }
-.ft-debt>.contact a{
-    color: white;
+.pagination>li>.active{
+    color: #333;
 }
-
-.ft-debt li:first-child{
-    border-left: 0px;
-}
-
-.ft-debt li{
-    border-left: 1px solid white;
-}
-
-.ft-debt .copyright {
-    color: #b4bdc1;
-}
-
-/*issue debt*/
-.issuedebt{
-    margin-top: 60px;
-    margin-bottom: 30px;
-}
-
-.issuedebt span{
-    color: #00CCCD;
-}
-
-.issuedebt button{
-    background-color:#00CCCD;
-    margin-top: 20px;
-}
-
-.issuedebt .control-label {
-    text-align: left;
+.pagination>li>.prepage,
+.pagination>li>.nextpage{
+    background-color: #00cccd;
+    border-radius: 4px;
+    color:#eee;
+    padding-left:20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
