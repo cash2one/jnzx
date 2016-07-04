@@ -87,15 +87,33 @@
 
 .issuedebt span{
     color: #00CCCD;
+    position: absolute;
+    margin-left: -30px;
+    line-height: 34px;
+}
+.issuedebt .file-input{
+    margin-left: 0px;
+    padding-right: 15px;
 }
 
 .issuedebt button{
     background-color:#00CCCD;
+    float: right;
     margin-top: 20px;
 }
 
 .issuedebt .control-label {
     text-align: left;
+}
+
+.issuedebt .btn-file{
+    color: #fff;
+    background-color: #00ccdd;
+    border: 1px solid #00ccdd;
+}
+.issuedebt .sp-hr{
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /*manage debt*/
