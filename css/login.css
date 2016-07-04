@@ -1,8 +1,12 @@
+body{
+    background-color: #f2f8f8;
+}
 .login{
     min-height:600px;
 }
 
 .login .login-form{
+    background-color: #fff;
     border: 1px solid #eee;
     margin-top: 50px;
     border-radius: 5px;
@@ -41,8 +45,29 @@
 
 .registerlawyer span {
     color: #00CCCD;
+    position: absolute;
+    margin-left: -30px;
+    line-height: 34px;
+}
+.registerlawyer .file-input{
+    margin-left: 0px;
+    padding-right: 15px;
+}
+
+.registerlawyer .btn-file{
+    color: #fff;
+    background-color: #00ccdd;
+    border: 1px solid #00ccdd;
+}
+
+.registerlawyer .col-file-input{
+    height: 34px;
 }
 
 .registerlawyer #lawyerDiv{
     display: none;
+}
+
+.btn-success{
+    background-color: #00ccdd;
 }
