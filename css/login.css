@@ -21,7 +21,17 @@
     padding-top: 20px;
 }
 
-.login-form button{
+.login-form button.login-btn{
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.registerdebtor a{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+}
+
+.registerdebtor{
+
 }
