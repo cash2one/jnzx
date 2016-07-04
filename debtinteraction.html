@@ -57,7 +57,7 @@
     <div class="carousel-inner">
         <div class="item active"><img class="img-responsive" src="images/slide1.jpg" alt="First slide"></div>
         <div class="item"><img class="img-responsive" src="images/slide2.jpg" alt="Second slide"></div>
-    </div> 
+    </div>
 </div>
 
 <div class="container">
@@ -69,60 +69,72 @@
                     <p><span class="glyphicon glyphicon-warning-sign"></span>请准备律师函和快递证明</p>
                 </div>
                 <form class="form-horizontal" id="dtfile" role="form">
-                   <div class="form-group">
-                      <label for="deadline" class="col-xs-4 control-label">律师函催欠截止日期</label>
-                      <div class="col-xs-8">
-                         <input type="text" class="form-control" id="deadline" 
-                            placeholder="请输入名字">
-                      </div>
-                   </div>
-                
+                    <div class="form-group">
+                        <label for="deadline" class="col-xs-4 control-label">律师函催欠截止日期</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" id="deadline"
+                                   placeholder="请输入名字">
+                        </div>
+                    </div>
+
                     <div class="col-xs-4">
-                        <p>支持文件</p>
+                        <p>支撑文件</p>
                     </div>
                     <div class="col-xs-8">
                         <table class="table">
-                           <thead>
-                              <tr>
-                                 <th>文件名称</th>
-                                 <th>描述</th>
-                                 <th>操作</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>催欠律师函.pdf</td>
-                                 <td>催欠律师函</td>
-                                 <td><button type="button" class="btn btn-default">删除</button></td>
-                              </tr>
-                              <tr>
-                                 <td>快递证明.pdf</td>
-                                 <td>快递证明</td>
-                                 <td><button type="button" class="btn btn-default">删除</button></td>
-                              </tr>
-                           </tbody>
+                            <thead>
+                            <tr>
+                                <th>文件名称</th>
+                                <th>描述</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>催欠律师函.pdf</td>
+                                <td>催欠律师函</td>
+                                <td>
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>快递证明.pdf</td>
+                                <td>快递证明</td>
+                                <td>
+                                    <button type="button" class="btn btn-default">删除</button>
+                                </td>
+                            </tr>
+                            </tbody>
                         </table>
                         <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-file">添加</button>
-                        <button type="submit" class="btn btn-default"></span>确认提交</button>
+                        <button type="submit" class="btn btn-success"></span>确认提交</button>
                     </div>
                 </form>
             </div>
             <div class="debt-comment">
                 <h4>项目评论</h4>
-                <form class="form-horizontal" id="dtcomment" role="form">
-                    <div class="form-group col-xs-12">
-                        <textarea clsss="col-xs-12 form-control" rows=5 placeholder="发表项目评论"></textarea> 
-                    </div>
-                    <div class="form-group col-xs-12">
-                        <select class="form-control">
-                            <option>全部评论</option>
-                            <option>债权人</option>
-                            <option>律师</option>
-                            <option>业务员</option>
-                        </select>
-                        <button type="submit" class="btn btn-default">提交</button>
-                    </div>
-                </form>
+                <div style="height: 200px">
+                    <form class="form-horizontal" id="dtcomment" role="form">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <textarea class="form-control" rows=5 placeholder="发表项目评论"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-4">
+                                <select class="form-control">
+                                    <option>全部评论</option>
+                                    <option>债权人</option>
+                                    <option>律师</option>
+                                    <option>业务员</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-8">
+                                <button type="submit" class="btn btn-success">发表</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <ul class="list-group">
                     <li class="list-group-item">
                         <img src="images/lawyer1.jpg" class="img-circle">
@@ -148,14 +160,14 @@
                 </ul>
                 <div class="text-center">
                     <ul class="pagination">
-                      <li><a class="prepage" href="#">上一页</a></li>
-                      <li><a class="active" href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">...</a></li>
-                      <li><a href="#">40</a></li>
-                      <li><a class="nextpage" href="#">下一页</a></li>
+                        <li><a class="prepage" href="#">上一页</a></li>
+                        <li><a class="active" href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">40</a></li>
+                        <li><a class="nextpage" href="#">下一页</a></li>
                     </ul>
                 </div>
             </div>
