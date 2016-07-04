@@ -1,11 +1,23 @@
 /**
  * Created by jack on 16/6/30.
- * nav update
+ * js control logic
  */
-
 $(document).ready(function () {
     /*update nav bar*/
     updateNav();
+
+    //display div based on user selection
+    $("#collectType").change(function(){
+        var collectType = $("#collectType").val();
+        console.log(collectType);
+        if(collectType == "corp"){
+            $("#corpDiv").show();
+            $("#lawyerDiv").hide();
+        }else{
+            $("#corpDiv").hide();
+            $("#lawyerDiv").show();
+        }
+    });
 
 });
 
