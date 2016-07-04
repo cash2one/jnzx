@@ -1,17 +1,20 @@
 .select-roles-col .second-part{
-
     background: #F4F9F9;
-    position: absolute;
-    top:30px;
-    left: 0px;
-    padding: 60px 30px 10px 30px;
+    position: relative;
+    padding-top: 55px;
+    border-radius: 4px;
     z-index: 1;
-
+}
+.select-roles-col table{
+    margin:0px auto;
+    font-style: italic;
+    font-size: 16px;
 }
 
 .select-roles-col img{
-    position: absolute;
+    position: relative;
     top:0px;
+    margin-bottom: -35px;
 }
 
 .select-roles .first-row{
@@ -27,11 +30,21 @@
     border-left: solid 0px #eee;
 }
 
-.select-roles a{
-    margin-top: 20px;
-    margin-bottom: 10px;
+.select-roles .btn{
+    margin-top: 40px;
+    margin-bottom: 30px;
     padding-left:20px;
     padding-right: 20px;
+}
+.btn-blue{
+    color: #eee;
+    background-color: #00cccd;
+    border-color: 0px;   
+}
+.btn-green{
+    color: #eee;
+    background-color: #1fda46;
+    border-color: 0px;
 }
 
 .select-roles img{
