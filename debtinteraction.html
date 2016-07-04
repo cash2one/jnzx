@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>还我钱-债务交互</title>
+    <link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script> <!--normalize.css-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">-->
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/debtinteraction.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> <![endif]-->
+    <!--<script src="js/respond.min.js"></script>--> <!--<script src="js/html5shiv.js"></script>-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
+
+    <script src="js/debtcenter.js"></script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-jn navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header"><img class="navbar-brand-jn" src="images/Logo.png" alt="LOGO"/> <a
+                class="navbar-brand-jn" href="#">还我<span>钱</span>
+        </a></div>
+        <div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li id="index"><a href=".">首页</a></li>
+                    <li id="issuedebt"><a href="issuedebt.html">发布债务</a></li>
+                    <li id="managedebt"><a href="managedebt.html">债务管理</a></li>
+                    <li id="trackdebt"><a href="#">债务跟踪</a></li>
+                    <li id="personcenter"><a href="#">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div>
+        <a class="btn btn-long" href="issuedebt.html" role="button">发布债务</a>
+        <a class="btn btn-long btn-trans" href="#" role="button">立即注册</a>
+    </div>
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active"><img class="img-responsive" src="images/slide1.jpg" alt="First slide"></div>
+        <div class="item"><img class="img-responsive" src="images/slide2.jpg" alt="Second slide"></div>
+    </div> 
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7">
+            <div class="support-file">
+                <div>
+                    <h4>资料提交</h4>
+                    <p><span class="glyphicon glyphicon-warning-sign"></span>请准备律师函和快递证明</p>
+                </div>
+                <form class="form-horizontal" id="dtfile" role="form">
+                   <div class="form-group">
+                      <label for="deadline" class="col-xs-4 control-label">律师函催欠截止日期</label>
+                      <div class="col-xs-8">
+                         <input type="text" class="form-control" id="deadline" 
+                            placeholder="请输入名字">
+                      </div>
+                   </div>
+                
+                    <div class="col-xs-4">
+                        <p>支持文件</p>
+                    </div>
+                    <div class="col-xs-8">
+                        <table class="table">
+                           <thead>
+                              <tr>
+                                 <th>文件名称</th>
+                                 <th>描述</th>
+                                 <th>操作</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>催欠律师函.pdf</td>
+                                 <td>催欠律师函</td>
+                                 <td><button type="button" class="btn btn-default">删除</button></td>
+                              </tr>
+                              <tr>
+                                 <td>快递证明.pdf</td>
+                                 <td>快递证明</td>
+                                 <td><button type="button" class="btn btn-default">删除</button></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-file">添加</button>
+                        <button type="submit" class="btn btn-default"></span>确认提交</button>
+                    </div>
+                </form>
+            </div>
+            <div class="debt-comment">
+                <h4>项目评论</h4>
+                <form class="form-horizontal" id="dtcomment" role="form">
+                    <div class="form-group col-xs-12">
+                        <textarea clsss="col-xs-12 form-control" rows=5 placeholder="发表项目评论"></textarea> 
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <select class="form-control">
+                            <option>全部评论</option>
+                            <option>债权人</option>
+                            <option>律师</option>
+                            <option>业务员</option>
+                        </select>
+                        <button type="submit" class="btn btn-default">提交</button>
+                    </div>
+                </form>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <img src="images/lawyer1.jpg" class="img-circle">
+                        <p>王先生</p>
+                        <p>债权人</p>
+                        <p>2016.06.10 19:00</p>
+                        <p>多亏了朋友介绍我到还我钱这个征信平台，借出去的这么久的钱终于要回来了！</p>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="images/lawyer2.jpg" class="img-circle">
+                        <p>张女士</p>
+                        <p>律师</p>
+                        <p>2016.06.10 19:00</p>
+                        <p>这是一个非常靠谱的平台！</p>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="images/lawyer3.jpg" class="img-circle">
+                        <p>宁宁</p>
+                        <p>业务员</p>
+                        <p>2016.06.10 19:00</p>
+                        <p>这个项目难度比较大，不过目前看进展一切顺利，我们的明星律师也是棒棒的，加油~</p>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <ul class="pagination">
+                      <li><a class="prepage" href="#">上一页</a></li>
+                      <li><a class="active" href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">...</a></li>
+                      <li><a href="#">40</a></li>
+                      <li><a class="nextpage" href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-offset-1 col-sm-4">
+            <div class="debt-submit">
+
+            </div>
+            <div class="debt-info">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="ft-dark">
+    <ul class="list-inline text-center contact">
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">用户协议</a></li>
+        <li><a href="#">增值服务</a></li>
+        <li><a href="#">异议处理</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">友情链接</a></li>
+    </ul>
+    <ul class="list-inline text-center copyright">
+        <li>©2016 北京京宁征信股份有限公司</li>
+        <li>京公网安备11010899384</li>
+        <li>京ICP备16006015号</li>
+    </ul>
+</footer>
+
+</body>
+
+</html>
