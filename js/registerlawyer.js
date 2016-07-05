@@ -19,6 +19,16 @@ $(document).ready(function () {
         }
     });
 
+    /*file upload*/
+    $("#proof").fileinput({
+        showUpload: false,
+        removeClass: "btn btn-default file-btn",
+        language: "zh"
+    });
+
+    // previewFileType: "text",
+    //     allowedFileExtensions: ["txt", "md", "ini", "text"],
+
 });
 
 //update nav bar based on current url address

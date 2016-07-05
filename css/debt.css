@@ -85,18 +85,18 @@
     margin-bottom: 30px;
 }
 
-.issuedebt span{
+.issuedebt span.glyphicon{
     color: #00CCCD;
     position: absolute;
     margin-left: -30px;
     line-height: 34px;
 }
-.issuedebt .file-input{
-    margin-left: 0px;
-    padding-right: 15px;
-}
+/*.issuedebt .file-input{*/
+    /*margin-left: 0px;*/
+    /*padding-right: 15px;*/
+/*}*/
 
-.issuedebt button{
+.issuedebt #submit-btn{
     background-color:#00CCCD;
     float: right;
     height: 34px;
@@ -114,9 +114,9 @@
     border: 1px solid #00ccdd;
 }
 
-.issuedebt .col-file-input{
-    height: 34px;
-}
+/*.issuedebt .col-file-input{*/
+    /*height: 34px;*/
+/*}*/
 
 .issuedebt .sp-hr{
     padding-left: 5px;

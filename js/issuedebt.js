@@ -5,6 +5,16 @@
 $(document).ready(function () {
     /*update nav bar*/
     updateNav();
+    
+    /*file upload*/
+    $("#proof").fileinput({
+        showUpload: false,
+        removeClass: "btn btn-default file-btn",
+        language: "zh"
+    });
+
+    // previewFileType: "text",
+    //     allowedFileExtensions: ["txt", "md", "ini", "text"],
 
     /*time picker: http://www.bootcss.com/p/bootstrap-datetimepicker/demo.htm */
     $(".form_datetime").datetimepicker({
