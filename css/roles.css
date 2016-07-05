@@ -11,10 +11,13 @@
     font-size: 16px;
 }
 
-.select-roles-col img{
+#myCarousel .select-roles-col img{
     position: relative;
     top:0px;
-    margin-bottom: -35px;
+    margin-bottom: -45px;
+    width: 90px;
+    height: 90px;
+    z-index: 2;
 }
 
 .select-roles .first-row{
@@ -45,10 +48,4 @@
     color: #eee;
     background-color: #1fda46;
     /*border-color: 0px;*/
-}
-
-.select-roles img{
-    width: 70px;
-    height: 70px;
-    z-index: 2;
 }
