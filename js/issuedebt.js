@@ -17,8 +17,10 @@ $(document).ready(function () {
     //     allowedFileExtensions: ["txt", "md", "ini", "text"],
 
     /*time picker: http://www.bootcss.com/p/bootstrap-datetimepicker/demo.htm */
-    $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii"
+    $("#debtDate-wrap").datepicker({
+        format: "yyyy/mm/dd",
+        todayHighlight: true
+        
     });
 
 
