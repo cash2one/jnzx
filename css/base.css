@@ -121,7 +121,7 @@ body{
     margin:5px 15px;
 }
 
-#myCarousel img{
+#myCarousel img.img-responsive{
     width:100%;
 }
 

@@ -39,12 +39,12 @@
 .btn-blue{
     color: #eee;
     background-color: #00cccd;
-    border-color: 0px;   
+    /*border-color: 0px;   */
 }
 .btn-green{
     color: #eee;
     background-color: #1fda46;
-    border-color: 0px;
+    /*border-color: 0px;*/
 }
 
 .select-roles img{
