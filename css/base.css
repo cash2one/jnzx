@@ -121,6 +121,10 @@ body{
     margin:5px 15px;
 }
 
+#myCarousel img{
+    width:100%;
+}
+
 /*Stats Data*/
 .stats{
     height: 410px;
