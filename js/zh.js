@@ -69,4 +69,19 @@
             close: 'Close detailed preview'
         }
     };
+
+    /*for datepicker*/
+    $.fn.datepicker.dates['en'] = {
+        days: ["星期日","星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+        daysShort: ["星期日","星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+        daysMin: ["星期日","星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+        months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        today: "今天",
+        clear: "清除",
+        format: "yyyy年mm月dd日",
+        titleFormat: "yyyy年MM", /* Leverages same syntax as 'format' */
+        weekStart: 1
+    };
+
 })(window.jQuery);

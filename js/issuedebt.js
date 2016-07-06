@@ -18,9 +18,9 @@ $(document).ready(function () {
 
     /*time picker: http://www.bootcss.com/p/bootstrap-datetimepicker/demo.htm */
     $("#debtDate-wrap").datepicker({
-        format: "yyyy/mm/dd",
-        todayHighlight: true
-        
+        format: "yyyy年mm月dd日",
+        todayHighlight: true,
+        language: "zh"
     });
 
 
