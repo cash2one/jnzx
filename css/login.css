@@ -37,10 +37,13 @@ body{
 }
 
 .registerdebtor button.registerdebtor2-btn,
-.registerlawyer button.registerlawyer-btn
-{
+.registerlawyer button.registerlawyer-btn {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.registerdebtor .agree{
+    margin-bottom: 20px;
 }
 
 .registerlawyer span.glyphicon {
