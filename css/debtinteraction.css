@@ -1,0 +1,91 @@
+/*column title*/
+h4{
+	border-bottom: 1px solid #ddd;
+	font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px; 
+}
+h4>small{
+	color: #fb1919;
+	margin-left: 20px;
+}
+h4>small>.glyphicon{
+	margin-right:5px;
+}
+/*upload form*/
+#dtfile .control-label{
+	text-align: left;
+}
+#dtfile table{
+	border:0px;
+	font-size:14px;
+	margin-bottom: -20px;
+
+}
+#dtfile .table>thead>tr>th{
+	font-weight: bold;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+	border: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top:15px;
+	padding-bottom: 15px;
+}
+#dtfile .btn-grey{
+	border:1px solid #ddd;
+	margin-top: -6px;
+}
+
+/*Comment area*/
+.debt-comment .btn-success{
+	float: right;
+}
+.debt-comment .list-group-item{
+	border-top:0px;
+	border-left:0px;
+	border-right: 0px;
+	margin-bottom: 0px;
+	padding:20px 0px;
+}
+.img-circle{
+	display: block;
+	float: left;
+	margin-right: 20px;
+	vertical-align: top;
+}
+.comment-name{
+	margin-top: 20px;
+}
+.comment-name>span{
+	font-size: 16px;
+	color:#00cccd;
+	margin-right: 8px;
+}
+.com-time{
+	position: absolute;
+	right: 0;
+}
+
+/*info area*/
+.btn-long{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.btn-trans{
+	margin-top: 20px;
+}
+.info-table>tbody>tr>th{
+	font-size: 16px;
+	font-weight:bold;
+	color: #00cccd;
+	vertical-align: middle;
+}
+.info-table>tbody>tr>td{
+	text-align: right;
+	font-size: 12px;
+	line-height: 16px;
+	vertical-align: middle;
+}
