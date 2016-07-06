@@ -88,3 +88,8 @@ h4>small>.glyphicon{
 	line-height: 16px;
 	vertical-align: middle;
 }
+
+#dtfile .topTable{
+	margin-right: 0px;
+	margin-left: 0px;
+}
