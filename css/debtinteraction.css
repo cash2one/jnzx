@@ -1,3 +1,7 @@
+nav+.container{
+	margin-top: 80px;
+}
+
 /*column title*/
 h4{
 	border-bottom: 1px solid #ddd;
@@ -13,7 +17,111 @@ h4>small{
 h4>small>.glyphicon{
 	margin-right:5px;
 }
+/*panel*/
+.panel-group{
+	border: 1px solid #ddd;
+	margin-top: 10px
+}
+.panel {
+    border: 0px solid #ddd;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.05);
+    box-shadow: 0 0px 0px rgba(0,0,0,.05);
+}
+.panel-group .panel+.panel {
+    margin-top: 0px;
+}
+.panel-group .panel {
+    border-radius: 0px;
+}
+.panel-heading{
+	padding:0px;
+	margin:0px;
+	background-color: #dbeded;
+	border-radius: 0px;
+}
+.panel-title{
+	font-size: 18px;
+	padding-left: 20px;
+}
+.panel-body{
+	padding:0px;
+}
+.panel-body .state-headline{
+	font-size: 18px;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #ddd;
+	line-height: 42px;
+	padding-left: 80px;
+}
+.panel-body .state-headline>.state-time{
+	width: 42%;
+}
+.panel-body>ul{
+	list-style-type: none;
+	padding-left: 0px;
+	margin-bottom: 20px;
+}
+.panel-body li{
+	padding-left: 40px;
+}
+.panel-body .state-table{
+	padding-left: 40px;
+	padding-top: 22px;
+}
+.panel-body .first-line>.state-table{
+	border-left: 0px;
+}
+
+.panel-body .node-icon{
+	position: absolute;
+	width: 14px;
+    height: 14px;
+    margin-left: -47px;
+    margin-top:7px;
+    background-image:url('../images/stateicon.png');
+	background-repeat:no-repeat;
+    z-index: 50;
+}
+.green-table{
+	border-left:1px solid #4bab00;
+}
+.green-table>i{
+	background-position: 0px 0px;
+}
+.grey-table{
+	border-left:1px solid #ddd;
+}
+.grey-table>i{
+	background-position: -17px 0px;
+}
+.panel-body .green-list,
+.panel-body .green-list .btn{
+	color:#4bab00;
+}
+.panel-body span{
+	display: inline-block;
+}
+.panel-body .state-time{
+	width: 46%;
+}
+.panel-body .state-detail{
+	width: 35%;
+}
+
+.panel-body .state-file{
+	float: right;
+	text-align: center;
+	margin-right: 20px;
+	width: 80px;
+}
+.panel-body .state-file>.btn-default{
+	margin-top:-6px;
+}
 /*upload form*/
+#dtfile{
+	padding:20px 20px;
+}
 #dtfile .control-label{
 	text-align: left;
 }

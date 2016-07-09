@@ -43,29 +43,173 @@
     </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div>
-        <a class="btn btn-long" href="issuedebt.html" role="button">发布债务</a>
-        <a class="btn btn-long btn-trans" href="#" role="button">立即注册</a>
-    </div>
-    <!-- 轮播（Carousel）指标 -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
-    <!-- 轮播（Carousel）项目 -->
-    <div class="carousel-inner">
-        <div class="item active"><img class="img-responsive" src="images/slide1.jpg" alt="First slide"></div>
-        <div class="item"><img class="img-responsive" src="images/slide2.jpg" alt="Second slide"></div>
-    </div>
-</div>
-
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-7">
-            <div class="support-file">
-                <div>
-                    <h4>资料提交<small><span class="glyphicon glyphicon-warning-sign"></span>请准备律师函和快递证明</small></h4>
+        	<div class="panel-group" id="accordion">
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							href="#collapseOne">
+							律师函催收阶段
+							</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="state-headline">
+								<span class="state-time">时间</span>
+								<span class="state-detail">状态</span>
+								<span class="state-file">关联文件</span>
+							</div>
+							<ul>
+								<li class="first-line">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.01 19:00:08</span>
+										<span class="state-detail">准备律师函</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 19:00:08</span>
+										<span class="state-detail">律师函已发送</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li class="green-list">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 20:00:08</span>
+										<span class="state-detail">律师函派送中</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time"></span>
+										<span class="state-detail">律师函已经派送</span>
+										<span class="state-file"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							href="#collapseTwo">
+							律师函催收阶段
+							</a>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="state-headline">
+								<span class="state-time">时间</span>
+								<span class="state-detail">状态</span>
+								<span class="state-file">关联文件</span>
+							</div>
+							<ul>
+								<li class="first-line green-list">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.01 19:00:08</span>
+										<span class="state-detail">准备律师函</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 19:00:08</span>
+										<span class="state-detail">律师函已发送</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 20:00:08</span>
+										<span class="state-detail">律师函派送中</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time"></span>
+										<span class="state-detail">律师函已经派送</span>
+										<span class="state-file"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							href="#collapseThree">
+							律师函催收阶段
+							</a>
+						</h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="state-headline">
+								<span class="state-time">时间</span>
+								<span class="state-detail">状态</span>
+								<span class="state-file">关联文件</span>
+							</div>
+							<ul>
+								<li class="first-line">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.01 19:00:08</span>
+										<span class="state-detail">准备律师函</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li class="green-list">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 19:00:08</span>
+										<span class="state-detail">律师函已发送</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 20:00:08</span>
+										<span class="state-detail">律师函派送中</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time"></span>
+										<span class="state-detail">律师函已经派送</span>
+										<span class="state-file"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="panel-group">
+                <div class="panel-heading">
+                    <h4 class="panel-title">资料提交<small><span class="glyphicon glyphicon-warning-sign"></span>请准备律师函和快递证明</small></h4>
                 </div>
                 <form class="form-horizontal" id="dtfile" role="form">
                     <div class="form-group topTable">
