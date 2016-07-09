@@ -136,19 +136,31 @@
                                         <button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file">添加</button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="text-right">
-                                        <button type="submit" class="btn btn-success"></span>确认提交</button>
-                                    </td>
-                                </tr>
                                 </tbody>
                             </table>
                             
                         </div>
                     </div>
-                    
+                    <div class="form-group">
+                        <label for="amountofmoney" class="col-xs-4 control-label">具体金额</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" id="amountofmoney"
+                                   placeholder="具体金额">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="moneystrategy" class="col-xs-4 control-label">继续催收决策</label>
+                        <div class="col-xs-8">
+                            <select class="form-control" id="moneystrategy" name="moneystrategy">
+                                <option selected>继续催收</option>
+                                <option>方法一</option>
+                                <option>方法二</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-success"></span>确认提交</button>
+                    </div>
                 </form>
             </div>
             <div class="debt-comment">
