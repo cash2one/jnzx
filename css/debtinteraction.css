@@ -54,9 +54,7 @@ h4>small>.glyphicon{
 	line-height: 42px;
 	padding-left: 80px;
 }
-.panel-body .state-headline>.state-time{
-	width: 42%;
-}
+
 .panel-body>ul{
 	list-style-type: none;
 	padding-left: 0px;
@@ -103,7 +101,7 @@ h4>small>.glyphicon{
 	display: inline-block;
 }
 .panel-body .state-time{
-	width: 46%;
+	width: 42%;
 }
 .panel-body .state-detail{
 	width: 35%;
