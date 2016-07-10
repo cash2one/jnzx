@@ -44,6 +44,12 @@ h4>small>.glyphicon{
 	font-size: 18px;
 	padding-left: 20px;
 }
+.panel-title>span{
+	float: right;
+	font-size: 14px;
+	font-weight: 100;
+	margin-right: 20px;
+}
 .panel-body{
 	padding:0px;
 }
@@ -148,6 +154,7 @@ h4>small>.glyphicon{
 /*Comment area*/
 .debt-comment .btn-success{
 	float: right;
+	min-width: 80px;
 }
 .debt-comment .list-group-item{
 	border-top:0px;
@@ -155,6 +162,10 @@ h4>small>.glyphicon{
 	border-right: 0px;
 	margin-bottom: 0px;
 	padding:20px 0px;
+}
+.debt-comment select{
+	min-width: 200px;
+	width: 30%;
 }
 .img-circle{
 	display: block;
