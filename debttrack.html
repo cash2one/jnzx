@@ -18,7 +18,7 @@
     <!--<script src="js/respond.min.js"></script>--> <!--<script src="js/html5shiv.js"></script>-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 
-    <script src="js/debtcenter.js"></script>
+    <script src="js/debtinteraction.js"></script>
 
 </head>
 
@@ -43,47 +43,184 @@
     </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div>
-        <a class="btn btn-long" href="issuedebt.html" role="button">发布债务</a>
-        <a class="btn btn-long btn-trans" href="#" role="button">立即注册</a>
-    </div>
-    <!-- 轮播（Carousel）指标 -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
-    <!-- 轮播（Carousel）项目 -->
-    <div class="carousel-inner">
-        <div class="item active"><img class="img-responsive" src="images/slide1.jpg" alt="First slide"></div>
-        <div class="item"><img class="img-responsive" src="images/slide2.jpg" alt="Second slide"></div>
-    </div>
-</div>
-
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-7">
-            <div class="debttrack-comment">
-                <form class="form-horizontal" id="dtcomment" role="form">
+        	<div class="panel-group" id="accordion">
+				<div class="panel">
+					<div class="panel-heading" id="oneHead">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							href="#collapseOne">
+							律师函催收阶段
+							</a>
+							<span class="panel-time">3天17:20:10</span>
+						</h4>
+						
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="state-headline">
+								<span class="state-time">时间</span>
+								<span class="state-detail">状态</span>
+								<span class="state-file">关联文件</span>
+							</div>
+							<ul>
+								<li class="first-line odd-line">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.01 19:00:08</span>
+										<span class="state-detail">准备律师函</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li class="even-line">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 19:00:08</span>
+										<span class="state-detail">律师函已发送</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li class="green-list odd-line">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 20:00:08</span>
+										<span class="state-detail">律师函派送中</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li class="even-line">
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time"></span>
+										<span class="state-detail">律师函已经派送</span>
+										<span class="state-file"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-heading" id="twoHead">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							href="#collapseTwo">
+							律师函催收阶段
+							</a>
+							<span class="panel-time">3天17:20:10</span>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="state-headline">
+								<span class="state-time">时间</span>
+								<span class="state-detail">状态</span>
+								<span class="state-file">关联文件</span>
+							</div>
+							<ul>
+								<li class="first-line green-list">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.01 19:00:08</span>
+										<span class="state-detail">准备律师函</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 19:00:08</span>
+										<span class="state-detail">律师函已发送</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 20:00:08</span>
+										<span class="state-detail">律师函派送中</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time"></span>
+										<span class="state-detail">律师函已经派送</span>
+										<span class="state-file"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-heading" id="threeHead">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							href="#collapseThree">
+							律师函催收阶段
+							</a>
+							<span class="panel-time">3天17:20:10</span>
+						</h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="state-headline">
+								<span class="state-time">时间</span>
+								<span class="state-detail">状态</span>
+								<span class="state-file">关联文件</span>
+							</div>
+							<ul>
+								<li class="first-line">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.01 19:00:08</span>
+										<span class="state-detail">准备律师函</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li class="green-list">
+									<div class="state-table green-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 19:00:08</span>
+										<span class="state-detail">律师函已发送</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time">2016.07.03 20:00:08</span>
+										<span class="state-detail">律师函派送中</span>
+										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
+									</div>
+								</li>
+								<li>
+									<div class="state-table grey-table">
+										<i class="node-icon"></i>
+										<span class="state-time"></span>
+										<span class="state-detail">律师函已经派送</span>
+										<span class="state-file"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="debt-comment">
+                <h4>项目评论</h4>
                     <div class="form-group">
-                        <div class="col-xs-12">
-                            <textarea class="form-control" rows=5 placeholder="发表项目评论"></textarea>
-                        </div>
+                        <select class="form-control">
+                            <option>全部评论</option>
+                            <option>债权人</option>
+                            <option>律师</option>
+                            <option>业务员</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <div class="col-xs-4">
-                            <select class="form-control">
-                                <option>全部评论</option>
-                                <option>债权人</option>
-                                <option>律师</option>
-                                <option>业务员</option>
-                            </select>
-                        </div>
-                        <div class="col-xs-2 col-xs-offset-6">
-                            <button type="submit" class="btn btn-success">发表</button>
-                        </div>
-                    </div>
-                </form>
                 <ul class="list-group">
                     <li class="list-group-item">
                         <img src="images/lawyer1.jpg" class="img-circle">
@@ -110,43 +247,19 @@
                             <p>这个项目难度比较大，不过目前看进展一切顺利，我们的明星律师也是棒棒的，加油~</p>
                         </div>
                     </li>
-
-                    <li class="list-group-item">
-                        <img src="images/lawyer2.jpg" class="img-circle">
-                        <div class="comment-info">
-                            <p class="com-time">2016.06.10 19:00</p>
-                            <p class="comment-name"><span>张女士</span>律师</p>
-                            <p>这是一个非常靠谱的平台！</p>
-                        </div>
-                    </li>
-
-                    <li class="list-group-item">
-                        <img src="images/lawyer2.jpg" class="img-circle">
-                        <div class="comment-info">
-                            <p class="com-time">2016.06.10 19:00</p>
-                            <p class="comment-name"><span>张女士</span>律师</p>
-                            <p>这是一个非常靠谱的平台！</p>
-                        </div>
-                    </li>
-
-                    <li class="list-group-item">
-                        <img src="images/lawyer2.jpg" class="img-circle">
-                        <div class="comment-info">
-                            <p class="com-time">2016.06.10 19:00</p>
-                            <p class="comment-name"><span>张女士</span>律师</p>
-                            <p>这是一个非常靠谱的平台！</p>
-                        </div>
-                    </li>
-
-                    <li class="list-group-item">
-                        <img src="images/lawyer2.jpg" class="img-circle">
-                        <div class="comment-info">
-                            <p class="com-time">2016.06.10 19:00</p>
-                            <p class="comment-name"><span>张女士</span>律师</p>
-                            <p>这是一个非常靠谱的平台！</p>
-                        </div>
-                    </li>
                 </ul>
+                <form class="form-horizontal" id="dtcomment" role="form">
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <textarea class="form-control" rows=5 placeholder="发表项目评论"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2 col-xs-offset-10">
+                            <button type="submit" class="btn btn-success">发表</button>
+                        </div>
+                    </div>
+                </form>
                 <div class="text-center">
                     <ul class="pagination">
                         <li><a class="prepage" href="#">上一页</a></li>
@@ -162,6 +275,11 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-offset-1 col-sm-4">
+            <div>
+                <h4 id="right-interaction">确认还款</h4>
+                <button type="button" class="btn btn-long btn-trans">部分还款</button>
+                <button type="button" class="btn btn-long">全款还清</button>
+            </div>
             <div>
                 <h4>债务及债务人信息</h4>
                 <table class="table info-table">
