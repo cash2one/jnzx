@@ -99,6 +99,23 @@ h4>small>.glyphicon{
 .grey-table>i{
 	background-position: -17px 0px;
 }
+
+/*.odd-line{*/
+	/*background-color: white;*/
+	/*height: 50px;*/
+	/*line-height: 50px;*/
+/*}*/
+
+/*.even-line{*/
+	/*background-color: #F9F9F9;*/
+	/*height: 50px;*/
+	/*line-height: 50px;*/
+/*}*/
+
+.greyHead{
+	background-color: #E5E5E5;
+}
+
 .panel-body .green-list,
 .panel-body .green-list .btn{
 	color:#4bab00;

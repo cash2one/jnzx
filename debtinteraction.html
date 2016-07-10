@@ -18,7 +18,7 @@
     <!--<script src="js/respond.min.js"></script>--> <!--<script src="js/html5shiv.js"></script>-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
 
-    <script src="js/debtcenter.js"></script>
+    <script src="js/debtinteraction.js"></script>
 
 </head>
 
@@ -48,7 +48,7 @@
         <div class="col-xs-12 col-sm-7">
         	<div class="panel-group" id="accordion">
 				<div class="panel">
-					<div class="panel-heading">
+					<div class="panel-heading" id="oneHead">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion" 
 							href="#collapseOne">
@@ -66,7 +66,7 @@
 								<span class="state-file">关联文件</span>
 							</div>
 							<ul>
-								<li class="first-line">
+								<li class="first-line odd-line">
 									<div class="state-table green-table">
 										<i class="node-icon"></i>
 										<span class="state-time">2016.07.01 19:00:08</span>
@@ -74,7 +74,7 @@
 										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
 									</div>
 								</li>
-								<li>
+								<li class="even-line">
 									<div class="state-table green-table">
 										<i class="node-icon"></i>
 										<span class="state-time">2016.07.03 19:00:08</span>
@@ -82,7 +82,7 @@
 										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
 									</div>
 								</li>
-								<li class="green-list">
+								<li class="green-list odd-line">
 									<div class="state-table green-table">
 										<i class="node-icon"></i>
 										<span class="state-time">2016.07.03 20:00:08</span>
@@ -90,7 +90,7 @@
 										<span class="state-file"><button type="button" class="btn btn-default btn-grey"><span class="glyphicon glyphicon-file"></span></button></span>
 									</div>
 								</li>
-								<li>
+								<li class="even-line">
 									<div class="state-table grey-table">
 										<i class="node-icon"></i>
 										<span class="state-time"></span>
@@ -103,7 +103,7 @@
 					</div>
 				</div>
 				<div class="panel">
-					<div class="panel-heading">
+					<div class="panel-heading" id="twoHead">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion" 
 							href="#collapseTwo">
@@ -157,7 +157,7 @@
 					</div>
 				</div>
 				<div class="panel">
-					<div class="panel-heading">
+					<div class="panel-heading" id="threeHead">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion" 
 							href="#collapseThree">
