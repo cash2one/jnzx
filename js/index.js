@@ -269,8 +269,9 @@ function showMapNode() {
     }
 }
 
+
 //change table content
-function refreshTable(data) {
+function refreshTable_ori(data) {
     var htmlContent = '<table class="table"><thead><tr><th>' + data["city"] + ' ' + data["client"] + ' ' + '催收编号：' + data["id"] + '</th></tr></thead><tbody>';
     htmlContent += '<tr class="items-odd"><td>债权金额 (万元)</td><td>' + data['money']
         + '</td></tr><tr class="items-even"><td>回报</td><td>' + data['return']
@@ -280,4 +281,31 @@ function refreshTable(data) {
         + '</td></tr></tbody></table>';
 
     $("#map-info").html(htmlContent);
+}
+
+
+//change table content
+function refreshTable1(data) {
+    //$("#map-info").css('display','none');
+    $("#map-info").hide();
+    var htmlContent = '<table class="table"><thead><tr><th>' + data["city"] + ' ' + data["client"] + ' ' + '催收编号：' + data["id"] + '</th></tr></thead><tbody>';
+    htmlContent += '<tr class="items-odd"><td>债权金额 (万元)</td><td>' + data['money']
+        + '</td></tr><tr class="items-even"><td>回报</td><td>' + data['return']
+        + '</td></tr><tr class="items-odd"><td>逾期时间</td><td>' + data['due']
+        + '</td></tr><tr class="items-even"><td>代办律师</td><td>' + data['lawyer']
+        + '</td></tr><tr class="items-final"><td>追回总额 (万元)</td><td>' + data['moneyGet']
+        + '</td></tr></tbody></table>';
+
+    $("#map-info").html(htmlContent);
+    $("#map-info").show('slow');
+}
+
+//change table content
+function refreshTable(data) {
+    $("#idx_head").hide().html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]).fadeIn(1000);
+    $("#idx_money").hide().html(data["money"]).fadeIn(1000);
+    $("#idx_return").hide().html(data["return"]).fadeIn(1000);
+    $("#idx_due").hide().html(data["due"]).fadeIn(1000);
+    $("#idx_lawyer").hide().html(data["lawyer"]).fadeIn(1000);
+    $("#idx_moneyGet").hide().html(data["moneyGet"]).fadeIn(1000);
 }

@@ -158,6 +158,10 @@ body{
     background-color: #00cccd;
 }
 
+/*#map-info .map-table-second{*/
+    /*min-width: 40px;*/
+/*}*/
+
 /*debt list*/
 .items{
     margin-top: 35px;
