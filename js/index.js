@@ -228,7 +228,7 @@ function showMapD3() {
                     .style({'fill': "#3fe265", "r": "10px"});
 
                 //2.change table content
-                refreshTable(d);
+                refreshTable(d,400);
             })
             .on("mouseout", function (d) {
                 //1.change point size and color
@@ -263,7 +263,7 @@ function showMapNode() {
         d3.select("#map-svg").selectAll("circle").each(function (d, i) {
             if (i == timeIdx) {
                 d3.select(this).transition().duration(1000).style({'fill': "#3fe265", "r": "10px"});
-                refreshTable(d);
+                refreshTable(d,1000);
             }
         });
     }
@@ -301,11 +301,34 @@ function refreshTable1(data) {
 }
 
 //change table content
-function refreshTable(data) {
-    $("#idx_head").hide().html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]).fadeIn(1000);
-    $("#idx_money").hide().html(data["money"]).fadeIn(1000);
-    $("#idx_return").hide().html(data["return"]).fadeIn(1000);
-    $("#idx_due").hide().html(data["due"]).fadeIn(1000);
-    $("#idx_lawyer").hide().html(data["lawyer"]).fadeIn(1000);
-    $("#idx_moneyGet").hide().html(data["moneyGet"]).fadeIn(1000);
+function refreshTable(data,freq) {
+    $("#idx_head").animate({"opacity":0},freq,function () {
+        $("#idx_head").html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]);
+        $("#idx_head").animate({"opacity":1},freq);
+    });
+
+    $("#idx_money").animate({"opacity":0},freq,function () {
+        $("#idx_money").html(data["money"]);
+        $("#idx_money").animate({"opacity":1},freq);
+    });
+
+    $("#idx_return").animate({"opacity":0},freq,function () {
+        $("#idx_return").html(data["return"]);
+        $("#idx_return").animate({"opacity":1},freq);
+    });
+
+    $("#idx_due").animate({"opacity":0},freq,function () {
+        $("#idx_due").html(data["due"]);
+        $("#idx_due").animate({"opacity":1},freq);
+    });
+
+    $("#idx_lawyer").animate({"opacity":0},freq,function () {
+        $("#idx_lawyer").html(data["lawyer"]);
+        $("#idx_lawyer").animate({"opacity":1},freq);
+    });
+
+    $("#idx_moneyGet").animate({"opacity":0},freq,function () {
+        $("#idx_moneyGet").html(data["moneyGet"]);
+        $("#idx_moneyGet").animate({"opacity":1},freq);
+    });
 }
