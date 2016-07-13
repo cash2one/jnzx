@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title></title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/new.css" type="text/css">
+<!--    <link rel="stylesheet" href="../css/new.min.css" type="text/css">-->
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/dropdown.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="../img/logo.png" alt="">
+            </a>
+            <nav class="top-nav">
+                <a class="top-nav-item " href="login.html">登录</a>
+                <a class="top-nav-item" href="login.html">注册</a>
+            </nav>
+            <div class="nav-user pull-right" style="display:none;">   
+                <div class="dropdown  profile">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+<!--                        <span class="badge" style="margin-left:-20px;">12</span>			-->
+                        <div class="profile-avatar">
+                            <img class="img-circle" src="../img/user_avatar.jpg" alt="个人中心">
+                        </div>
+                        <div class="profile-username"><span class="caret"></span></div>
+                    </a>
+                    <div class="dropdown-menu pull-right profile-box">
+                        <div class="glyphicon glyphicon-triangle-top arrow"></div>              
+                        <ul class="profile-navigation"> 
+                            <li><a href="/user_follow"><i class="menu-icon icon-1"></i>  我的关注</a></li>
+                            <li><a href="/user_history"><i class="menu-icon icon-2"></i>  浏览历史</a></li>				
+                            <li><a href="/msg"><i class="menu-icon icon-3"></i>  消息中心 </a></li>
+                            <li><a href="/user_credit"><i class="menu-icon icon-4"></i> 用户积分</a></li>
+                            <li><a href="/user_setting"><i class="menu-icon icon-5"></i> 账号设置</a></li>								
+                            <li><a href="/user_logout"><i class="menu-icon icon-6"></i>  退出</a></li>
+                        </ul> 
+                    </div>  
+                </div>
+                <div class="clearfix"></div>
+            </div>  
+        </div>
+    </header>
+    <section id="mod-search">
+        <div class="container mod-search">
+            <div class="row">
+                <h1>查企业，一步轻松搞定！</h1>
+                <span class="subtitle">帮您查找最全面的企业资料，从这里开始...</span>
+                <div class="search-form-block">
+                    <div class="row">
+                        <input type="text" placeholder="请输入企业名称或注册号" id="newInput" name="key" value="" autocomplete="off">
+                        <input type="hidden" id="sType" value="0">
+                        <button class="newBtn" id="new-search">
+                            <i class="sear_btn"></i>
+                            搜索
+                        </button>
+                    </div>
+                    <div class="new-index-list hidden-xs" style="top:108px;"> 
+						<ul class="newlist" style="display: none;"></ul>			 		 
+					</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mod-entry">
+        <div class="container mod-entry-style">
+            <div class="row" id="entry">
+                <div class="col-sm-3 col-sm-offset-1">
+                    <a href="../../issuedebt.html"><img src="../img/icon1.png" class="img-responsive" alt="我有催收需求"></a>
+                    <div class="description">我有催收需求</div>
+                </div>
+
+                <div class="col-sm-3 col-sm-offset-1">
+                    <a href="../../issuedebt.html"><img src="../img/icon2.png" href='' class="img-responsive" alt="我要发布债务"></a>
+                    <div class="description">我要发布债务</div>
+                </div>
+
+                <div class="col-sm-3 col-sm-offset-1">
+                    <img src="../img/icon3.png" class="img-responsive" alt="我要找老赖">
+                    <div class="description">我要找老赖</div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="index-content" style="background:#f6f7f9;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9" id="index-left">
+                    <div class="index-block">
+                        <h3 class="block-title"><span class="pull-right"><a href="/">查看更多</a></span>公司动态 </h3>                				
+                        <div class="album-list clearfix">
+
+
+                            <div class="album-item clearfix">
+                                <div class="album-title">
+                                    <a href="/"> 智能家居相关的中国创业公司</a>
+                                </div>						 	
+                                <div class="album-body">
+                                    动态性。整个动态联盟是靠项目共同利益所产生的凝聚力暂时维系在一起的，项目周期终结时，动态联盟也随之解体。
+                                </div> 
+                                <div class="time pull-right">
+                                    <span>2015年5月25日</span>
+                                    <span>北京</span>
+                                </div>
+                            </div>
+
+                            <div class="album-item clearfix">
+                                <div class="album-title">
+                                    <a href="/"> 根据市场机遇它就可以在全球范围内寻求合作伙伴</a>
+                                </div>						 	
+                                <div class="album-body">
+                                    核心成本优势。企业动态联盟的战略成本管理关键在于核心竞争能力的成本优势。一般而言，动态联盟中存在一个盟主企业，即当市场机遇出现时，能迅速抓住机遇并作出响应的...
+                                </div> 
+                                <div class="time pull-right">
+                                    <span>2015年6月3日</span>
+                                    <span>上海</span>
+                                </div>
+                            </div>
+                            <div class="album-item clearfix">
+                                <div class="album-title">
+                                    <a href="/"> 企业动态在传统企业模式下管理框架</a>
+                                </div>						 	
+                                <div class="album-body">
+                                    其框架包括：价值链分析、成本动因分析和战略定位分析。其中，价值链分析包括行业和企业价值链分析。
+                                </div> 
+                                <div class="time pull-right">
+                                    <span>2015年6月3日</span>
+                                    <span>广州</span>
+                                </div>
+                            </div>
+                            <div class="album-item clearfix">
+                                <div class="album-title">
+                                    <a href="/"> 智能家居相关的中国创业公司</a>
+                                </div>						 	
+                                <div class="album-body">
+                                    动态性。整个动态联盟是靠项目共同利益所产生的凝聚力暂时维系在一起的，项目周期终结时，动态联盟也随之解体。所以，企业动态联盟产品的成本结构、成本动因都是动态变化的。
+                                </div> 
+                                <div class="time pull-right">
+                                    <span>2015年6月3日</span>
+                                    <span>北京</span>
+                                </div>
+                            </div>
+
+                            <div class="album-item clearfix" style="border-bottom:0;">
+                                <div class="album-title">
+                                    <a href="/"> 根据市场机遇它就可以在全球范围内寻求合作伙伴</a>
+                                </div>						 	
+                                <div class="album-body">
+                                    核心成本优势。企业动态联盟的战略成本管理关键在于核心竞争能力的成本优势。一般而言，动态联盟中存在一个盟主企业，即当市场机遇出现时，能迅速抓住机遇并作出响应的...
+                                </div> 
+                                <div class="time pull-right">
+                                    <span>2015年6月3日</span>
+                                    <span>上海</span>
+                                </div>
+                            </div>
+                        </div>		   
+                   </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="index-block">
+                        <h3 class="block-title">人气公司<span class="pull-right"><a href="/album">查看更多</a></span>
+                        </h3>                				
+                        <div class="index-data">
+                            <p>
+                              <a href="/">天津东疆保税港区瑞海国际物流有</a>
+                            </p>
+                            <p>
+                              <a href="/">华为技术有限公司 </a>
+                            </p>
+                            <p>
+                              <a href="/">中化化肥有限公司 </a>
+                            </p>
+                            <p>
+                              <a href="/">苏州朗动网络科技有限公司</a>
+                            </p>
+                            <p>
+                              <a href="/">小米科技有限责任公司</a>
+                            </p>
+                            <p>
+                              <a href="/">日照昕丰宇实业有限公司</a>
+                            </p>
+                            <p>
+                              <a href="/">天津东疆保税港区瑞海国际物流有</a>
+                            </p>
+                            <p>
+                              <a href="/">华为技术有限公司 </a>
+                            </p>
+                            <p>
+                              <a href="/">中化化肥有限公司 </a>
+                            </p>
+                            <p>
+                              <a href="/">苏州朗动网络科技有限公司 </a>
+                            </p>
+                        </div>  
+                    </div>
+                    <div class="index-block">
+                        <h3 class="block-title">微信公众号</h3>                				
+                        <div class="weixin text-center">
+                            <p><img src="../img/qr_code.jpg"></p>
+                            <p>关注微信公众号</p>
+                        </div>  
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content"> 
+            <div class="nav hidden-xs">
+                <span><a href="/cms?id=13">联系我们</a></span>
+                <span class="spliter">|</span>
+
+                <span><a href="/cms?id=14">用户协议</a></span>
+                <span class="spliter">|</span>
+
+                <span><a href="/cms?id=15">用户隐私权</a></span>
+                <span class="spliter">|</span>
+
+                <span><a href="/cms?id=16">友情链接</a></span>
+                <span class="spliter">|</span>
+
+                <span><a href="/cms?id=892">关于我们</a></span>
+                <span class="spliter">|</span>
+                <span><a href="http://open.qichacha.com" target="_blank"> 开放平台</a></span>
+                <span class="spliter">|</span>			
+                <span><a href="/weixin_yjjump" target="_blank"> 企业服务</a></span>
+
+                <span class="spliter">|</span>
+
+                <span><a href="#" title="意见反馈" data-toggle="modal" data-target="#feedModal"> 意见反馈</a></span>
+            </div>
+            <div class="record">
+                <span><a href="javascript:void(0)" title="jx.01">@2014</a> <a href="/">企业名称</a> <a href="#" target="_blank" title="">www.com</a></span>
+                <span class="hidden-xs"><a href="/" target="_blank">京ICP备14039861号-5</a></span>
+                <span class="hidden-xs">交流QQ群：56464390895&nbsp;&nbsp;</span>
+            </div>  
+         </div>        
+      </footer>
+      <a href="#top" id="scroll-top" class="hidden-xs" style="display: inline;"></a>
+      <script type="text/javascript">
+            $('.dropdown-toggle').dropdown();
+      </script>
+</body>
+</html>
