@@ -30,15 +30,32 @@ function updateNav() {
 
 //update accordion color
 function updateAccordion(){
-    $("#twoHead").addClass('greyHead');
-    $("#threeHead").addClass('greyHead');
+
+    var stage = parseInt($("#stage").text());
+    console.log(stage);
+    if(stage <= 5){  //first
+        $("#collapseOne").collapse('show');
+        $("#twoHead").addClass('greyHead');
+        $("#threeHead").addClass('greyHead');
+
+    }else if(stage > 5 && stage <=10){  //second
+        $("#collapseTwo").collapse('show');
+        $("#oneHead").addClass('greyHead');
+        $("#threeHead").addClass('greyHead');
+
+
+    }else{  //final
+        $("#collapseThree").collapse('show');
+        $("#oneHead").addClass('greyHead');
+        $("#twoHead").addClass('greyHead');
+
+    }
 
     $('#collapseOne').on('show.bs.collapse', function () {
         $("#oneHead").removeClass('greyHead');
     })
 
     $('#collapseOne').on('hidden.bs.collapse', function () {
-        $("#oneHead").addClass('greyHead');
         $("#oneHead").addClass('greyHead');
     })
 
