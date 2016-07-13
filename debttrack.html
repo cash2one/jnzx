@@ -11,6 +11,10 @@
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">-->
     <link href="css/base.css" rel="stylesheet">
     <link href="css/debtinteraction.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+    <![endif]-->
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -44,6 +48,7 @@
 </nav>
 
 <div class="container">
+    <div id="stage" style="display: none">4</div>
     <div class="row">
         <div class="col-xs-12 col-sm-7">
         	<div class="panel-group" id="accordion">
@@ -52,13 +57,13 @@
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion" 
 							href="#collapseOne">
-							律师函催收阶段<span class="glyphicon glyphicon-chevron-down"></span>
+							律师函催收阶段&nbsp;&nbsp;<i class="icon-caret-down"></i></span>
 							</a>
 							<span class="panel-time">3天17:20:10</span>
 						</h4>
 						
 					</div>
-					<div id="collapseOne" class="panel-collapse collapse in">
+					<div id="collapseOne" class="panel-collapse collapse">
 						<div class="panel-body">
 							<div class="state-headline">
 								<span class="state-time">时间</span>
@@ -107,7 +112,7 @@
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion" 
 							href="#collapseTwo">
-							律师函催收阶段<span class="glyphicon glyphicon-chevron-down"></span>
+							诉讼催收阶段&nbsp;&nbsp;<i class="icon-caret-down"></i></span>
 							</a>
 							<span class="panel-time">3天17:20:10</span>
 						</h4>
@@ -160,8 +165,7 @@
 					<div class="panel-heading" id="threeHead">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion" 
-							href="#collapseThree">
-							律师函催收阶段<span class="glyphicon glyphicon-chevron-down"></span>
+							href="#collapseThree">强制执行催收阶段&nbsp;&nbsp;<i class="icon-caret-down"></i></span>
 							</a>
 							<span class="panel-time">3天17:20:10</span>
 						</h4>

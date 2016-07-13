@@ -35,43 +35,62 @@ function updateAccordion(){
     console.log(stage);
     if(stage <= 5){  //first
         $("#collapseOne").collapse('show');
-        $("#twoHead").addClass('greyHead');
-        $("#threeHead").addClass('greyHead');
+        // $("#twoHead").addClass('greyHead');
+        // $("#threeHead").addClass('greyHead');
+
+        $("#twoHead i").removeClass('icon-caret-down');
+        $("#twoHead i").addClass('icon-caret-up');
+        $("#threeHead i").removeClass('icon-caret-down');
+        $("#threeHead i").addClass('icon-caret-up');
+
 
     }else if(stage > 5 && stage <=10){  //second
         $("#collapseTwo").collapse('show');
-        $("#oneHead").addClass('greyHead');
-        $("#threeHead").addClass('greyHead');
-
+        // $("#oneHead").addClass('greyHead');
+        // $("#threeHead").addClass('greyHead');
+        $("#oneHead i").removeClass('icon-caret-down');
+        $("#oneHead i").addClass('icon-caret-up');
+        $("#threeHead i").removeClass('icon-caret-down');
+        $("#threeHead i").addClass('icon-caret-up');
 
     }else{  //final
         $("#collapseThree").collapse('show');
-        $("#oneHead").addClass('greyHead');
-        $("#twoHead").addClass('greyHead');
+        // $("#oneHead").addClass('greyHead');
+        // $("#twoHead").addClass('greyHead');
+        $("#oneHead i").removeClass('icon-caret-down');
+        $("#oneHead i").addClass('icon-caret-up');
+        $("#twoHead i").removeClass('icon-caret-down');
+        $("#twoHead i").addClass('icon-caret-up');
 
     }
 
     $('#collapseOne').on('show.bs.collapse', function () {
-        $("#oneHead").removeClass('greyHead');
+        $("#oneHead i").removeClass('icon-caret-up');
+        $("#oneHead i").addClass('icon-caret-down');
     })
 
     $('#collapseOne').on('hidden.bs.collapse', function () {
-        $("#oneHead").addClass('greyHead');
+        $("#oneHead i").removeClass('icon-caret-down');
+        $("#oneHead i").addClass('icon-caret-up');
     })
 
     $('#collapseTwo').on('show.bs.collapse', function () {
-        $("#twoHead").removeClass('greyHead');
+        $("#twoHead i").removeClass('icon-caret-up');
+        $("#twoHead i").addClass('icon-caret-down');
     })
 
     $('#collapseTwo').on('hidden.bs.collapse', function () {
-        $("#twoHead").addClass('greyHead');
+        $("#twoHead i").removeClass('icon-caret-down');
+        $("#twoHead i").addClass('icon-caret-up');
     })
 
     $('#collapseThree').on('show.bs.collapse', function () {
-        $("#threeHead").removeClass('greyHead');
+        $("#threeHead i").removeClass('icon-caret-up');
+        $("#threeHead i").addClass('icon-caret-down');
     })
 
     $('#collapseThree').on('hidden.bs.collapse', function () {
-        $("#threeHead").addClass('greyHead');
+        $("#threeHead i").removeClass('icon-caret-down');
+        $("#threeHead i").addClass('icon-caret-up');
     })
 }
