@@ -98,7 +98,7 @@ body{
 }
 
 /*Carsousel*/
-#myCarousel{
+nav+div{
     margin-top: 50px;/*The height of navigation bar*/
 }
 #myCarousel>div:first-child{
