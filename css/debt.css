@@ -152,3 +152,21 @@
 .manage-debt-items .manage-id{
     color: #00CCCD;
 }
+
+.audit-body{
+    background-color: #f2f8f8;
+}
+
+.audit-style{
+    min-height:600px;
+}
+
+.audit-style .description{
+    margin-top: 20px;
+    text-align: center;
+    color: #585958;
+}
+
+#audit{
+    text-align: center;
+}
