@@ -73,8 +73,9 @@ body{
 }
 .nav>li>a:hover, .nav>li>a:focus,.nav>.active,.nav>.active>a{
     text-decoration: none;
-    background-color: #eee;
-    color:#1fda46;
+    background-color: transparent;
+    color:#fff;
+    font-weight: bold;
 }
 
 
@@ -240,8 +241,14 @@ body{
 /*footer*/
 .ft-bright,
 .ft-dark{
-    min-height:80px;
+    min-height:130px;
 }
+
+.ft-bright>.container,
+.ft-dark>.container{
+    padding-top:20px;
+}
+
 .ft-bright{
     background-color:#fff;
     color:#333;
@@ -261,8 +268,10 @@ body{
     border-left: 1px solid #eee;
 }
 
-.contact{
-    padding-top: 25px;
+.contact li{
+    border-left: 0px;
+    margin-right: 50px;
+    text-align: left;
 }
 .ft-bright>.contact a{
     color:#333;
@@ -271,7 +280,9 @@ body{
     color:#eee;
 }
 .copyright{
+    margin-top: 15px;
     font-size: 10px;
+    color:#aaa;
 }
 
 

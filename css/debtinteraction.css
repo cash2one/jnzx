@@ -1,17 +1,27 @@
-nav+.container{
-	margin-top: 80px;
+#myCarousel+.container{
+	margin-top: 10px;
+}
+#myCarousel>div:first-child {
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    width: 75%;
+    margin-left: -37.5%;
+    z-index: 50;
 }
 
 /*column title*/
 h4{
 	border-bottom: 1px solid #ddd;
 	font-weight: bold;
+	margin-top:15px;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 15px; 
 }
 h4>small{
-	color: #fb1919;
+	color: #4bab00;
 	margin-left: 20px;
 }
 h4>small>.glyphicon{
@@ -19,7 +29,6 @@ h4>small>.glyphicon{
 }
 /*panel*/
 .panel-group{
-	border: 1px solid #ddd;
 	margin-top: 10px
 }
 .panel {
@@ -37,28 +46,26 @@ h4>small>.glyphicon{
 .panel-heading{
 	padding:0px;
 	margin:0px;
-	background-color: #dbeded;
+	border:0px;
 	border-radius: 0px;
 }
 .panel-title{
 	font-size: 18px;
-	padding-left: 20px;
 }
 .panel-title>span{
 	float: right;
 	font-size: 14px;
 	font-weight: 100;
-	margin-right: 20px;
 }
-.panel-body{
+.panel-group .panel-heading+.panel-collapse>.panel-body,
+.panel-group .panel-heading+.panel-collapse>.list-group{
 	padding:0px;
+	border-top:0px;
 }
 .panel-body .state-headline{
 	font-size: 18px;
-	background-color: #f9f9f9;
-	border-bottom: 1px solid #ddd;
 	line-height: 42px;
-	padding-left: 80px;
+	padding-left: 40px;
 }
 
 .panel-body>ul{
@@ -67,10 +74,10 @@ h4>small>.glyphicon{
 	margin-bottom: 20px;
 }
 .panel-body li{
-	padding-left: 40px;
+	padding-left: 13px;
 }
 .panel-body .state-table{
-	padding-left: 40px;
+	padding-left: 27px;
 	padding-top: 22px;
 }
 .panel-body .first-line>.state-table{
@@ -81,7 +88,7 @@ h4>small>.glyphicon{
 	position: absolute;
 	width: 14px;
     height: 14px;
-    margin-left: -47px;
+    margin-left: -34px;
     margin-top:7px;
     background-image:url('../images/stateicon.png');
 	background-repeat:no-repeat;
@@ -117,7 +124,7 @@ h4>small>.glyphicon{
 }
 
 #right-interaction{
-	padding-top: 0px;
+	margin-top: 10px;
 }
 
 .panel-body .green-list,
@@ -137,7 +144,6 @@ h4>small>.glyphicon{
 .panel-body .state-file{
 	float: right;
 	text-align: center;
-	margin-right: 20px;
 	width: 80px;
 }
 .panel-body .state-file>.btn-default{
@@ -145,7 +151,7 @@ h4>small>.glyphicon{
 }
 /*upload form*/
 #dtfile{
-	padding:20px 20px;
+	padding:20px 0px;
 }
 #dtfile .control-label{
 	text-align: left;
