@@ -18,6 +18,7 @@
     <script src="../js/jquery-1.11.3.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/dropdown.js"></script>
+    <script src="../js/index_zy.js"></script>
     
 </head>
 <body>
@@ -81,18 +82,18 @@
         <div class="container mod-entry-style">
             <div class="row" id="entry">
                 <div class="col-sm-3 col-sm-offset-1">
-                    <a href="../../issuedebt.html"><img src="../img/icon1.png" class="img-responsive" alt="我有催收需求"></a>
-                    <div class="description">我有催收需求</div>
+                    <a href="../../issuedebt.html"><img id="img1" src="../img/icon1.png" class="img-responsive" alt="我有催收需求" onmouseover="changeStyleIn(1)" onmouseout="changeStyleOut(1)"></a>
+                    <div id='item1' class="description">我有催收需求</div>
                 </div>
 
                 <div class="col-sm-3 col-sm-offset-1">
-                    <a href="../../issuedebt.html"><img src="../img/icon2.png" href='' class="img-responsive" alt="我要发布债务"></a>
-                    <div class="description">我要发布债务</div>
+                    <a href="../../issuedebt.html"><img id="img2" src="../img/icon2.png" href='' class="img-responsive" alt="我要发布债务" onmouseover="changeStyleIn(2)" onmouseout="changeStyleOut(2)"></a>
+                    <div id="item2" class="description">我要发布债务</div>
                 </div>
 
                 <div class="col-sm-3 col-sm-offset-1">
-                    <img src="../img/icon3.png" class="img-responsive" alt="我要找老赖">
-                    <div class="description">我要找老赖</div>
+                    <img src="../img/icon3.png" id="img3" class="img-responsive" alt="我要找老赖" onmouseover="changeStyleIn(3)" onmouseout="changeStyleOut(3)">
+                    <div id="item3" class="description">我要找老赖</div>
                 </div>
 
             </div>

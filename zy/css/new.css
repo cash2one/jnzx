@@ -1703,7 +1703,12 @@ strong.ok {
 .mod-entry-style .description{
     margin-top: 10px;
     color: #09538a;
+    opacity: 0.8;
 }
+
+/*.mod-entry-style img:hover{*/
+    /*opacity: 0.5;*/
+/*}*/
 
 
 
