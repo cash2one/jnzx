@@ -191,7 +191,19 @@ function showMapD3() {
     var proj = d3.geo.mercator().center([105, 38]).scale(400).translate([width / 2, height / 2]);
     var path = d3.geo.path().projection(proj);
 
-    d3.json("media/china.json", function (error, cn) {
+    d3.xml("media/southchinasea.svg", function(error, xmlDocument) {
+        svg.html(function(d){
+            return  xmlDocument.getElementsByTagName("g")[0].outerHTML+d3.select(this).html();
+        });
+
+        var gSouthSea = d3.select("#southsea");
+
+        gSouthSea.attr("transform","translate(380,300)scale(0.5)")
+            .attr("class","southsea");
+
+    });
+
+    d3.json("media/china1.json", function (error, cn) {
         svg.append("g")
             .attr("class", "states")
             .selectAll("path")
@@ -227,6 +239,9 @@ function showMapD3() {
                 d3.select(this).transition().duration(1000).ease("elastic")
                     .style({'fill': "#3fe265", "r": "10px"});
 
+                console.log('1');
+                console.log(d);
+
                 //2.change table content
                 refreshTable(d,400);
             })
@@ -248,7 +263,10 @@ function showMapD3() {
 
         //set timer
         timeInter = setInterval(showMapNode, 3000);
+
     });
+
+
 }
 
 function showMapNode() {
@@ -302,6 +320,7 @@ function refreshTable1(data) {
 
 //change table content
 function refreshTable(data,freq) {
+    
     $("#idx_head").animate({"opacity":0},freq,function () {
         $("#idx_head").html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]);
         $("#idx_head").animate({"opacity":1},freq);

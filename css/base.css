@@ -159,6 +159,12 @@ nav+div{
     background-color: #00cccd;
 }
 
+.southsea {
+    stroke: rgb(93, 213, 214);
+    stroke-width: 1px;
+    fill: rgb(203, 227, 227);
+}
+
 /*#map-info .map-table-second{*/
     /*min-width: 40px;*/
 /*}*/
