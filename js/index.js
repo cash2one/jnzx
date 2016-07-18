@@ -320,7 +320,7 @@ function refreshTable1(data) {
 
 //change table content
 function refreshTable(data,freq) {
-    
+
     $("#idx_head").animate({"opacity":0},freq,function () {
         $("#idx_head").html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]);
         $("#idx_head").animate({"opacity":1},freq);

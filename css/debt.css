@@ -64,11 +64,22 @@
     margin-bottom: 30px;
 }
 
+.debtinfo{
+    margin-top: 10px;
+}
+
 .issuedebt span.glyphicon{
     color: #00CCCD;
     position: absolute;
     margin-left: -30px;
     line-height: 34px;
+}
+
+.info-gly{
+    position: relative !important;
+    margin-left: 0 !important;
+    line-height: 2 !important;
+    color: #cbcfd0 !important;
 }
 
 .issuedebt .input-group-addon span.glyphicon{
@@ -77,6 +88,30 @@
     line-height: 1;
 
 }
+
+.info-header{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ebeff0;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.info-row{
+    border: 1px solid #ebeff0;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    line-height: 2;
+}
+
+#proof{
+    color: black;
+    margin-left: 10px;
+}
+
 
 /*.issuedebt .file-input{*/
     /*margin-left: 0px;*/
