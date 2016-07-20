@@ -14,7 +14,7 @@ $(document).ready(function () {
     updateNav();
 
     //detect whether support svg or canvas
-    if (supportSVG()) {
+    if (!supportSVG()) {
         //replace the circle
         $('#drawing').html('<div><img class="img-responsive" src="images/circle.png" alt="统计信息"></div>');
 
