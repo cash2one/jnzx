@@ -23,7 +23,8 @@ $(document).ready(function () {
     $("#proof").fileinput({
         showUpload: false,
         removeClass: "btn btn-default file-btn",
-        language: "zh"
+        language: "zh",
+        initialCaption:"输入文件"
     });
 
     // previewFileType: "text",

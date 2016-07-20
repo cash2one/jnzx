@@ -4,41 +4,91 @@
  */
 var city;
 var timeIdx = 0;
-var timeInter;
+var timeInter,timeInter1;
 
 $(document).ready(function () {
+    /*setHeight*/
+    setHeight();
+
     /*update nav bar*/
     updateNav();
 
-    //three circle
-    showCircle();
+    //detect whether support svg or canvas
+    if (supportSVG()) {
+        //replace the circle
+        $('#drawing').html('<div><img class="img-responsive" src="images/circle.png" alt="统计信息"></div>');
 
-    d3.json("media/city.json", function (error, mcity) {
-        city = mcity;
-        showMapD3();  //when get city info, we plot China map
-    });
+        //replace the circle
+        $('#china-map').html('<div style="margin-top: 20px"><img class="img-responsive" src="images/china.png" alt="中国地图"></div>');
+
+
+        //update table
+        d3.json("media/city.json", function (error, mcity) {
+            city = mcity;
+            timeInter1 = setInterval(refreshTableNoSVG, 3000);
+        });
+
+
+
+    }else {
+
+        //three circle
+        showCircle();
+
+        d3.json("media/city.json", function (error, mcity) {
+            city = mcity;
+            showMapD3();  //when get city info, we plot China map
+        });
+    }
 
 
 });
+
+function supportSVG() {
+    return document.createElement('svg').getAttributeNS
+}
+
+function supportCanvas() {
+    var elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d'));
+}
+
+function setHeight(){
+    var HEIG = 500;
+    var width = $(window).width();
+    if(width > 960){
+        var margin = -(width*550/1440 - HEIG)/2;
+        var height = width*550/1440;
+
+        $('#myCarousel img.img-responsive').css('width','100%');
+        $('#myCarousel img.img-responsive').css('overflow','hidden');
+        $('#myCarousel img.img-responsive').css('height',height);
+        $('#myCarousel img.img-responsive').css('margin-top',margin);
+        $('#myCarousel img.img-responsive').css('margin-bottom',margin);
+        $('#myCarousel img.img-responsive').css('margin-left',0);
+        $('#myCarousel img.img-responsive').css('margin-right',0);
+
+    }
+}
 
 function showCircle() {
     var draw = SVG('drawing').size(520, 320)
     var circle1 = draw.circle(150).attr({
         cx: 103
         , cy: 137
-        , fill: '#54555d'
+        , fill: '#292a34'
         , 'fill-opacity': 0.8
     })
-    var circle2 = draw.circle(130).attr({
-        cx: 261
-        , cy: 216
-        , fill: '#4ce16b'
+    var circle2 = draw.circle(150).attr({
+        cx: 230
+        , cy: 200
+        , fill: '#1fda46'
         , 'fill-opacity': 0.8
     })
-    var circle3 = draw.circle(100).attr({
-        cx: 403
+    var circle3 = draw.circle(150).attr({
+        cx: 340
         , cy: 110
-        , fill: '#33d6d7'
+        , fill: '#00cccd'
         , 'fill-opacity': 0.8
     })
     var text1 = draw.text("案件数量").attr({
@@ -47,112 +97,127 @@ function showCircle() {
         , fill: '#eee'
     }).font({
         family: 'Microsoft YaHei'
-        , size: 18
+        , size: 15
         , anchor: 'middle'
         , leading: '1.5em'
     })
     var text2 = draw.text("债务总额").attr({
-        x: 261
-        , y: 221
+        x: 230
+        , y: 202
         , fill: '#eee'
     }).font({
         family: 'Microsoft YaHei'
-        , size: 18
+        , size: 15
         , anchor: 'middle'
         , leading: '1.5em'
     })
     var text3 = draw.text("催收率").attr({
-        x: 403
-        , y: 115
+        x: 340
+        , y: 114
         , fill: '#eee'
     }).font({
         family: 'Microsoft YaHei'
-        , size: 18
+        , size: 15
         , anchor: 'middle'
         , leading: '1.5em'
     })
 
-    var num1 = draw.text("1088").attr({
-        x: 103
-        , y: 77
+    var num1 = draw.text("28").attr({
+        x: 100
+        , y: 87
         , fill: '#eee'
     }).font({
         family: 'Microsoft YaHei'
-        , size: 38
+        , style: 'italic'
+        , size: 32
         , anchor: 'middle'
         , leading: '1.5em'
     })
-    var num2 = draw.text("18亿").attr({
-        x: 261
-        , y: 156
+    var num2 = draw.text("0.40亿").attr({
+        x: 228
+        , y: 150
         , fill: '#eee'
     }).font({
         family: 'Microsoft YaHei'
-        , size: 38
+        , style: 'italic'
+        , size: 32
         , anchor: 'middle'
         , leading: '1.5em'
     })
-    var num3 = draw.text("48%").attr({
-        x: 403
+    var num3 = draw.text("90.00%").attr({
+        x: 338
         , y: 60
         , fill: '#eee'
     }).font({
         family: 'Microsoft YaHei'
-        , size: 38
+        , style: 'italic'
+        , size: 32
         , anchor: 'middle'
         , leading: '1.5em'
     })
 
     var sh1;
-    var time1 = 50;
-    var ni1 = new SVG.Number('1088')
+    var time1 = 40;
+    var ni1 = new SVG.Number('28')
 
     var sh2;
-    var time2 = 50;
-    var ni2 = new SVG.Number('18')
+    var time2 = 40;
+    var ni2 = 0.40;
 
     var sh3;
-    var time3 = 50;
-    var ni3 = new SVG.Number('48%')
+    var time3 = 20;
+    var sh4;
+    var time4 = 20;
+    //var ni3 = new SVG.Number('98.00%')
+    var ni3 = 90.00;
 
     function delay3() {
         sh3 = setInterval("rise3()", 30);
     }
 
-    var flag = 0
+    var flag = 0;
     $(window).scroll(function () {
         var x = $(document).scrollTop()
-        if ($(document).scrollTop() > 300 && flag == 0) {
-            circle1.animate(1500, '>', 100).attr({r: '100'})
-            circle2.animate(1500, '>', 100).attr({r: '100'})
-            circle3.animate(1500, '>', 100).attr({r: '100'})
+        if ($(document).scrollTop() > 100 && flag == 0) {
+            circle1.animate(1500, '>', 100).attr({r: '80'})
+            circle2.animate(1500, '>', 100).attr({r: '80'})
+            circle3.animate(1500, '>', 100).attr({r: '80'})
             sh1 = setInterval(function () {
-                ni1 = ni1.plus('3356');
+                ni1 = ni1.plus('2');
                 num1.text(ni1.toString());
                 time1 = time1 - 1;
                 if (time1 <= 0) {
                     clearInterval(sh1);
                 }
-                ;
             }, 30);
             sh2 = setInterval(function () {
-                ni2 = ni2.plus('3');
+                ni2 = parseFloat(ni2) + 0.04;
+                ni2 = parseFloat(ni2).toFixed(2);
                 num2.text(ni2.toString() + "亿");
                 time2 = time2 - 1;
                 if (time2 <= 0) {
                     clearInterval(sh2);
                 }
-                ;
             }, 30);
             sh3 = setInterval(function () {
-                ni3 = ni3.plus('1%');
-                num3.text(ni3.toString());
+                ni3 = ni3 - 0.03;
+                ni3 = ni3.toFixed(2);
+                num3.text(ni3.toString()+'%');
                 time3 = time3 - 1;
                 if (time3 <= 0) {
                     clearInterval(sh3);
+                    sh4 = setInterval(function () {
+                        ni3 = parseFloat(ni3) + 0.03;
+                        ni3 = ni3.toFixed(2);
+                        num3.text(ni3.toString()+'%');
+                        time4 = time4 - 1;
+                        if (time4 <= 0) {
+                            clearInterval(sh4);
+                        }
+                    }, 30);
                 }
-                ;
             }, 30);
+
             flag = 1
         }
         ;
@@ -162,19 +227,9 @@ function showCircle() {
 //update nav bar based on current url address
 function updateNav() {
     var position = window.location.pathname;
-    var dot1 = position.indexOf('.')
-    if (dot1 < 0) {  //home
-        $('#index').addClass('active');
-    } else {
-        //index.html or other
-        var slash1 = position.lastIndexOf('/');
-        if (slash1 < 0) {  // impossible
-            $('#index').addClass('active');
-        } else {
-            var posName = position.substring(slash1 + 1, dot1);
-            $('#' + posName).addClass('active');
-        }
-    }
+    var slash1 = position.lastIndexOf('/');
+    var posName = position.substring(slash1 + 1, position.length);
+    $('#' + posName).addClass('active');
 }
 
 //option1: visualize China map with D3.js
@@ -239,9 +294,6 @@ function showMapD3() {
                 d3.select(this).transition().duration(1000).ease("elastic")
                     .style({'fill': "#3fe265", "r": "10px"});
 
-                console.log('1');
-                console.log(d);
-
                 //2.change table content
                 refreshTable(d,400);
             })
@@ -263,10 +315,7 @@ function showMapD3() {
 
         //set timer
         timeInter = setInterval(showMapNode, 3000);
-
     });
-
-
 }
 
 function showMapNode() {
@@ -287,39 +336,43 @@ function showMapNode() {
     }
 }
 
-
-//change table content
-function refreshTable_ori(data) {
-    var htmlContent = '<table class="table"><thead><tr><th>' + data["city"] + ' ' + data["client"] + ' ' + '催收编号：' + data["id"] + '</th></tr></thead><tbody>';
-    htmlContent += '<tr class="items-odd"><td>债权金额 (万元)</td><td>' + data['money']
-        + '</td></tr><tr class="items-even"><td>回报</td><td>' + data['return']
-        + '</td></tr><tr class="items-odd"><td>逾期时间</td><td>' + data['due']
-        + '</td></tr><tr class="items-even"><td>代办律师</td><td>' + data['lawyer']
-        + '</td></tr><tr class="items-final"><td>追回总额 (万元)</td><td>' + data['moneyGet']
-        + '</td></tr></tbody></table>';
-
-    $("#map-info").html(htmlContent);
-}
-
-
-//change table content
-function refreshTable1(data) {
-    //$("#map-info").css('display','none');
-    $("#map-info").hide();
-    var htmlContent = '<table class="table"><thead><tr><th>' + data["city"] + ' ' + data["client"] + ' ' + '催收编号：' + data["id"] + '</th></tr></thead><tbody>';
-    htmlContent += '<tr class="items-odd"><td>债权金额 (万元)</td><td>' + data['money']
-        + '</td></tr><tr class="items-even"><td>回报</td><td>' + data['return']
-        + '</td></tr><tr class="items-odd"><td>逾期时间</td><td>' + data['due']
-        + '</td></tr><tr class="items-even"><td>代办律师</td><td>' + data['lawyer']
-        + '</td></tr><tr class="items-final"><td>追回总额 (万元)</td><td>' + data['moneyGet']
-        + '</td></tr></tbody></table>';
-
-    $("#map-info").html(htmlContent);
-    $("#map-info").show('slow');
-}
-
 //change table content
 function refreshTable(data,freq) {
+    $("#idx_head").animate({"opacity":0},freq,function () {
+        $("#idx_head").html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]);
+        $("#idx_head").animate({"opacity":1},freq);
+    });
+
+    $("#idx_money").animate({"opacity":0},freq,function () {
+        $("#idx_money").html(data["money"]);
+        $("#idx_money").animate({"opacity":1},freq);
+    });
+
+    $("#idx_return").animate({"opacity":0},freq,function () {
+        $("#idx_return").html(data["return"]);
+        $("#idx_return").animate({"opacity":1},freq);
+    });
+
+    $("#idx_due").animate({"opacity":0},freq,function () {
+        $("#idx_due").html(data["due"]);
+        $("#idx_due").animate({"opacity":1},freq);
+    });
+
+    $("#idx_lawyer").animate({"opacity":0},freq,function () {
+        $("#idx_lawyer").html(data["lawyer"]);
+        $("#idx_lawyer").animate({"opacity":1},freq);
+    });
+
+    $("#idx_moneyGet").animate({"opacity":0},freq,function () {
+        $("#idx_moneyGet").html(data["moneyGet"]);
+        $("#idx_moneyGet").animate({"opacity":1},freq);
+    });
+}
+
+function refreshTableNoSVG() {
+    var freq = 1000;
+    var cityLen = city.length;
+    var data = city[timeIdx];
 
     $("#idx_head").animate({"opacity":0},freq,function () {
         $("#idx_head").html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]);
@@ -350,4 +403,6 @@ function refreshTable(data,freq) {
         $("#idx_moneyGet").html(data["moneyGet"]);
         $("#idx_moneyGet").animate({"opacity":1},freq);
     });
+
+    timeIdx = (timeIdx + 1) % cityLen;
 }
