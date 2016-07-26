@@ -1,9 +1,9 @@
 body{
     background-color: #f2f8f8;
 }
-.login{
-    min-height:900px;
-}
+/*.login{*/
+    /*min-height:900px;*/
+/*}*/
 
 .login .login-form{
     background-color: #fff;
