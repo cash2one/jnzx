@@ -20,6 +20,10 @@
     z-index: 2;
 }
 
+.select-roles .first-row{
+    border-bottom: solid 1px #eee;
+}
+
 .select-roles  td{
     border-left: solid 1px #eee;
     padding: 20px;
@@ -44,4 +48,27 @@
     color: #eee;
     background-color: #1fda46;
     /*border-color: 0px;*/
+}
+
+/*new layout for mobile phone*/
+@media screen and (max-width: 768px) {
+    #myCarousel>div:first-child {
+        top: 0%;
+    }
+
+    .select-roles-col{
+        margin-top: 20px;
+    }
+
+    .select-roles .btn {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .select-roles-col .second-part {
+        padding-top: 25px;
+    }
+
 }

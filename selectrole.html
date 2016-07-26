@@ -20,23 +20,32 @@
 
     <script src="http://apps.bdimg.com/libs/d3/3.4.8/d3.min.js"></script>
     <script src="js/debtcenter.js"></script>
+    <script src="js/regselect.js"></script>
     <script type="text/javascript" src="js/svg.min.js"></script>
 
 </head>
 
 <body>
 
-<nav class="navbar navbar-jn navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header"><img class="navbar-brand-jn" src="images/Logo.png" alt="LOGO"/> <a
-                class="navbar-brand-jn" href="#">还我<span>钱</span>
-        </a></div>
-        <div>
+<nav class="navbar navbar-jn navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container nav-container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <img class="navbar-brand-jn" src="images/Logo.png" alt="LOGO"/>
+            <a class="navbar-brand-jn" href="#">还我<span>钱</span></a>
+        </div>
+        <div id="hidden-nav" class="navbar-collapse collapse" role="navigation">
             <ul class="nav navbar-nav">
                 <li id="index"><a href=".">首页</a></li>
                 <li id="debtcenter"><a href="debtcenter.html">债务中心</a></li>
                 <li id="issuedebt"><a href="issuedebt.html">发布债务</a></li>
-                <!--<li id="collectdebt"><a href="#">债务催收</a></li>-->
+                <li id="collectdebt"><a href="#">债务催收</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-right-jn">
                 <li id="register"><a href="selectrole.html">注册</a></li>
@@ -46,7 +55,7 @@
     </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide selectrole" data-ride="carousel">
     <div class="container">
         <div class="row select-roles">
             <div class="col-lg-offset-1 col-lg-5 col-md-6 col-sm-12 select-roles-col">
@@ -86,10 +95,10 @@
     </div>
 
     <!-- 轮播（Carousel）指标 -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
+    <!--<ol class="carousel-indicators">-->
+        <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+        <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+    <!--</ol>-->
     <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner">
         <div class="item active"><img class="img-responsive" src="images/slide1.jpg" alt="First slide"></div>
@@ -114,7 +123,7 @@
                 <li>京ICP备16006015号</li>
             </ul>
         </div>
-        <div class="col-xs-3 col-md-2  text-center">
+        <div class="col-xs-3 col-md-2  text-center qrcode">
             <img src="images/QRCode.png">
             <p>扫描二维码关注</p>
         </div>
