@@ -2,27 +2,39 @@ body{
     background-color: #f2f8f8;
 }
 .login{
-    min-height:600px;
+    min-height:900px;
 }
 
 .login .login-form{
     background-color: #fff;
     border: 1px solid #eee;
-    margin-top: 50px;
+    margin-top: 150px;
     border-radius: 5px;
 }
 
 .login-form .top-title{
     border-bottom: 1px solid #eee;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: normal;
     font-size: 120%;
 }
 
 .login-form .below-content{
     padding-top: 20px;
+}
+
+.login-form .below-content .usernamecol{
+    padding-right: 0px;
+}
+
+.login-form .below-content .authcodecol input{
+    border-color: #d8d8d8 !important;
+}
+
+.login-form .below-content .othercol{
+    padding-right: 10px;
 }
 
 .login-form button.login-btn{
@@ -31,9 +43,9 @@ body{
 }
 
 .registerdebtor a{
-    border: 1px solid #eee;
-    border-radius: 5px;
-    background-color: #FBFBFB;
+    /*border: 1px solid #eee;*/
+    /*border-radius: 5px;*/
+    /*background-color: #FBFBFB;*/
 }
 
 .registerdebtor button.registerdebtor2-btn,
@@ -43,28 +55,45 @@ body{
 }
 
 .registerdebtor .agree{
+    padding-top: 0px;
     margin-bottom: 20px;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 0px;
+    line-height: 1.7;
 }
 
-.registerlawyer span.glyphicon {
+/*.registerlawyer span.glyphicon {*/
+/*color: #00CCCD;*/
+/*position: absolute;*/
+/*margin-left: -30px;*/
+/*line-height: 34px;*/
+/*font-size:1px;*/
+/*}*/
+
+.registerlawyer span.star {
     color: #00CCCD;
     position: absolute;
     margin-left: -30px;
     line-height: 34px;
+    font-size:20px;
 }
+
 /*.registerlawyer .file-input{*/
-    /*margin-left: 0px;*/
-    /*padding-right: 15px;*/
+/*margin-left: 0px;*/
+/*padding-right: 15px;*/
 /*}*/
 
 .registerlawyer .btn-file{
     color: #fff;
-    background-color: #00ccdd;
-    border: 1px solid #00ccdd;
+    /*background-color: #00ccdd;*/
+    background-color: #cdcfd0;
+    /*border: 1px solid #00ccdd;*/
+    border: 1px solid #bdbfbf;
 }
 
 /*.registerlawyer .col-file-input{*/
-    /*height: 34px;*/
+/*height: 34px;*/
 /*}*/
 
 .registerlawyer #lawyerDiv{
@@ -73,4 +102,11 @@ body{
 
 .btn-success{
     background-color: #00ccdd;
+}
+
+/*new layout for mobile phone*/
+@media screen and (max-width: 768px) {
+    .authcodecol{
+        margin-left: 5px;
+    }
 }
