@@ -32,12 +32,32 @@ $(document).ready(function () {
 
     }else {
 
+        /*decide the window size*/
+        var windowWid1 = $(window).width();
+        if (windowWid1 > 500){
+            var wid1 = 520;
+            var hei1 = 320;
+        }else{
+            var wid1 = windowWid1;
+            var hei1 = wid1*7/13;
+        }
         //three circle
-        showCircle();
+        showCircle(wid1,hei1);
 
         d3.json("media/city.json", function (error, mcity) {
             city = mcity;
-            showMapD3();  //when get city info, we plot China map
+
+            /*decide the window size*/
+            var windowWid = $(window).width();
+            if (windowWid > 500){
+                var wid = 500;
+                var hei = 400;
+            }else{
+                var wid = windowWid*0.9;
+                var hei = wid*4/5;
+            }
+
+            showMapD3(wid,hei);  //when get city info, we plot China map
         });
     }
 
@@ -71,8 +91,14 @@ function setHeight(){
     }
 }
 
-function showCircle() {
-    var draw = SVG('drawing').size(520, 320)
+function showCircle(width,height) {
+
+    var draw = SVG('drawing').size(width, height);
+    var svg = $('#drawing').find('svg')[0];
+    svg.setAttribute('viewBox', '0 0 ' + 520 + ' ' + 320);
+    svg.setAttribute('preserveAspectRatio', 'xMinYMin meet');
+
+
     var circle1 = draw.circle(150).attr({
         cx: 103
         , cy: 137
@@ -233,8 +259,8 @@ function updateNav() {
 }
 
 //option1: visualize China map with D3.js
-function showMapD3() {
-    var width = 500, height = 400;
+function showMapD3(width,height) {
+    //var width = 500, height = 400;
 
     var svg = d3.select("#china-map").append("svg")
         .attr("width", width)
@@ -243,7 +269,7 @@ function showMapD3() {
         .attr("preserveAspectRatio", "xMidYMid")
         .attr("viewBox", "0 0 " + width + " " + height);
 
-    var proj = d3.geo.mercator().center([105, 38]).scale(400).translate([width / 2, height / 2]);
+    var proj = d3.geo.mercator().center([105, 38]).scale(width*0.8).translate([width / 2, height / 2]);
     var path = d3.geo.path().projection(proj);
 
     d3.xml("media/southchinasea.svg", function(error, xmlDocument) {

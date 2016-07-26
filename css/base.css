@@ -4,7 +4,7 @@ body{
     font-family: 'PingFang SC','Myriad Pro', 'Hiragino Sans GB',"Open Sans","Helvetica Neue",Helvetica,"Segoe UI","Segoe WP","Microsoft YaHei";
     -webkit-font-smoothing: antialiased;
 }
-.btn{   
+.btn{
     border-width: 0px;
 }
 .btn-long{
@@ -14,22 +14,28 @@ body{
     color:#eee;
     font-size: 15px;
 }
-.btn-long:hover,
-.btn-long:focus,
-.btn-long.focus {
+/*.btn-long:hover,*/
+/*.btn-long:focus,*/
+/*.btn-long.focus {*/
+/*color: #eee;*/
+/*text-decoration: none;*/
+/*}*/
+
+.btn1:hover,
+.btn1:focus{
     color: #eee;
-    text-decoration: none;
+    background-color: #01bdbe;
 }
+
 .btn-trans{
     border: 1px solid #00cccd;
     background-color: transparent;
     color: #00cccd;
 }
 .btn-trans:hover,
-.btn-trans:focus,
 .btn-trans.focus {
-    color: #00cccd;
-    text-decoration: none;
+    color: #eee;
+    background-color: #00cccd;
 }
 
 /*navigation bar*/
@@ -41,6 +47,26 @@ body{
     margin-bottom: 0px;
 
 }
+
+.navbar-jn #drop-jn{
+    min-width: 90px;
+    background-color: #32333e;
+    color: #c2cccf;
+}
+
+.navbar-jn #drop-jn li a{
+    color: #c2cccf;
+}
+
+.navbar-jn #drop-jn li a:hover{
+    background-color: #32333e;
+    color: #00cccd;
+}
+
+.navbar-jn .dropdown.open a.dropdown-toggle{
+    background-color: #292a34;
+}
+
 .container>.navbar-header,
 .container-fluid>.navbar-header,
 .container>.navbar-collapse,
@@ -52,7 +78,7 @@ body{
 }
 
 .navbar-brand-jn {
-	float: left;
+    float: left;
     height: 50px;
     padding: 7px 15px 7px 0px;
     font-size: 22px;
@@ -61,7 +87,7 @@ body{
     letter-spacing: 3px;
 }
 .navbar-brand-jn>span {
-	color: #1edb42;
+    color: #1edb42;
 }
 .navbar-brand-jn:hover,
 .navbar-brand-jn:focus {
@@ -76,6 +102,9 @@ body{
     background-color: transparent;
     color:#fff;
     font-weight: bold;
+}
+.nav>li>a:hover{
+    color: #00cccd;
 }
 
 
@@ -98,9 +127,14 @@ body{
 }
 
 /*Carsousel*/
-nav+div{
+#myCarousel{
     margin-top: 50px;/*The height of navigation bar*/
 }
+
+.indexCarousel{
+    margin-top: 25px !important;
+}
+
 #myCarousel>div:first-child{
     position: absolute;
     text-align: center;
@@ -111,12 +145,13 @@ nav+div{
     z-index: 50;
 }
 #myCarousel h1{
-    color:#eee;
+    color:#c2cccf;
     line-height: 200%;
     font-style: italic;
     letter-spacing: 3px;
     font-size: 28px;
     margin-bottom: 5%;
+    font-weight: normal;
 }
 #myCarousel .btn-long{
     margin:5px 15px;
@@ -126,15 +161,33 @@ nav+div{
     width:100%;
 }
 
+.selectrole img.img-responsive{
+    height: 800px;
+}
+
+@media screen and (min-width: 1500px) {
+    .selectrole .select-roles-col {
+        width: 450px;
+    }
+
+    .select-roles {
+        padding-left: 10%;
+    }
+}
+
 /*Stats Data*/
 .stats{
-    height: 410px;
+    height: 350px;
     display: table-cell;
     vertical-align: middle;
 }
 
 .stats #intro{
     line-height: 2;
+}
+
+.stats h3{
+    margin-top: 60px;
 }
 
 /*China map area*/
@@ -166,7 +219,7 @@ nav+div{
 }
 
 /*#map-info .map-table-second{*/
-    /*min-width: 40px;*/
+/*min-width: 40px;*/
 /*}*/
 
 /*debt list*/
@@ -236,13 +289,17 @@ nav+div{
     color:#777;
 }
 
+.lawyers p.lawyer-bottom{
+    margin-bottom: 5px;
+}
+
 
 /*IE6-IE8 respond*/
-@media screen and (max-width: 480px){
-    body{
-        background: blue;
-    }
-}
+/*@media screen and (max-width: 480px){*/
+/*body{*/
+/*background: blue;*/
+/*}*/
+/*}*/
 
 /*footer*/
 .ft-bright,
@@ -265,18 +322,18 @@ nav+div{
 }
 .ft-dark li:first-child,
 .ft-bright li:first-child{
-     border-left: 0px;
- }
+    border-left: 0px;
+}
 .ft-bright li{
     border-left: 1px solid #333;
 }
 .ft-dark li{
-    border-left: 1px solid #eee;
+    border-left: 1px solid #c2cccf;
 }
 
 .contact li{
     border-left: 0px;
-    margin-right: 50px;
+    margin-right: 30px;
     text-align: left;
 }
 .ft-bright>.contact a{
@@ -289,6 +346,7 @@ nav+div{
     margin-top: 15px;
     font-size: 10px;
     color:#aaa;
+    line-height: 0.9;
 }
 
 
@@ -314,4 +372,160 @@ nav+div{
     padding-right: 20px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+#idx_head{
+    font-weight: normal;
+}
+
+#messagecount{
+    background-color: #1fda46;
+    color: white;
+    font-weight: normal;
+}
+
+/*media query*/
+/*@media screen and (min-width: 960px) {*/
+/*#myCarousel img.img-responsive{*/
+/*width:100%;*/
+/*height: 733px;*/
+/*overflow: hidden;*/
+/*margin :calc() 0;*/
+/*}*/
+/*}*/
+
+/*html5 for IE8*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+
+/*new layout for mobile phone*/
+@media screen and (max-width: 768px){
+
+    img.navbar-brand-jn{
+        margin-left: 30px;
+    }
+
+    nav.navbar-jn .navbar-nav>li>a{
+        padding: 0px 0px 0px 15px;
+    }
+
+    .navbar-right-jn #login-btn {
+        background-color: #292a34;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: left;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 15px;
+    }
+
+    .navbar-right-jn #login-btn:hover,
+    .navbar-right-jn #login-btn:focus{
+        background-color: #292a34;
+        color: white;
+        font-weight: bold;
+    }
+
+    .navbar-nav {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: 15px;
+    }
+
+    #hidden-nav{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /*top carousel*/
+    #mobile-disable{
+        display: none;
+    }
+
+    .container>.navbar-collapse {
+        margin-right: 0px;
+    }
+
+    /*stats*/
+    .stats h3{
+        margin-top: 70px;
+    }
+
+    #map-info{
+        padding: 0px;
+        padding-bottom: 20px;
+    }
+
+    .btn-long {
+        width: 150px;
+        font-size:14px;
+    }
+
+    .container.nav-container{
+        padding-right: 0px;
+    }
+
+    #table-links td{
+        border: 0px;
+        padding: 0px;
+    }
+
+    .items thead {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .lawyers {
+        padding-top: 45px;
+        /*min-height: 480px;*/
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .qrcode p{
+        margin-top: 10px;
+    }
+
+    .container>.navbar-header{
+        margin-right: 0px;
+    }
+
+    .lawyers>h3 {
+        font-size: 18px;
+    }
+
+    .lawyers #lawyer-intro {
+        font-size: 14px;
+    }
+
+    #debt-list{
+        display: none;
+    }
+
+    .stripe-lawyer {
+        background-color: white;
+    }
+
+    #table-links-hidden{
+        display: block !important;
+    }
+
+    #table-links-hidden{
+        border: 0px;
+        padding: 0px;
+        padding: 15px;
+        margin-bottom: 20px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .btn-long{
+        padding: 7px 0px 5px 0px;
+        width: 150px;
+        background-color: #00cccd;
+        color:#eee;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+
 }
