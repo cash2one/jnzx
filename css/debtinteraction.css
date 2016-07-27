@@ -55,8 +55,10 @@ h4>small>.glyphicon{
 	font-size: 14px;
 	font-weight: 100;
 }
-.panel-group .panel-heading+.panel-collapse>.panel-body,
-.panel-group .panel-heading+.panel-collapse>.list-group{
+/*.panel-group .panel-heading+.panel-collapse>.panel-body,*/
+/*.panel-group .panel-heading+.panel-collapse>.list-group{*/
+.panel-group .panel-heading+.panel-collapse .panel-body,
+.panel-group .panel-heading+.panel-collapse .list-group{
 	padding:0px;
 	border-top:0px;
 }
@@ -66,11 +68,13 @@ h4>small>.glyphicon{
 	padding-left: 40px;
 }
 
-.panel-body>ul{
+/*.panel-body>ul{*/
+.panel-body ul{
 	list-style-type: none;
 	padding-left: 0px;
 	margin-bottom: 20px;
 }
+
 .panel-body li{
 	padding-left: 13px;
 }
@@ -83,11 +87,12 @@ h4>small>.glyphicon{
 }
 
 .panel-body .node-icon{
-	position: absolute;
+	display: inline-block;
 	width: 14px;
 	height: 14px;
 	margin-left: -34px;
 	margin-top:7px;
+	margin-bottom: -7px;
 	/*background-image:url('../img/debt/stateicon.png');*/
 	background-image:url('../images/stateicon.png');
 	background-repeat:no-repeat;
@@ -136,6 +141,11 @@ h4>small>.glyphicon{
 .panel-body .state-time{
 	width: 42%;
 }
+
+.panel-body .state-time{
+	margin-left: 8px;
+}
+
 .panel-body .state-detail{
 	width: 35%;
 }
@@ -276,4 +286,9 @@ h4>small>.glyphicon{
 
 #currentmaterials a{
 	border: 1px solid #d8d8d8;
+}
+
+/*new layout for mobile phone*/
+@media screen and (max-width: 768px) {
+
 }
