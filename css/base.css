@@ -95,7 +95,7 @@ body{
     text-decoration: none;
 }
 .nav>li>a{
-    color:#eee;
+    color:#eee !important;
 }
 .nav>li>a:hover, .nav>li>a:focus,.nav>.active,.nav>.active>a{
     text-decoration: none;
