@@ -3,7 +3,7 @@
 
 /*table style*/
 .debtcenter-table td{
-    padding: 20px !important;
+    padding: 20px 0px 20px 0px !important;
 }
 
 .debtcenter-table a{
@@ -16,6 +16,11 @@
     padding-left: 15px;
 }
 
+.cityfilter1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 .cityNameWrap{
     float:left;
     margin-right: 20px
@@ -26,8 +31,8 @@
 }
 
 .debt-items .form-control{
-	float: left;
-	width:auto;
+    float: left;
+    width:auto;
 }
 
 .debtcenter-nav{
@@ -60,19 +65,16 @@
 
 /*issue debt*/
 .issuedebt{
-    margin-top: 60px;
+    margin-top: 150px;
     margin-bottom: 30px;
 }
 
-.debtinfo{
-    margin-top: 10px;
-}
-
-.issuedebt span.glyphicon{
+.issuedebt span.star{
     color: #00CCCD;
     position: absolute;
     margin-left: -30px;
     line-height: 34px;
+    font-size:20px;
 }
 
 .info-gly{
@@ -114,8 +116,8 @@
 
 
 /*.issuedebt .file-input{*/
-    /*margin-left: 0px;*/
-    /*padding-right: 15px;*/
+/*margin-left: 0px;*/
+/*padding-right: 15px;*/
 /*}*/
 
 .issuedebt #submit-btn{
@@ -132,8 +134,19 @@
 
 .issuedebt .btn-file{
     color: #fff;
-    background-color: #00ccdd;
-    border: 1px solid #00ccdd;
+    /*background-color: #00ccdd;*/
+    background-color: #cdcfd0;
+    /*border: 1px solid #00ccdd;*/
+    border: 1px solid #bdbfbf;
+}
+
+.issuedebt #sub_btn{
+    background-color: #00cccd;
+}
+
+.btn-debtnew{
+    background-color: #00cccd;
+    color: white;
 }
 
 .guarantee{
@@ -141,7 +154,7 @@
 }
 
 /*.issuedebt .col-file-input{*/
-    /*height: 34px;*/
+/*height: 34px;*/
 /*}*/
 
 .issuedebt .sp-hr{
@@ -164,6 +177,15 @@
 .cityfilter select{
     width: auto;
 }
+
+.cityfilter1 select{
+    width: auto;
+}
+
+.cleaner{
+    padding-left: 0px !important;
+}
+
 .manage-debt-items{
     min-height:600px;
 }
@@ -204,4 +226,11 @@
 
 #audit{
     text-align: center;
+}
+
+/*new layout for mobile phone*/
+@media screen and (max-width: 768px) {
+    .issuedebt {
+        margin-top: 80px;
+    }
 }

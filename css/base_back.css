@@ -1,0 +1,323 @@
+body{
+    background: #fff;
+    font-size: 14px;
+    font-family: 'PingFang SC','Myriad Pro', 'Hiragino Sans GB',"Open Sans","Helvetica Neue",Helvetica,"Segoe UI","Segoe WP","Microsoft YaHei";
+    -webkit-font-smoothing: antialiased;
+}
+.btn{   
+    border-width: 0px;
+}
+.btn-long{
+    padding: 12px 0px;
+    width: 310px;
+    background-color: #00cccd;
+    color:#eee;
+    font-size: 15px;
+}
+.btn-long:hover,
+.btn-long:focus,
+.btn-long.focus {
+    color: #eee;
+    text-decoration: none;
+}
+.btn-trans{
+    border: 1px solid #00cccd;
+    background-color: transparent;
+    color: #00cccd;
+}
+.btn-trans:hover,
+.btn-trans:focus,
+.btn-trans.focus {
+    color: #00cccd;
+    text-decoration: none;
+}
+
+/*navigation bar*/
+.navbar-jn {
+    background-color: #292a34;
+    border-radius: 0px;
+    box-shadow:  0px 2px 5px #333;
+    border: 0px;
+    margin-bottom: 0px;
+
+}
+.container>.navbar-header,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container-fluid>.navbar-collapse{
+    margin-right: 20px;
+}
+.navbar-right{
+    margin-right: 0px;
+}
+
+.navbar-brand-jn {
+	float: left;
+    height: 50px;
+    padding: 7px 15px 7px 0px;
+    font-size: 22px;
+    line-height: 36px;
+    color:#eee;
+    letter-spacing: 3px;
+}
+.navbar-brand-jn>span {
+	color: #1edb42;
+}
+.navbar-brand-jn:hover,
+.navbar-brand-jn:focus {
+    color: #eee;
+    text-decoration: none;
+}
+.nav>li>a{
+    color:#eee;
+}
+.nav>li>a:hover, .nav>li>a:focus,.nav>.active,.nav>.active>a{
+    text-decoration: none;
+    background-color: transparent;
+    color:#fff;
+    font-weight: bold;
+}
+
+
+.navbar-right-jn #login-btn{
+    background: #1fda46;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar-right-jn #login-btn:hover,
+.navbar-right-jn #login-btn:focus{
+    color:#eee;
+    background-color: #00b600;
+}
+
+.navbar-right-jn{
+    vertical-align: middle;
+}
+
+/*Carsousel*/
+nav+div{
+    margin-top: 50px;/*The height of navigation bar*/
+}
+#myCarousel>div:first-child{
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+    width:75%;
+    margin-left: -37.5%;
+    z-index: 50;
+}
+#myCarousel h1{
+    color:#eee;
+    line-height: 200%;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-size: 28px;
+    margin-bottom: 5%;
+}
+#myCarousel .btn-long{
+    margin:5px 15px;
+}
+
+#myCarousel img.img-responsive{
+    width:100%;
+}
+
+/*Stats Data*/
+.stats{
+    height: 410px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.stats #intro{
+    line-height: 2;
+}
+
+/*China map area*/
+.stripe{
+    background-color: #dbeded;
+}
+
+#map-info{
+    padding: 100px 0px;
+}
+#map-info table{
+    background-color: white;
+    max-width: 340px;
+    margin:auto;
+}
+
+#map-info .items-even{
+    background-color: #f2f7f7;
+}
+
+#map-info .items-final{
+    background-color: #00cccd;
+}
+
+.southsea {
+    stroke: rgb(93, 213, 214);
+    stroke-width: 1px;
+    fill: rgb(203, 227, 227);
+}
+
+/*#map-info .map-table-second{*/
+    /*min-width: 40px;*/
+/*}*/
+
+/*debt list*/
+.items{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+.items #item-btn{
+    margin-top: 25px;
+}
+
+.items thead{
+    font-size:16px;
+    font-weight: bold;
+}
+
+.items .table>thead>tr>th,
+.items .table>tbody>tr>th,
+.items .table>tfoot>tr>th,
+.items .table>thead>tr>td,
+.items .table>tbody>tr>td,
+.items .table>tfoot>tr>td {
+    padding: 25px;
+    vertical-align: middle;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/*lawyers info*/
+.lawyers{
+    padding-top:45px;
+    min-height: 480px;
+}
+.lawyers>h3{
+    margin-bottom: 20px;
+}
+.lawyers>p{
+    margin-bottom: 45px;
+}
+.lawyers>ul a{
+    color: #333;
+    text-decoration: none;
+}
+.lawyers>ul>li{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.img-circle + p+p{
+    font-size:12px;
+}
+
+.lawyers #lawyer-intro{
+    font-size: 16px;
+}
+
+.img-circle + p{
+    margin-top: 14px;
+    font-size: 16px;
+}
+#lawyer-btn{
+    background-color: transparent;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border:1px solid #777;
+    color:#777;
+}
+
+
+/*IE6-IE8 respond*/
+/*@media screen and (max-width: 480px){*/
+    /*body{*/
+        /*background: blue;*/
+    /*}*/
+/*}*/
+
+/*footer*/
+.ft-bright,
+.ft-dark{
+    min-height:130px;
+}
+
+.ft-bright>.container,
+.ft-dark>.container{
+    padding-top:20px;
+}
+
+.ft-bright{
+    background-color:#fff;
+    color:#333;
+}
+.ft-dark{
+    background-color:#292a34;
+    color:#eee;
+}
+.ft-dark li:first-child,
+.ft-bright li:first-child{
+     border-left: 0px;
+ }
+.ft-bright li{
+    border-left: 1px solid #333;
+}
+.ft-dark li{
+    border-left: 1px solid #eee;
+}
+
+.contact li{
+    border-left: 0px;
+    margin-right: 50px;
+    text-align: left;
+}
+.ft-bright>.contact a{
+    color:#333;
+}
+.ft-dark>.contact a{
+    color:#eee;
+}
+.copyright{
+    margin-top: 15px;
+    font-size: 10px;
+    color:#aaa;
+}
+
+
+/*pagination*/
+.pagination>li>a, .pagination>li>span {
+    color: #aaa;
+    background-color: transparent;
+    border: 0px;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus {
+    color: #333;
+}
+.pagination>li>.active{
+    color: #333;
+}
+.pagination>li>.prepage,
+.pagination>li>.nextpage{
+    background-color: #00cccd;
+    border-radius: 4px;
+    color:#eee;
+    padding-left:20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #carousel-top{
+        display: none;
+    }
+}
