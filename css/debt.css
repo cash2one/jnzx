@@ -186,9 +186,9 @@
     padding-left: 0px !important;
 }
 
-.manage-debt-items{
-    min-height:600px;
-}
+/*.manage-debt-items{*/
+    /*min-height:600px;*/
+/*}*/
 
 .manage-debt-items .form-control{
     size: auto;

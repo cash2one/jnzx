@@ -397,6 +397,9 @@ body{
 /*html5 for IE8*/
 article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 
+.qrcode p{
+    margin-top: 10px;
+}
 
 /*new layout for mobile phone*/
 @media screen and (max-width: 768px){
