@@ -104,7 +104,7 @@ body{
     font-weight: bold;
 }
 .nav>li>a:hover{
-    color: #00cccd;
+    color: #00cccd !important;
 }
 
 
@@ -161,9 +161,9 @@ body{
     width:100%;
 }
 
-/*.selectrole img.img-responsive{*/
-    /*height: 800px;*/
-/*}*/
+.selectrole img.img-responsive{
+    height: 800px;
+}
 
 @media screen and (min-width: 1500px) {
     .selectrole .select-roles-col {
@@ -394,7 +394,12 @@ body{
 /*}*/
 /*}*/
 
-/*html5 for IE8*/
+@media screen and (max-width: 768px){
+    #mobile-disable{
+        display: none;
+    }
+}
+/*html5*/
 article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 
 .qrcode p{
