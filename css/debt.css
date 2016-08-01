@@ -233,4 +233,12 @@
     .issuedebt {
         margin-top: 80px;
     }
+
+    .cityNameWrap .input-group-addon{
+        width: auto !important;
+    }
+
+    .debtcenter-table td {
+        padding: 20px 5px 20px 5px !important;
+    }
 }
