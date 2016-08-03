@@ -4,7 +4,7 @@
  */
 var city;
 var timeIdx = 0;
-var timeInter,timeInter1;
+var timeInter, timeInter1;
 
 $(document).ready(function () {
     /*setHeight*/
@@ -29,40 +29,94 @@ $(document).ready(function () {
         });
 
 
-
-    }else {
+    } else {
 
         /*decide the window size*/
         var windowWid1 = $(window).width();
-        if (windowWid1 > 500){
+        if (windowWid1 > 500) {
             var wid1 = 520;
             var hei1 = 320;
-        }else{
+        } else {
             var wid1 = windowWid1;
-            var hei1 = wid1*7/13;
+            var hei1 = wid1 * 7 / 13;
         }
         //three circle
-        showCircle(wid1,hei1);
+        showCircle(wid1, hei1);
 
         d3.json("media/city.json", function (error, mcity) {
             city = mcity;
 
             /*decide the window size*/
             var windowWid = $(window).width();
-            if (windowWid > 500){
+            if (windowWid > 500) {
                 var wid = 500;
                 var hei = 400;
-            }else{
-                var wid = windowWid*0.9;
-                var hei = wid*4/5;
+            } else {
+                var wid = windowWid * 0.9;
+                var hei = wid * 4 / 5;
             }
 
-            showMapD3(wid,hei);  //when get city info, we plot China map
+            showMapD3(wid, hei);  //when get city info, we plot China map
         });
     }
 
+    //lawyer
+    loadLawyer();
 
 });
+
+function loadLawyer(){
+    //lawyer
+    var jcarousel = $('.jcarousel');
+
+    jcarousel
+        .on('jcarousel:reload jcarousel:create', function () {
+            var carousel = $(this),
+                width = carousel.innerWidth();
+
+            if (width >= 1000) {
+                width = width / 5;
+            } else if (width >= 800) {
+                width = width / 4;
+            } else if(width >= 600){
+                width = width / 3;
+            } else if(width >= 350){
+                width = width / 2;
+            }
+
+            carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+        })
+        .jcarousel({
+            wrap: 'circular'
+        });
+
+    $('.jcarousel-control-prev')
+        .jcarouselControl({
+            target: '-=1'
+        });
+
+    $('.jcarousel-control-next')
+        .jcarouselControl({
+            target: '+=1'
+        });
+
+    $('.jcarousel-pagination')
+        .on('jcarouselpagination:active', 'a', function() {
+            $(this).addClass('active');
+        })
+        .on('jcarouselpagination:inactive', 'a', function() {
+            $(this).removeClass('active');
+        })
+        .on('click', function(e) {
+            e.preventDefault();
+        })
+        .jcarouselPagination({
+            perPage: 1,
+            item: function(page) {
+                return '<a href="#' + page + '">' + page + '</a>';
+            }
+        });
+}
 
 function supportSVG() {
     return document.createElement('svg').getAttributeNS
@@ -73,25 +127,25 @@ function supportCanvas() {
     return !!(elem.getContext && elem.getContext('2d'));
 }
 
-function setHeight(){
+function setHeight() {
     var HEIG = 500;
     var width = $(window).width();
-    if(width > 960){
-        var margin = -(width*550/1440 - HEIG)/2;
-        var height = width*550/1440;
+    if (width > 960) {
+        var margin = -(width * 550 / 1440 - HEIG) / 2;
+        var height = width * 550 / 1440;
 
-        $('#myCarousel img.img-responsive').css('width','100%');
-        $('#myCarousel img.img-responsive').css('overflow','hidden');
-        $('#myCarousel img.img-responsive').css('height',height);
-        $('#myCarousel img.img-responsive').css('margin-top',margin);
-        $('#myCarousel img.img-responsive').css('margin-bottom',margin);
-        $('#myCarousel img.img-responsive').css('margin-left',0);
-        $('#myCarousel img.img-responsive').css('margin-right',0);
+        $('#myCarousel img.img-responsive').css('width', '100%');
+        $('#myCarousel img.img-responsive').css('overflow', 'hidden');
+        $('#myCarousel img.img-responsive').css('height', height);
+        $('#myCarousel img.img-responsive').css('margin-top', margin);
+        $('#myCarousel img.img-responsive').css('margin-bottom', margin);
+        $('#myCarousel img.img-responsive').css('margin-left', 0);
+        $('#myCarousel img.img-responsive').css('margin-right', 0);
 
     }
 }
 
-function showCircle(width,height) {
+function showCircle(width, height) {
 
     var draw = SVG('drawing').size(width, height);
     var svg = $('#drawing').find('svg')[0];
@@ -228,14 +282,14 @@ function showCircle(width,height) {
             sh3 = setInterval(function () {
                 ni3 = ni3 - 0.03;
                 ni3 = ni3.toFixed(2);
-                num3.text(ni3.toString()+'%');
+                num3.text(ni3.toString() + '%');
                 time3 = time3 - 1;
                 if (time3 <= 0) {
                     clearInterval(sh3);
                     sh4 = setInterval(function () {
                         ni3 = parseFloat(ni3) + 0.03;
                         ni3 = ni3.toFixed(2);
-                        num3.text(ni3.toString()+'%');
+                        num3.text(ni3.toString() + '%');
                         time4 = time4 - 1;
                         if (time4 <= 0) {
                             clearInterval(sh4);
@@ -259,7 +313,7 @@ function updateNav() {
 }
 
 //option1: visualize China map with D3.js
-function showMapD3(width,height) {
+function showMapD3(width, height) {
     //var width = 500, height = 400;
 
     var svg = d3.select("#china-map").append("svg")
@@ -269,18 +323,18 @@ function showMapD3(width,height) {
         .attr("preserveAspectRatio", "xMidYMid")
         .attr("viewBox", "0 0 " + width + " " + height);
 
-    var proj = d3.geo.mercator().center([105, 38]).scale(width*0.8).translate([width / 2, height / 2]);
+    var proj = d3.geo.mercator().center([105, 38]).scale(width * 0.8).translate([width / 2, height / 2]);
     var path = d3.geo.path().projection(proj);
 
-    d3.xml("media/southchinasea.svg", function(error, xmlDocument) {
-        svg.html(function(d){
-            return  xmlDocument.getElementsByTagName("g")[0].outerHTML+d3.select(this).html();
+    d3.xml("media/southchinasea.svg", function (error, xmlDocument) {
+        svg.html(function (d) {
+            return xmlDocument.getElementsByTagName("g")[0].outerHTML + d3.select(this).html();
         });
 
         var gSouthSea = d3.select("#southsea");
 
-        gSouthSea.attr("transform","translate(380,300)scale(0.5)")
-            .attr("class","southsea");
+        gSouthSea.attr("transform", "translate(380,300)scale(0.5)")
+            .attr("class", "southsea");
 
     });
 
@@ -321,7 +375,7 @@ function showMapD3(width,height) {
                     .style({'fill': "#3fe265", "r": "10px"});
 
                 //2.change table content
-                refreshTable(d,400);
+                refreshTable(d, 400);
             })
             .on("mouseout", function (d) {
                 //1.change point size and color
@@ -356,42 +410,42 @@ function showMapNode() {
         d3.select("#map-svg").selectAll("circle").each(function (d, i) {
             if (i == timeIdx) {
                 d3.select(this).transition().duration(1000).style({'fill': "#3fe265", "r": "10px"});
-                refreshTable(d,1000);
+                refreshTable(d, 1000);
             }
         });
     }
 }
 
 //change table content
-function refreshTable(data,freq) {
-    $("#idx_head").animate({"opacity":0},freq,function () {
-        $("#idx_head").html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]);
-        $("#idx_head").animate({"opacity":1},freq);
+function refreshTable(data, freq) {
+    $("#idx_head").animate({"opacity": 0}, freq, function () {
+        $("#idx_head").html(data["city"] + " " + data["client"] + " 催收编号：" + data["id"]);
+        $("#idx_head").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_money").animate({"opacity":0},freq,function () {
+    $("#idx_money").animate({"opacity": 0}, freq, function () {
         $("#idx_money").html(data["money"]);
-        $("#idx_money").animate({"opacity":1},freq);
+        $("#idx_money").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_return").animate({"opacity":0},freq,function () {
+    $("#idx_return").animate({"opacity": 0}, freq, function () {
         $("#idx_return").html(data["return"]);
-        $("#idx_return").animate({"opacity":1},freq);
+        $("#idx_return").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_due").animate({"opacity":0},freq,function () {
+    $("#idx_due").animate({"opacity": 0}, freq, function () {
         $("#idx_due").html(data["due"]);
-        $("#idx_due").animate({"opacity":1},freq);
+        $("#idx_due").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_lawyer").animate({"opacity":0},freq,function () {
+    $("#idx_lawyer").animate({"opacity": 0}, freq, function () {
         $("#idx_lawyer").html(data["lawyer"]);
-        $("#idx_lawyer").animate({"opacity":1},freq);
+        $("#idx_lawyer").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_moneyGet").animate({"opacity":0},freq,function () {
+    $("#idx_moneyGet").animate({"opacity": 0}, freq, function () {
         $("#idx_moneyGet").html(data["moneyGet"]);
-        $("#idx_moneyGet").animate({"opacity":1},freq);
+        $("#idx_moneyGet").animate({"opacity": 1}, freq);
     });
 }
 
@@ -400,34 +454,34 @@ function refreshTableNoSVG() {
     var cityLen = city.length;
     var data = city[timeIdx];
 
-    $("#idx_head").animate({"opacity":0},freq,function () {
-        $("#idx_head").html(data["city"]+" "+data["client"]+" 催收编号："+data["id"]);
-        $("#idx_head").animate({"opacity":1},freq);
+    $("#idx_head").animate({"opacity": 0}, freq, function () {
+        $("#idx_head").html(data["city"] + " " + data["client"] + " 催收编号：" + data["id"]);
+        $("#idx_head").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_money").animate({"opacity":0},freq,function () {
+    $("#idx_money").animate({"opacity": 0}, freq, function () {
         $("#idx_money").html(data["money"]);
-        $("#idx_money").animate({"opacity":1},freq);
+        $("#idx_money").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_return").animate({"opacity":0},freq,function () {
+    $("#idx_return").animate({"opacity": 0}, freq, function () {
         $("#idx_return").html(data["return"]);
-        $("#idx_return").animate({"opacity":1},freq);
+        $("#idx_return").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_due").animate({"opacity":0},freq,function () {
+    $("#idx_due").animate({"opacity": 0}, freq, function () {
         $("#idx_due").html(data["due"]);
-        $("#idx_due").animate({"opacity":1},freq);
+        $("#idx_due").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_lawyer").animate({"opacity":0},freq,function () {
+    $("#idx_lawyer").animate({"opacity": 0}, freq, function () {
         $("#idx_lawyer").html(data["lawyer"]);
-        $("#idx_lawyer").animate({"opacity":1},freq);
+        $("#idx_lawyer").animate({"opacity": 1}, freq);
     });
 
-    $("#idx_moneyGet").animate({"opacity":0},freq,function () {
+    $("#idx_moneyGet").animate({"opacity": 0}, freq, function () {
         $("#idx_moneyGet").html(data["moneyGet"]);
-        $("#idx_moneyGet").animate({"opacity":1},freq);
+        $("#idx_moneyGet").animate({"opacity": 1}, freq);
     });
 
     timeIdx = (timeIdx + 1) % cityLen;
