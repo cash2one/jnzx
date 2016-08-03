@@ -1,19 +1,22 @@
-body{
+body {
     background: #fff;
     font-size: 14px;
-    font-family: 'PingFang SC','Myriad Pro', 'Hiragino Sans GB',"Open Sans","Helvetica Neue",Helvetica,"Segoe UI","Segoe WP","Microsoft YaHei";
+    font-family: 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB', "Open Sans", "Helvetica Neue", Helvetica, "Segoe UI", "Segoe WP", "Microsoft YaHei";
     -webkit-font-smoothing: antialiased;
 }
-.btn{
+
+.btn {
     border-width: 0px;
 }
-.btn-long{
+
+.btn-long {
     padding: 12px 0px;
     width: 310px;
     background-color: #00cccd;
-    color:#eee;
+    color: #eee;
     font-size: 15px;
 }
+
 /*.btn-long:hover,*/
 /*.btn-long:focus,*/
 /*.btn-long.focus {*/
@@ -22,16 +25,17 @@ body{
 /*}*/
 
 .btn1:hover,
-.btn1:focus{
+.btn1:focus {
     color: #eee;
     background-color: #01bdbe;
 }
 
-.btn-trans{
+.btn-trans {
     border: 1px solid #00cccd;
     background-color: transparent;
     color: #00cccd;
 }
+
 .btn-trans:hover,
 .btn-trans.focus {
     color: #eee;
@@ -42,38 +46,39 @@ body{
 .navbar-jn {
     background-color: #292a34;
     border-radius: 0px;
-    box-shadow:  0px 2px 5px #333;
+    box-shadow: 0px 2px 5px #333;
     border: 0px;
     margin-bottom: 0px;
 
 }
 
-.navbar-jn #drop-jn{
+.navbar-jn #drop-jn {
     min-width: 90px;
     background-color: #32333e;
     color: #c2cccf;
 }
 
-.navbar-jn #drop-jn li a{
+.navbar-jn #drop-jn li a {
     color: #c2cccf;
 }
 
-.navbar-jn #drop-jn li a:hover{
+.navbar-jn #drop-jn li a:hover {
     background-color: #32333e;
     color: #00cccd;
 }
 
-.navbar-jn .dropdown.open a.dropdown-toggle{
+.navbar-jn .dropdown.open a.dropdown-toggle {
     background-color: #292a34;
 }
 
-.container>.navbar-header,
-.container-fluid>.navbar-header,
-.container>.navbar-collapse,
-.container-fluid>.navbar-collapse{
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
     margin-right: 20px;
 }
-.navbar-right{
+
+.navbar-right {
     margin-right: 0px;
 }
 
@@ -83,32 +88,36 @@ body{
     padding: 7px 15px 7px 0px;
     font-size: 22px;
     line-height: 36px;
-    color:#eee;
+    color: #eee;
     letter-spacing: 3px;
 }
-.navbar-brand-jn>span {
+
+.navbar-brand-jn > span {
     color: #1edb42;
 }
+
 .navbar-brand-jn:hover,
 .navbar-brand-jn:focus {
     color: #eee;
     text-decoration: none;
 }
-.navbar-jn .nav>li>a{
-    color:#eee !important;
+
+.navbar-jn .nav > li > a {
+    color: #eee !important;
 }
-.nav>li>a:hover, .nav>li>a:focus,.nav>.active,.nav>.active>a{
+
+.nav > li > a:hover, .nav > li > a:focus, .nav > .active, .nav > .active > a {
     text-decoration: none;
     background-color: transparent !important;
-    color:#fff;
+    color: #fff;
     font-weight: bold;
 }
-.navbar-jn .nav>li>a:hover{
+
+.navbar-jn .nav > li > a:hover {
     color: #00cccd !important;
 }
 
-
-.navbar-right-jn #login-btn{
+.navbar-right-jn #login-btn {
     background: #1fda46;
     margin-top: 10px;
     padding-top: 5px;
@@ -116,36 +125,53 @@ body{
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .navbar-right-jn #login-btn:hover,
-.navbar-right-jn #login-btn:focus{
-    color:#eee;
+.navbar-right-jn #login-btn:focus {
+    color: #eee;
     background-color: #00b600;
 }
 
-.navbar-right-jn{
+.navbar-right-jn #login-btn-before {
+    background: #1fda46 !important;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-right-jn #login-btn-before:hover,
+.navbar-right-jn #login-btn-before:focus {
+    color: #eee;
+    background-color: #00b600;
+}
+
+.navbar-right-jn {
     vertical-align: middle;
 }
 
 /*Carsousel*/
-#myCarousel{
-    margin-top: 50px;/*The height of navigation bar*/
+#myCarousel {
+    margin-top: 50px; /*The height of navigation bar*/
 }
 
-.indexCarousel{
+.indexCarousel {
     margin-top: 25px !important;
 }
 
-#myCarousel>div:first-child{
+#myCarousel > div:first-child {
     position: absolute;
     text-align: center;
     top: 20%;
     left: 50%;
-    width:75%;
+    width: 75%;
     margin-left: -37.5%;
     z-index: 50;
 }
-#myCarousel h1{
-    color:#c2cccf;
+
+#myCarousel h1 {
+    color: #c2cccf;
     line-height: 200%;
     font-style: italic;
     letter-spacing: 3px;
@@ -153,12 +179,13 @@ body{
     margin-bottom: 5%;
     font-weight: normal;
 }
-#myCarousel .btn-long{
-    margin:5px 15px;
+
+#myCarousel .btn-long {
+    margin: 5px 15px;
 }
 
-#myCarousel img.img-responsive{
-    width:100%;
+#myCarousel img.img-responsive {
+    width: 100%;
 }
 
 @media screen and (min-width: 1500px) {
@@ -172,39 +199,40 @@ body{
 }
 
 /*Stats Data*/
-.stats{
+.stats {
     height: 350px;
     display: table-cell;
     vertical-align: middle;
 }
 
-.stats #intro{
+.stats #intro {
     line-height: 2;
 }
 
-.stats h3{
+.stats h3 {
     margin-top: 60px;
 }
 
 /*China map area*/
-.stripe{
+.stripe {
     background-color: #dbeded;
 }
 
-#map-info{
+#map-info {
     padding: 100px 0px;
 }
-#map-info table{
+
+#map-info table {
     background-color: white;
     max-width: 340px;
-    margin:auto;
+    margin: auto;
 }
 
-#map-info .items-even{
+#map-info .items-even {
     background-color: #f2f7f7;
 }
 
-#map-info .items-final{
+#map-info .items-final {
     background-color: #00cccd;
 }
 
@@ -219,27 +247,26 @@ body{
 /*}*/
 
 /*debt list*/
-.items{
+.items {
     margin-top: 35px;
     margin-bottom: 35px;
 }
 
-
-.items #item-btn{
+.items #item-btn {
     margin-top: 25px;
 }
 
-.items thead{
-    font-size:16px;
+.items thead {
+    font-size: 16px;
     font-weight: bold;
 }
 
-.items .table>thead>tr>th,
-.items .table>tbody>tr>th,
-.items .table>tfoot>tr>th,
-.items .table>thead>tr>td,
-.items .table>tbody>tr>td,
-.items .table>tfoot>tr>td {
+.items .table > thead > tr > th,
+.items .table > tbody > tr > th,
+.items .table > tfoot > tr > th,
+.items .table > thead > tr > td,
+.items .table > tbody > tr > td,
+.items .table > tfoot > tr > td {
     padding: 25px;
     vertical-align: middle;
     text-align: center;
@@ -247,48 +274,53 @@ body{
 }
 
 /*lawyers info*/
-.lawyers{
-    padding-top:45px;
+.lawyers {
+    padding-top: 45px;
     min-height: 480px;
 }
-.lawyers>h3{
+
+.lawyers > h3 {
     margin-bottom: 20px;
 }
-.lawyers>p{
+
+.lawyers > p {
     margin-bottom: 45px;
 }
-.lawyers>ul a{
+
+.lawyers > ul a {
     color: #333;
     text-decoration: none;
 }
-.lawyers>ul>li{
+
+.lawyers > ul > li {
     padding-left: 40px;
     padding-right: 40px;
 }
-.img-circle + p+p{
-    font-size:12px;
+
+.img-circle + p + p {
+    font-size: 12px;
 }
 
-.lawyers #lawyer-intro{
+.lawyers #lawyer-intro {
     font-size: 16px;
 }
 
-.img-circle + p{
+.img-circle + p {
     margin-top: 14px;
     font-size: 16px;
 }
-#lawyer-btn{
+
+#lawyer-btn {
     background-color: transparent;
     margin-top: 25px;
     margin-bottom: 50px;
-    border:1px solid #777;
-    color:#777;
+    border: 1px solid #777;
+    color: #777;
 }
 
-.lawyers p.lawyer-bottom{
+.lawyers p.lawyer-bottom {
     margin-bottom: 5px;
 }
-
 
 /*IE6-IE8 respond*/
 /*@media screen and (max-width: 480px){*/
@@ -299,82 +331,91 @@ body{
 
 /*footer*/
 .ft-bright,
-.ft-dark{
-    min-height:130px;
+.ft-dark {
+    min-height: 130px;
 }
 
-.ft-bright>.container,
-.ft-dark>.container{
-    padding-top:20px;
+.ft-bright > .container,
+.ft-dark > .container {
+    padding-top: 20px;
 }
 
-.ft-bright{
-    background-color:#fff;
-    color:#333;
+.ft-bright {
+    background-color: #fff;
+    color: #333;
 }
-.ft-dark{
-    background-color:#292a34;
-    color:#eee;
+
+.ft-dark {
+    background-color: #292a34;
+    color: #eee;
 }
+
 .ft-dark li:first-child,
-.ft-bright li:first-child{
+.ft-bright li:first-child {
     border-left: 0px;
 }
-.ft-bright li{
+
+.ft-bright li {
     border-left: 1px solid #333;
 }
-.ft-dark li{
+
+.ft-dark li {
     border-left: 1px solid #c2cccf;
 }
 
-.contact li{
+.contact li {
     border-left: 0px;
     margin-right: 30px;
     text-align: left;
 }
-.ft-bright>.contact a{
-    color:#333;
+
+.ft-bright > .contact a {
+    color: #333;
 }
-.ft-dark>.contact a{
-    color:#eee;
+
+.ft-dark > .contact a {
+    color: #eee;
 }
-.copyright{
+
+.copyright {
     margin-top: 15px;
     font-size: 10px;
-    color:#aaa;
+    color: #aaa;
     line-height: 0.9;
 }
 
-
 /*pagination*/
-.pagination>li>a, .pagination>li>span {
+.pagination > li > a, .pagination > li > span {
     color: #aaa;
     background-color: transparent;
     border: 0px;
 }
-.pagination>li>a:hover,
-.pagination>li>a:focus {
+
+.pagination > li > a:hover,
+.pagination > li > a:focus {
     color: #333;
 }
-.pagination>li>.active{
+
+.pagination > li > .active {
     color: #333;
 }
-.pagination>li>.prepage,
-.pagination>li>.nextpage{
+
+.pagination > li > .prepage,
+.pagination > li > .nextpage {
     background-color: #00cccd;
     border-radius: 4px;
-    color:#eee;
-    padding-left:20px;
+    color: #eee;
+    padding-left: 20px;
     padding-right: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-#idx_head{
+#idx_head {
     font-weight: normal;
 }
 
-#messagecount{
+#messagecount {
     background-color: #1fda46;
     color: white;
     font-weight: normal;
@@ -390,26 +431,29 @@ body{
 /*}*/
 /*}*/
 
-@media screen and (max-width: 768px){
-    #mobile-disable{
+@media screen and (max-width: 768px) {
+    #mobile-disable {
         display: none;
     }
 }
-/*html5*/
-article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
 
-.qrcode p{
+/*html5*/
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+    display: block
+}
+
+.qrcode p {
     margin-top: 10px;
 }
 
 /*new layout for mobile phone*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    img.navbar-brand-jn{
+    img.navbar-brand-jn {
         margin-left: 30px;
     }
 
-    nav.navbar-jn .navbar-nav>li>a{
+    nav.navbar-jn .navbar-nav > li > a {
         padding: 0px 0px 0px 15px;
     }
 
@@ -424,7 +468,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
     }
 
     .navbar-right-jn #login-btn:hover,
-    .navbar-right-jn #login-btn:focus{
+    .navbar-right-jn #login-btn:focus {
         background-color: #292a34;
         color: white;
         font-weight: bold;
@@ -436,40 +480,40 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
         padding-left: 15px;
     }
 
-    #hidden-nav{
+    #hidden-nav {
         padding-top: 10px;
         padding-bottom: 10px;
     }
 
     /*top carousel*/
-    #mobile-disable{
+    #mobile-disable {
         display: none;
     }
 
-    .container>.navbar-collapse {
+    .container > .navbar-collapse {
         margin-right: 0px;
     }
 
     /*stats*/
-    .stats h3{
+    .stats h3 {
         margin-top: 70px;
     }
 
-    #map-info{
+    #map-info {
         padding: 0px;
         padding-bottom: 20px;
     }
 
     .btn-long {
         width: 150px;
-        font-size:14px;
+        font-size: 14px;
     }
 
-    .container.nav-container{
+    .container.nav-container {
         padding-right: 0px;
     }
 
-    #table-links td{
+    #table-links td {
         border: 0px;
         padding: 0px;
     }
@@ -486,15 +530,15 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
         padding-right: 20px;
     }
 
-    .qrcode p{
+    .qrcode p {
         margin-top: 10px;
     }
 
-    .container>.navbar-header{
+    .container > .navbar-header {
         margin-right: 0px;
     }
 
-    .lawyers>h3 {
+    .lawyers > h3 {
         font-size: 18px;
     }
 
@@ -502,7 +546,7 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
         font-size: 14px;
     }
 
-    #debt-list{
+    #debt-list {
         display: none;
     }
 
@@ -510,11 +554,11 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
         background-color: white;
     }
 
-    #table-links-hidden{
+    #table-links-hidden {
         display: block !important;
     }
 
-    #table-links-hidden{
+    #table-links-hidden {
         border: 0px;
         padding: 0px;
         padding: 15px;
@@ -523,13 +567,41 @@ article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
         text-align: center;
     }
 
-    .btn-long{
+    .btn-long {
         padding: 7px 0px 5px 0px;
         width: 150px;
         background-color: #00cccd;
-        color:#eee;
+        color: #eee;
         font-size: 14px;
         vertical-align: middle;
     }
+
+    .navbar-jn .navbar-toggle {
+        background-color: #1edb42 !important;
+    }
+
+    .navbar-header-before {
+        float: left;
+    }
+
+    .navbar-right-before{
+        float:right;
+    }
+
+    .navbar-right-before li{
+        float: left;
+    }
+
+    .navbar-right-before>li{
+        display: block;
+        position: relative;
+    }
+
+    .navbar-right-before>li#register>a {
+        padding: 15px 15px !important;
+
+    }
+
+
 
 }
